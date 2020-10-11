@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -196,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      378 字
+      350 字
     </span>
   
 
@@ -266,32 +272,32 @@
 <h4 id="二、Python代码"><a href="#二、Python代码" class="headerlink" title="二、Python代码"></a>二、Python代码</h4><ul>
 <li>伪代码：(详细代码可以查看：<a target="_blank" rel="noopener" href="https://github.com/C-Yunfeng/ML-algorithms/blob/master/K-means.ipynb">K-means.ipynb</a>)</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-comment">#初始化中心</span>
-centroids = &#123;
-    i+<span class="hljs-number">1</span>: [np.random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">80</span>), np.random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">80</span>)]
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(k)
-&#125;
-<span class="hljs-comment">#将样本归类</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">assignment</span>(<span class="hljs-params">df, centroids</span>):</span>
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> centroids.keys():
-        <span class="hljs-comment"># sqrt((x1 - x2)^2 - (y1 - y2)^2)</span>
-        df[<span class="hljs-string">&#x27;distance_from_&#123;&#125;&#x27;</span>.format(i)] = (
-            np.sqrt(
-                (df[<span class="hljs-string">&#x27;x&#x27;</span>] - centroids[i][<span class="hljs-number">0</span>]) ** <span class="hljs-number">2</span>
-                + (df[<span class="hljs-string">&#x27;y&#x27;</span>] - centroids[i][<span class="hljs-number">1</span>]) ** <span class="hljs-number">2</span>
-            )
-        )
-    centroid_distance_cols = [<span class="hljs-string">&#x27;distance_from_&#123;&#125;&#x27;</span>.format(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> centroids.keys()]
-    df[<span class="hljs-string">&#x27;closest&#x27;</span>] = df.loc[:, centroid_distance_cols].idxmin(axis=<span class="hljs-number">1</span>)
-    df[<span class="hljs-string">&#x27;closest&#x27;</span>] = df[<span class="hljs-string">&#x27;closest&#x27;</span>].map(<span class="hljs-keyword">lambda</span> x: int(x.lstrip(<span class="hljs-string">&#x27;distance_from_&#x27;</span>)))
-    df[<span class="hljs-string">&#x27;color&#x27;</span>] = df[<span class="hljs-string">&#x27;closest&#x27;</span>].map(<span class="hljs-keyword">lambda</span> x: colmap[x])
-    <span class="hljs-keyword">return</span> df
-<span class="hljs-comment">#更新中心</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update</span>(<span class="hljs-params">k</span>):</span>
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> centroids.keys():
-        centroids[i][<span class="hljs-number">0</span>] = np.mean(df[df[<span class="hljs-string">&#x27;closest&#x27;</span>] == i][<span class="hljs-string">&#x27;x&#x27;</span>])
-        centroids[i][<span class="hljs-number">1</span>] = np.mean(df[df[<span class="hljs-string">&#x27;closest&#x27;</span>] == i][<span class="hljs-string">&#x27;y&#x27;</span>])
-    <span class="hljs-keyword">return</span> k</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#初始化中心</span>
+centroids <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">#将样本归类</span>
+<span class="token keyword">def</span> <span class="token function">assignment</span><span class="token punctuation">(</span>df<span class="token punctuation">,</span> centroids<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> centroids<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># sqrt((x1 - x2)^2 - (y1 - y2)^2)</span>
+        df<span class="token punctuation">[</span><span class="token string">'distance_from_&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+            np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>
+                <span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">]</span> <span class="token operator">-</span> centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span>
+                <span class="token operator">+</span> <span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'y'</span><span class="token punctuation">]</span> <span class="token operator">-</span> centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span>
+            <span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+    centroid_distance_cols <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'distance_from_&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> centroids<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    df<span class="token punctuation">[</span><span class="token string">'closest'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> centroid_distance_cols<span class="token punctuation">]</span><span class="token punctuation">.</span>idxmin<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'closest'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'closest'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>lstrip<span class="token punctuation">(</span><span class="token string">'distance_from_'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    df<span class="token punctuation">[</span><span class="token string">'color'</span><span class="token punctuation">]</span> <span class="token operator">=</span> df<span class="token punctuation">[</span><span class="token string">'closest'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> colmap<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> df
+<span class="token comment">#更新中心</span>
+<span class="token keyword">def</span> <span class="token function">update</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> centroids<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>df<span class="token punctuation">[</span>df<span class="token punctuation">[</span><span class="token string">'closest'</span><span class="token punctuation">]</span> <span class="token operator">==</span> i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        centroids<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>df<span class="token punctuation">[</span>df<span class="token punctuation">[</span><span class="token string">'closest'</span><span class="token punctuation">]</span> <span class="token operator">==</span> i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'y'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> k</code></pre>
 
 <ul>
 <li><p>过程图示：</p>
@@ -434,6 +440,8 @@ centroids = &#123;
 
 
 
+  
+    
   
 
 

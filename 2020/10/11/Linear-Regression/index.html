@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -264,7 +270,7 @@
 <p>$$<br>\begin{aligned}<br>J(b)&amp;=(Xb-y)^2\<br>&amp;=(Xb-y)^T(Xb-y)\<br>&amp;=(b^TX^T-y^T)(Xb-y)\<br>&amp;=b^TX^TXb-b^TX^Ty-y^TXb+y^Ty<br>\end{aligned}<br>$$<br>求导：<br>$$<br>\begin{equation*}<br>\begin{split}<br>\nabla_b J(b) &amp;= \nabla_b (b^T X^T Xb - b^T X^T y - y^T Xb + y^T y)\\ &amp;= \nabla_b (b^T X^T Xb) - \nabla_b (b^T X^T y) - \nabla_b (y^T Xb) + \nabla_b (y^T y)\\ &amp;= \nabla_b (b^T (X^T X)b) - \nabla_b (b^T (X^T y)) - \nabla_b ((y^T X)b) + 0\\ &amp;= (X^T X + (X^T X)^T)b - X^T y - (y^T X)^T\\ &amp;= 2 X^T X b - 2 X^T y\\ &amp;= 2 X^T (Xb-y) \end{split} \end{equation*}<br>$$</p>
 <p>其中，常用的矩阵求导公式：</p>
 <p>$\frac{\partial(AX)}{\partial X}=A^T$，$\frac{\partial(AX)}{\partial X^T}=A$，$\frac{\partial(X^TAX)}{\partial X}=AX+A^TX$，$\frac{\partial(X^Ta)}{\partial X}=a$</p>
-<h5 id="3-损失函数代码-Octave"><a href="#3-损失函数代码-Octave" class="headerlink" title="3.损失函数代码(Octave)"></a>3.损失函数代码(Octave)</h5><pre><code class="hljs octave">%损失函数
+<h5 id="3-损失函数代码-Octave"><a href="#3-损失函数代码-Octave" class="headerlink" title="3.损失函数代码(Octave)"></a>3.损失函数代码(Octave)</h5><pre class="language-octave" data-language="octave"><code class="language-octave">%损失函数
 function J &#x3D; computeCost(X, y, theta)
 m &#x3D; length(y); % number of training examples
 h&#x3D;X*theta;
@@ -275,7 +281,7 @@ end</code></pre>
 
 
 <h4 id="二、梯度下降求解-Gradient-Descent"><a href="#二、梯度下降求解-Gradient-Descent" class="headerlink" title="二、梯度下降求解(Gradient Descent)"></a>二、梯度下降求解(Gradient Descent)</h4><h5 id="1-迭代"><a href="#1-迭代" class="headerlink" title="1.迭代"></a>1.迭代</h5><p>$$<br>Repeat:{\<br>θ_j:=θ<em>j-α\frac{1}{m}\sum</em>{i=1}^{m}(h_θ(x^{(i)})-y^{(i)})x_j^{(i)}\<br>}<br>$$</p>
-<h5 id="2-Octave代码"><a href="#2-Octave代码" class="headerlink" title="2.Octave代码"></a>2.Octave代码</h5><pre><code class="hljs Octave">%梯度下降
+<h5 id="2-Octave代码"><a href="#2-Octave代码" class="headerlink" title="2.Octave代码"></a>2.Octave代码</h5><pre class="language-Octave" data-language="Octave"><code class="language-Octave">%梯度下降
 function [theta, J_history] &#x3D; gradientDescent(X, y, theta, alpha, num_iters)
 m &#x3D; length(y); % number of training examples
 J_history &#x3D; zeros(num_iters, 1);
@@ -472,6 +478,8 @@ end</code></pre>
 
 
 
+  
+    
   
 
 

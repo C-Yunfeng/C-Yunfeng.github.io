@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -196,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      306 字
+      299 字
     </span>
   
 
@@ -271,8 +277,8 @@
 </ul>
 <h5 id="5-切换jupyter-notebook的环境"><a href="#5-切换jupyter-notebook的环境" class="headerlink" title="5.切换jupyter notebook的环境"></a>5.切换jupyter notebook的环境</h5><ul>
 <li><p>在命令行里面可以用conda activate python367切换至367环境，但notebook仍是base。方法：</p>
-<pre><code class="hljs python">conda install ipykernel
-python -m ipykernel install --user --name python367 --display-name <span class="hljs-string">&quot;Python [conda env:367]&quot;</span></code></pre>
+<pre class="language-python" data-language="python"><code class="language-python">conda install ipykernel
+python <span class="token operator">-</span>m ipykernel install <span class="token operator">-</span><span class="token operator">-</span>user <span class="token operator">-</span><span class="token operator">-</span>name python367 <span class="token operator">-</span><span class="token operator">-</span>display<span class="token operator">-</span>name <span class="token string">"Python [conda env:367]"</span></code></pre>
 
 </li>
 </ul>
@@ -281,14 +287,14 @@ python -m ipykernel install --user --name python367 --display-name <span class="
 </blockquote>
 <p>但发现仍然是1.2的Torch，查看目录发现，装到了3.5的里面：</p>
 <p><img src="https://user-images.githubusercontent.com/49241298/72658754-969c9580-39f0-11ea-8d04-530bd0d93392.png" srcset="/img/loading.gif" alt="6"></p>
-<pre><code class="hljs python"><span class="hljs-comment"># python367环境目录  /root/anaconda3/envs/python367</span></code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># python367环境目录  /root/anaconda3/envs/python367</span></code></pre>
 
 <p>……..</p>
-<h5 id="7-Detectron与Python版本"><a href="#7-Detectron与Python版本" class="headerlink" title="7.Detectron与Python版本"></a>7.Detectron与Python版本</h5><pre><code class="hljs python"><span class="hljs-comment"># ERROR: Package &#x27;detectron2&#x27; requires a different Python: 3.5.2 not in &#x27;&gt;=3.6&#x27;</span>
+<h5 id="7-Detectron与Python版本"><a href="#7-Detectron与Python版本" class="headerlink" title="7.Detectron与Python版本"></a>7.Detectron与Python版本</h5><pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># ERROR: Package 'detectron2' requires a different Python: 3.5.2 not in '>=3.6'</span>
 </code></pre>
 
-<h5 id="8-更换pip镜像"><a href="#8-更换pip镜像" class="headerlink" title="8.更换pip镜像"></a>8.更换pip镜像</h5><pre><code class="hljs python">!pqi ls <span class="hljs-comment"># 查看镜像地址</span>
-!pqi use aliyun <span class="hljs-comment">#</span></code></pre>
+<h5 id="8-更换pip镜像"><a href="#8-更换pip镜像" class="headerlink" title="8.更换pip镜像"></a>8.更换pip镜像</h5><pre class="language-python" data-language="python"><code class="language-python">!pqi ls <span class="token comment"># 查看镜像地址</span>
+!pqi use aliyun <span class="token comment">#</span></code></pre>
 
 
             </div>
@@ -415,6 +421,8 @@ python -m ipykernel install --user --name python367 --display-name <span class="
 
 
 
+  
+    
   
 
 

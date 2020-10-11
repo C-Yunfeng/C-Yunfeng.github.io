@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -196,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      6.1k 字
+      6k 字
     </span>
   
 
@@ -206,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      78
+      76
        分钟
     </span>
   
@@ -289,27 +295,27 @@
 <li><p>在Java中%是取余运算符，要求两端操作数为整型（×）∵long，int，float，double都可以。</p>
 </li>
 <li><p>？：：</p>
-<pre><code class="hljs java">expression?:s1:s2<span class="hljs-comment">//二者类型相同</span></code></pre>
+<pre class="language-java" data-language="java"><code class="language-java">expression<span class="token operator">?</span><span class="token operator">:</span>s1<span class="token operator">:</span>s2<span class="token comment">//二者类型相同</span></code></pre>
 
 </li>
 </ul>
 <h5 id="3-默认初始化"><a href="#3-默认初始化" class="headerlink" title="3.默认初始化"></a>3.默认初始化</h5><ul>
 <li>基本数据类型的数组在创建之后，已经赋默认值 0 （或0L、0.0D、0.0F）；引用类型的数组在创建之后，已经赋默认值null(单不能使用)</li>
 </ul>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span></span>&#123;
-	<span class="hljs-keyword">static</span> String s;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-		String s2;
-		<span class="hljs-comment">//System.out.println(s2); //不能用</span>
-		System.out.println(s);	<span class="hljs-comment">//类变量，加载时初始化了，null</span>
-	&#125;
-&#125;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">static</span> <span class="token class-name">String</span> s<span class="token punctuation">;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">String</span> s2<span class="token punctuation">;</span>
+		<span class="token comment">//System.out.println(s2); //不能用</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//类变量，加载时初始化了，null</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-String[] sa=<span class="hljs-keyword">new</span> String [<span class="hljs-number">3</span>];
-out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">//null</span>
+<span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> sa<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sa<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//null</span>
 
-<span class="hljs-comment">//String[] sa=new String[] &#123;&#125;;</span>
-<span class="hljs-comment">//out.println(sa[0]); //Error</span></code></pre>
+<span class="token comment">//String[] sa=new String[] &#123;&#125;;</span>
+<span class="token comment">//out.println(sa[0]); //Error</span></code></pre>
 
 
 <h5 id="4-流程控制"><a href="#4-流程控制" class="headerlink" title="4.流程控制"></a>4.流程控制</h5><ul>
@@ -470,15 +476,15 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 <li><p>任何继承抽象类的子类必须实现父类的<strong>所有抽象方法</strong>，<strong>除非该子类也是抽象类</strong>。</p>
 </li>
 <li><p>如果一个类包含若干个抽象方法，那么该类必须声明为抽象类。抽象类<strong>可以不包含</strong>抽象方法。</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SuperClass</span></span>&#123;
-    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">m</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">//抽象方法</span>
-&#125;
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SubClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SuperClass</span></span>&#123;
-    <span class="hljs-comment">//实现抽象方法</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">m</span><span class="hljs-params">()</span></span>&#123;
-        ......
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">SuperClass</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">m</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//抽象方法</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">class</span> <span class="token class-name">SubClass</span> <span class="token keyword">extends</span> <span class="token class-name">SuperClass</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//实现抽象方法</span>
+    <span class="token keyword">void</span> <span class="token function">m</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 </li>
 </ul>
 </li>
@@ -491,9 +497,9 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 <li><p>synchronized</p>
 <blockquote>
 <p>synchronized 关键字声明的方法同一时间只能被一个线程访问。synchronized 修饰符可以应用于四个访问修饰符。</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">showDetails</span><span class="hljs-params">()</span></span>&#123;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">synchronized</span> <span class="token keyword">void</span> <span class="token function">showDetails</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
        
-&#125;</code></pre>
+<span class="token punctuation">&#125;</span></code></pre>
 </blockquote>
 </li>
 </ul>
@@ -515,17 +521,17 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 <li><p>接口：</p>
 <ul>
 <li><p>使用 implements 关键字可以变相的使 Java 具有多继承的特性，使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）。</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">A</span> </span>&#123;
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>;
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sleep</span><span class="hljs-params">()</span></span>;
-&#125;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">A</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
  
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">B</span> </span>&#123;
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span>;
-&#125;
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">B</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
  
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">A</span>,<span class="hljs-title">B</span> </span>&#123;
-&#125;</code></pre>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">C</span> <span class="token keyword">implements</span> <span class="token class-name">A</span><span class="token punctuation">,</span><span class="token class-name">B</span> <span class="token punctuation">&#123;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 </li>
 <li></li>
 </ul>
@@ -540,23 +546,23 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 </li>
 <li><p>父类没有无参构造器，且子类构造器中没有显示调用父类构造器时，报错。</p>
 <p>创建子类对象时，先创建父类对象。如果没有super，则调用F()，因为没有，所以报错。</p>
-<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">F</span></span>&#123;
-	<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> i;
-	<span class="hljs-comment">//F()&#123;	&#125;</span>
-	F(<span class="hljs-keyword">int</span> i)&#123;
-		<span class="hljs-keyword">this</span>.i=i;
-	&#125;
-&#125;
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">F</span></span>&#123;
-    Test(<span class="hljs-keyword">int</span> i)&#123;	<span class="hljs-comment">//Error，F() not defined  </span>
-    	<span class="hljs-comment">//super(i);	//换成super就可以了。</span>
-    	<span class="hljs-keyword">this</span>.i=i;
-    &#125;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-    	Test t = <span class="hljs-keyword">new</span> Test(<span class="hljs-number">10</span>);
-    	System.out.println(t.i);
-    &#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">F</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+	<span class="token comment">//F()&#123;	&#125;</span>
+	<span class="token class-name">F</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>i<span class="token operator">=</span>i<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token keyword">extends</span> <span class="token class-name">F</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>	<span class="token comment">//Error，F() not defined  </span>
+    	<span class="token comment">//super(i);	//换成super就可以了。</span>
+    	<span class="token keyword">this</span><span class="token punctuation">.</span>i<span class="token operator">=</span>i<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    	<span class="token class-name">Test</span> t <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    	<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -600,7 +606,7 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 <li><p>如果两个引用型变量，只有指向同一对象时，==才返回true。</p>
 </li>
 <li><p>==<strong>不可</strong>用于比较类型上<strong>没有继承关系</strong>的两个对象。</p>
-<pre><code class="hljs java">out.println(<span class="hljs-string">&quot;hello&quot;</span>==<span class="hljs-keyword">new</span> Test());<span class="hljs-comment">//因为String和Test没有继承关系，因此报错</span></code></pre>
+<pre class="language-java" data-language="java"><code class="language-java">out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token operator">==</span><span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//因为String和Test没有继承关系，因此报错</span></code></pre>
 </li>
 <li><p><strong>Object(StringBuffer等许多类)默认提供的equals()只比较对象的地址，因此本质上和==一样。</strong>在实际应用中，常需要重写equals()。</p>
 </li>
@@ -618,27 +624,27 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 <li><p>常量池：</p>
 <ul>
 <li><p>常量池保证相同的字符串直接量只有一个，不会产生多个副本。</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">aaa</span> </span>&#123;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-		String s1=<span class="hljs-string">&quot;AstraStar&quot;</span>;
-		String s2=<span class="hljs-string">&quot;Astra&quot;</span>;
-		String s3=<span class="hljs-string">&quot;Star&quot;</span>;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> aaa <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">String</span> s1<span class="token operator">=</span><span class="token string">"AstraStar"</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span> s2<span class="token operator">=</span><span class="token string">"Astra"</span><span class="token punctuation">;</span>
+		<span class="token class-name">String</span> s3<span class="token operator">=</span><span class="token string">"Star"</span><span class="token punctuation">;</span>
 		
-		String s4=<span class="hljs-string">&quot;Astra&quot;</span>+<span class="hljs-string">&quot;Star&quot;</span>;<span class="hljs-comment">//编译时就确定,直接引用常量池中的AstraStar</span>
-		String s5=s2+s3; <span class="hljs-comment">//编译时没确定,因此不引用常量池的AstraStar</span>
-		String s6=<span class="hljs-keyword">new</span> String(<span class="hljs-string">&quot;AstraStar&quot;</span>);<span class="hljs-comment">//在堆内存，不引用常量池</span>
+		<span class="token class-name">String</span> s4<span class="token operator">=</span><span class="token string">"Astra"</span><span class="token operator">+</span><span class="token string">"Star"</span><span class="token punctuation">;</span><span class="token comment">//编译时就确定,直接引用常量池中的AstraStar</span>
+		<span class="token class-name">String</span> s5<span class="token operator">=</span>s2<span class="token operator">+</span>s3<span class="token punctuation">;</span> <span class="token comment">//编译时没确定,因此不引用常量池的AstraStar</span>
+		<span class="token class-name">String</span> s6<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"AstraStar"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在堆内存，不引用常量池</span>
 		
-		out.println(
-				<span class="hljs-string">&quot;s1:&quot;</span>+System.identityHashCode(s1)+
-				<span class="hljs-string">&quot;\ns2:&quot;</span>+System.identityHashCode(s2)+
-				<span class="hljs-string">&quot;\ns3:&quot;</span>+System.identityHashCode(s3)+
-				<span class="hljs-string">&quot;\ns4:&quot;</span>+System.identityHashCode(s4)+
-				<span class="hljs-string">&quot;\ns5:&quot;</span>+System.identityHashCode(s5)+
-				<span class="hljs-string">&quot;\ns6:&quot;</span>+System.identityHashCode(s6)
-				);
-		out.println((s1==s4)+<span class="hljs-string">&quot; &quot;</span>+(s1==s5)+<span class="hljs-string">&quot; &quot;</span>+(s4==s5)+<span class="hljs-string">&quot; &quot;</span>+(s1==s6));
-	&#125;
-&#125;</code></pre>
+		out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>
+				<span class="token string">"s1:"</span><span class="token operator">+</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token operator">+</span>
+				<span class="token string">"\ns2:"</span><span class="token operator">+</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token operator">+</span>
+				<span class="token string">"\ns3:"</span><span class="token operator">+</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s3<span class="token punctuation">)</span><span class="token operator">+</span>
+				<span class="token string">"\ns4:"</span><span class="token operator">+</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s4<span class="token punctuation">)</span><span class="token operator">+</span>
+				<span class="token string">"\ns5:"</span><span class="token operator">+</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s5<span class="token punctuation">)</span><span class="token operator">+</span>
+				<span class="token string">"\ns6:"</span><span class="token operator">+</span><span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">identityHashCode</span><span class="token punctuation">(</span>s6<span class="token punctuation">)</span>
+				<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s1<span class="token operator">==</span>s4<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span><span class="token punctuation">(</span>s1<span class="token operator">==</span>s5<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span><span class="token punctuation">(</span>s4<span class="token operator">==</span>s5<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span><span class="token punctuation">(</span>s1<span class="token operator">==</span>s6<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 <p><img src="https://user-images.githubusercontent.com/49241298/72427669-3c6cbc00-37c7-11ea-9060-d19c3f9b70a5.png" srcset="/img/loading.gif"></p>
 </li>
@@ -659,11 +665,11 @@ out.println(sa[<span class="hljs-number">0</span>]);<span class="hljs-comment">/
 <li><p>宏替换</p>
 <ul>
 <li><p>上文常量池中，我们发现s5=s2+s3不能在编译时确定内容，因此没引用常量池中的s1。而将s2和s3分别用final修饰，则可以使其地址一样：</p>
-<pre><code class="hljs java">String str1=<span class="hljs-string">&quot;AB&quot;</span>;
-<span class="hljs-keyword">final</span> String str2=<span class="hljs-string">&quot;A&quot;</span>;
-<span class="hljs-keyword">final</span> String str3=<span class="hljs-string">&quot;B&quot;</span>;
-String str4=str2+str3;
-out.println(str1==str4);<span class="hljs-comment">//结果为true</span></code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">String</span> str1<span class="token operator">=</span><span class="token string">"AB"</span><span class="token punctuation">;</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> str2<span class="token operator">=</span><span class="token string">"A"</span><span class="token punctuation">;</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> str3<span class="token operator">=</span><span class="token string">"B"</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> str4<span class="token operator">=</span>str2<span class="token operator">+</span>str3<span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str1<span class="token operator">==</span>str4<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//结果为true</span></code></pre>
 </li>
 </ul>
 </li>
@@ -682,10 +688,10 @@ out.println(str1==str4);<span class="hljs-comment">//结果为true</span></code>
 <li><p>抽象方法</p>
 <ul>
 <li><p>抽象方法与空方法：</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span></span>&#123;&#125;
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span></span>&#123;&#125;;
-<span class="hljs-comment">//抽象方法必须属于抽象类</span>
-<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">g</span><span class="hljs-params">()</span></span>;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token comment">//抽象方法必须属于抽象类</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">g</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
 </li>
 </ul>
@@ -705,27 +711,27 @@ out.println(str1==str4);<span class="hljs-comment">//结果为true</span></code>
 <li><p>变量：</p>
 <ul>
 <li><p>接口中的成员变量<strong>只</strong>能是<strong>静态常量</strong>。在接口里声明的成员变量，会自动加上<strong>public static final</strong>，如下，二行代码结果完全一样：</p>
-<pre><code class="hljs java"><span class="hljs-keyword">int</span> a=<span class="hljs-number">5</span>;
-<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> a=<span class="hljs-number">5</span>;
-<span class="hljs-comment">//public与final因为共同规范；static因为接口不能实例化，所以static。</span></code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token comment">//public与final因为共同规范；static因为接口不能实例化，所以static。</span></code></pre>
 </li>
 </ul>
 </li>
 <li><p>方法：</p>
 <ul>
 <li><p>抽象方法</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">f</span><span class="hljs-params">()</span></span>;	<span class="hljs-comment">//public abstract</span>
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id)</span></span>;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//public abstract</span>
+<span class="token keyword">void</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </li>
 <li><p>类方法</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-title">g</span><span class="hljs-params">()</span></span>&#123;		<span class="hljs-comment">//public static。不能加default</span>
-    out.println(<span class="hljs-string">&quot; &quot;</span>);
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">static</span> <span class="token function">g</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>		<span class="token comment">//public static。不能加default</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>	</code></pre>
 </li>
 <li><p>默认方法</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">default</span> <span class="hljs-title">l</span><span class="hljs-params">()</span></span>&#123;	<span class="hljs-comment">//default。不能加static，因此只能用接口的实现类的实例调用</span>
-    out.println(<span class="hljs-string">&quot; &quot;</span>);
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">default</span> <span class="token function">l</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>	<span class="token comment">//default。不能加static，因此只能用接口的实现类的实例调用</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 </li>
 </ul>
 </li>
@@ -752,42 +758,42 @@ out.println(str1==str4);<span class="hljs-comment">//结果为true</span></code>
 <li><p>接口的使用：</p>
 <ul>
 <li><p>接口的继承：<del>获得父接口的所有抽象方法、常量</del></p>
-<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ifA</span></span>&#123;
-    <span class="hljs-keyword">int</span> A=<span class="hljs-number">5</span>;
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">testA</span><span class="hljs-params">()</span></span>;
-&#125;
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ifB</span></span>&#123;
-    <span class="hljs-keyword">int</span> B=<span class="hljs-number">5</span>;
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">testB</span><span class="hljs-params">()</span></span>;
-&#125;
-<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ifC</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">ifA</span>,<span class="hljs-title">ifB</span></span>&#123;
-    <span class="hljs-keyword">int</span> C=<span class="hljs-number">10</span>;
-&#125;
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span></span>&#123;
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;
-        System.out.println(ifC.C);
-    &#125;
-&#125;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">interface</span> ifA<span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> <span class="token class-name">A</span><span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">testA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">interface</span> ifB<span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> <span class="token class-name">B</span><span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">testB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">interface</span> ifC <span class="token keyword">extends</span> ifA<span class="token punctuation">,</span>ifB<span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> <span class="token class-name">C</span><span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ifC<span class="token punctuation">.</span><span class="token class-name">C</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 </code></pre>
 </li>
 <li><p>类实现</p>
-<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ifA</span></span>&#123;
-	<span class="hljs-keyword">int</span> a=<span class="hljs-number">10</span>;
-	<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">geta</span><span class="hljs-params">()</span></span>;
-&#125;
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ifA</span></span>&#123;
-	<span class="hljs-comment">//static int geta() &#123; //static method cannot hide geta() from ifA</span>
-	<span class="hljs-comment">//int geta() &#123; //cannot reduce the visibility of geta() from ifA</span>
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">geta</span><span class="hljs-params">()</span> </span>&#123;
-		<span class="hljs-keyword">return</span> ifA.a;
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-		Test t=<span class="hljs-keyword">new</span> Test();
-		ifA ifa=<span class="hljs-keyword">new</span> Test();
-		out.println(t.geta());
-		out.println(ifa.geta());
-	&#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">interface</span> ifA<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> <span class="token function">geta</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token keyword">implements</span> ifA<span class="token punctuation">&#123;</span>
+	<span class="token comment">//static int geta() &#123; //static method cannot hide geta() from ifA</span>
+	<span class="token comment">//int geta() &#123; //cannot reduce the visibility of geta() from ifA</span>
+	<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">geta</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span> ifA<span class="token punctuation">.</span>a<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token class-name">Test</span> t<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		ifA ifa<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">geta</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>ifa<span class="token punctuation">.</span><span class="token function">geta</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 </li>
@@ -808,8 +814,8 @@ out.println(str1==str4);<span class="hljs-comment">//结果为true</span></code>
 <li><p><strong>非静态内部类里可以直接访问外部类的private的成员，而外部类不能直接访问内部类的变量。</strong></p>
 </li>
 <li><p>同名变量：</p>
-<pre><code class="hljs java">OuterClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment">//外部类变量</span>
-InnerClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment">//内部类变量，或this.str</span></code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">OuterClass</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">.</span>str	<span class="token comment">//外部类变量</span>
+<span class="token class-name">InnerClass</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">.</span>str	<span class="token comment">//内部类变量，或this.str</span></code></pre>
 </li>
 <li><p>非静态内部类<strong>不</strong>能有<strong>静态成员变量</strong>，<strong>静态方法</strong>，<strong>静态初始化块</strong>。外部类的静态成员不能访问非静态内部类。</p>
 </li>
@@ -821,55 +827,55 @@ InnerClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment"
 </ul>
 </li>
 <li><p>(非)静态内部类案例：</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cow</span> </span>&#123;
-	<span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> w;
-	<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> i1=<span class="hljs-number">2019</span>;
-	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> i2=<span class="hljs-number">2020</span>;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Cow</span> <span class="token punctuation">&#123;</span>
+	<span class="token keyword">private</span> <span class="token keyword">double</span> w<span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">int</span> i1<span class="token operator">=</span><span class="token number">2019</span><span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> i2<span class="token operator">=</span><span class="token number">2020</span><span class="token punctuation">;</span>
 	
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cow</span><span class="hljs-params">(<span class="hljs-keyword">double</span> w)</span> </span>&#123;	<span class="hljs-comment">//2</span>
-		<span class="hljs-keyword">this</span>.w=w;
-		&#125;
-	<span class="hljs-keyword">private</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CowLeg</span></span>&#123;	<span class="hljs-comment">//非静态内部类</span>
-		<span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> l;
-		<span class="hljs-comment">//private static double h;	//非静态内部类不能有静态成员变量</span>
-		<span class="hljs-comment">//public static void train() &#123;&#125;	//非静态内部类不能有静态方法</span>
-		<span class="hljs-comment">//static &#123;out.print(&quot;a&quot;);&#125;	//非静态内部类不能有静态代码块</span>
-		<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">CowLeg</span><span class="hljs-params">(<span class="hljs-keyword">double</span> l)</span> </span>&#123;	<span class="hljs-comment">//4</span>
-			<span class="hljs-keyword">this</span>.l=l;
-		&#125;
-		<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">info</span><span class="hljs-params">()</span> </span>&#123;	<span class="hljs-comment">//5</span>
-			out.println(w+<span class="hljs-string">&quot; &quot;</span>+l);	<span class="hljs-comment">//非静态内部类的方法可以直接访问外部类的private成员</span>
-			out.println(Cow.<span class="hljs-keyword">this</span>.i1);	<span class="hljs-comment">//如果外内部类有同名变量，可以用Outer.this访问</span>
-			out.println(<span class="hljs-keyword">this</span>.l);	<span class="hljs-comment">//等价于out.println(CowLeg.this.l);			</span>
-			<span class="hljs-comment">//out.println(Cow.this.i2);	//非静态可以访问静态，但不推荐</span>
-		&#125;
-	&#125;
+	<span class="token keyword">public</span> <span class="token class-name">Cow</span><span class="token punctuation">(</span><span class="token keyword">double</span> w<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>	<span class="token comment">//2</span>
+		<span class="token keyword">this</span><span class="token punctuation">.</span>w<span class="token operator">=</span>w<span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token keyword">private</span> <span class="token keyword">class</span> <span class="token class-name">CowLeg</span><span class="token punctuation">&#123;</span>	<span class="token comment">//非静态内部类</span>
+		<span class="token keyword">private</span> <span class="token keyword">double</span> l<span class="token punctuation">;</span>
+		<span class="token comment">//private static double h;	//非静态内部类不能有静态成员变量</span>
+		<span class="token comment">//public static void train() &#123;&#125;	//非静态内部类不能有静态方法</span>
+		<span class="token comment">//static &#123;out.print("a");&#125;	//非静态内部类不能有静态代码块</span>
+		<span class="token keyword">public</span> <span class="token class-name">CowLeg</span><span class="token punctuation">(</span><span class="token keyword">double</span> l<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>	<span class="token comment">//4</span>
+			<span class="token keyword">this</span><span class="token punctuation">.</span>l<span class="token operator">=</span>l<span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>	<span class="token comment">//5</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>w<span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//非静态内部类的方法可以直接访问外部类的private成员</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Cow</span><span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">.</span>i1<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//如果外内部类有同名变量，可以用Outer.this访问</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//等价于out.println(CowLeg.this.l);			</span>
+			<span class="token comment">//out.println(Cow.this.i2);	//非静态可以访问静态，但不推荐</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 	
-	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StaticClass</span></span>&#123;	<span class="hljs-comment">//静态内部类</span>
-		<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> i3=<span class="hljs-number">2021</span>;
-		<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> i4=<span class="hljs-number">2022</span>;
-		<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">info_s</span><span class="hljs-params">()</span> </span>&#123;
-			<span class="hljs-comment">//out.pritnln(w);	//静态内部类的方法不能访问外部类的非静态成员</span>
-			out.println(i2);	<span class="hljs-comment">//静态内部类的方法可以访问外部类的静态成员</span>
-		&#125;
-	&#125;
+	<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">StaticClass</span><span class="token punctuation">&#123;</span>	<span class="token comment">//静态内部类</span>
+		<span class="token keyword">private</span> <span class="token keyword">int</span> i3<span class="token operator">=</span><span class="token number">2021</span><span class="token punctuation">;</span>
+		<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> i4<span class="token operator">=</span><span class="token number">2022</span><span class="token punctuation">;</span>
+		<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">info_s</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token comment">//out.pritnln(w);	//静态内部类的方法不能访问外部类的非静态成员</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>i2<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//静态内部类的方法可以访问外部类的静态成员</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
 	
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>&#123;	<span class="hljs-comment">//3</span>
-        out.println(<span class="hljs-keyword">new</span> CowLeg(<span class="hljs-number">1.2</span>).l);	<span class="hljs-comment">//外部类中，可以用new显式创建对象来访问内部类成员</span>
-        CowLeg cl=<span class="hljs-keyword">new</span> CowLeg(<span class="hljs-number">1.1</span>);	<span class="hljs-comment">//外部类的非静态方法可以访问非静态内部类</span>
-		cl.info();
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test_s</span><span class="hljs-params">()</span> </span>&#123;
-		out.println(StaticClass.i4);	<span class="hljs-comment">//外部类用静态内部类的类名访问其类成员</span>
-		<span class="hljs-comment">//out.println(StaticClass.i3);  //外部类的方法不能用静态内部类的类名访问其非静态成员↓</span>
-		out.println(<span class="hljs-keyword">new</span> StaticClass().i3);	<span class="hljs-comment">//但可以用实例来访问</span>
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;	<span class="hljs-comment">//1</span>
-		<span class="hljs-comment">//CowLeg cl2=new CowLeg(1.2);	//外部类的静态方法不能访问非静态内部类</span>
-		Cow cow=<span class="hljs-keyword">new</span> Cow(<span class="hljs-number">370</span>);
-		cow.test();
-	&#125;
-&#125;</code></pre>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>	<span class="token comment">//3</span>
+        out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CowLeg</span><span class="token punctuation">(</span><span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//外部类中，可以用new显式创建对象来访问内部类成员</span>
+        <span class="token class-name">CowLeg</span> cl<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">CowLeg</span><span class="token punctuation">(</span><span class="token number">1.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//外部类的非静态方法可以访问非静态内部类</span>
+		cl<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test_s</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">StaticClass</span><span class="token punctuation">.</span>i4<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//外部类用静态内部类的类名访问其类成员</span>
+		<span class="token comment">//out.println(StaticClass.i3);  //外部类的方法不能用静态内部类的类名访问其非静态成员↓</span>
+		out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">StaticClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>i3<span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//但可以用实例来访问</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>	<span class="token comment">//1</span>
+		<span class="token comment">//CowLeg cl2=new CowLeg(1.2);	//外部类的静态方法不能访问非静态内部类</span>
+		<span class="token class-name">Cow</span> cow<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Cow</span><span class="token punctuation">(</span><span class="token number">370</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		cow<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 <ul>
 <li><p>逻辑图</p>
@@ -882,7 +888,7 @@ InnerClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment"
 <li><p>创建静态内部类对象时，不用创建外部类对象。</p>
 </li>
 <li><p>在外部类以外的地方创建静态内部类对象的语句：</p>
-<pre><code class="hljs java">OutClass.InnerClass oi=<span class="hljs-keyword">new</span> OuterClass.InnerClass();</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token class-name">OutClass</span><span class="token punctuation">.</span><span class="token class-name">InnerClass</span> oi<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">OuterClass</span><span class="token punctuation">.</span><span class="token class-name">InnerClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 </li>
 </ul>
 </li>
@@ -999,61 +1005,61 @@ InnerClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment"
 </ul>
 <h4 id="四、Java集合"><a href="#四、Java集合" class="headerlink" title="四、Java集合"></a>四、Java集合</h4><h5 id="1-Array"><a href="#1-Array" class="headerlink" title="1. Array"></a>1. Array</h5><ul>
 <li><p>一维</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-    <span class="hljs-comment">// 静态初始化：只能指定数组元素的初始值，不能指定长度</span>
-    <span class="hljs-keyword">int</span>[] arr1 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span> &#125;;
-    <span class="hljs-keyword">int</span>[] arr2 = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span> &#125;;	<span class="hljs-comment">// 简化写法</span>
-    <span class="hljs-keyword">int</span>[] arr3 = &#123; <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span> &#125;;
-    <span class="hljs-keyword">int</span>[] arr4 = &#123; <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span> &#125;;
-    <span class="hljs-comment">// Arrays类函数</span>
-    out.println(<span class="hljs-string">&quot;arr1.equals(arr2): &quot;</span> + Arrays.equals(arr1, arr2));
-    out.println(<span class="hljs-string">&quot;arr1 == arr2: &quot;</span>+(arr1==arr4));
-    out.println(<span class="hljs-string">&quot;arr1.equals(arr3): &quot;</span> + Arrays.equals(arr1, arr3));
-    out.println(<span class="hljs-string">&quot;arr1 == arr3: &quot;</span>+(arr1==arr3));
-    out.println(<span class="hljs-string">&quot;arr3.equals(arr4): &quot;</span> + Arrays.equals(arr3, arr4));
-    out.println(<span class="hljs-string">&quot;arr3 == arr4: &quot;</span>+(arr3==arr4));	<span class="hljs-comment">//new省略了，所以实际上创建了另一个对象</span>
-    <span class="hljs-comment">//输出数组</span>
-    out.println(<span class="hljs-string">&quot;arr1:&quot;</span> + Arrays.toString(arr1)+<span class="hljs-string">&quot;\n&quot;</span>);
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 静态初始化：只能指定数组元素的初始值，不能指定长度</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">&#123;</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>	<span class="token comment">// 简化写法</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr3 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr4 <span class="token operator">=</span> <span class="token punctuation">&#123;</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span> <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token comment">// Arrays类函数</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr1.equals(arr2): "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr1 == arr2: "</span><span class="token operator">+</span><span class="token punctuation">(</span>arr1<span class="token operator">==</span>arr4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr1.equals(arr3): "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr1 == arr3: "</span><span class="token operator">+</span><span class="token punctuation">(</span>arr1<span class="token operator">==</span>arr3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr3.equals(arr4): "</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>arr3<span class="token punctuation">,</span> arr4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr3 == arr4: "</span><span class="token operator">+</span><span class="token punctuation">(</span>arr3<span class="token operator">==</span>arr4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//new省略了，所以实际上创建了另一个对象</span>
+    <span class="token comment">//输出数组</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"arr1:"</span> <span class="token operator">+</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">// 动态初始化：只能指定长度，系统根据类型不同设置不同的初始值</span>
-    <span class="hljs-keyword">int</span>[] a1 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];<span class="hljs-comment">// byte、short、int、long初始值为0</span>
-    <span class="hljs-keyword">float</span>[] a2 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">2</span>];<span class="hljs-comment">// float、double初始值为0.0</span>
-    <span class="hljs-keyword">char</span>[] a3 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">2</span>];<span class="hljs-comment">// 初始值为&#x27;\u0000&#x27;</span>
-    <span class="hljs-keyword">boolean</span>[] a4 = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[<span class="hljs-number">2</span>];<span class="hljs-comment">// 初始值为false</span>
-    out.println(<span class="hljs-string">&quot;a1[0]:&quot;</span> + a1[<span class="hljs-number">0</span>]);
-    out.println(<span class="hljs-string">&quot;a2[0]:&quot;</span> + a2[<span class="hljs-number">0</span>]);
-    out.println(<span class="hljs-string">&quot;a3[0]:&quot;</span> + a3[<span class="hljs-number">0</span>]);	<span class="hljs-comment">//显示为空</span>
-    out.println(<span class="hljs-string">&quot;a3[0] == &#x27;\u0000&#x27;:&quot;</span>+(a3[<span class="hljs-number">0</span>] == <span class="hljs-string">&#x27;\u0000&#x27;</span>));
-    out.println(<span class="hljs-string">&quot;a4[0]:&quot;</span> + a4[<span class="hljs-number">0</span>]);
-&#125;</code></pre>
+    <span class="token comment">// 动态初始化：只能指定长度，系统根据类型不同设置不同的初始值</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// byte、short、int、long初始值为0</span>
+    <span class="token keyword">float</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">float</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// float、double初始值为0.0</span>
+    <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// 初始值为'\u0000'</span>
+    <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// 初始值为false</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a1[0]:"</span> <span class="token operator">+</span> a1<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a2[0]:"</span> <span class="token operator">+</span> a2<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a3[0]:"</span> <span class="token operator">+</span> a3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>	<span class="token comment">//显示为空</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a3[0] == '\u0000':"</span><span class="token operator">+</span><span class="token punctuation">(</span>a3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'\u0000'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"a4[0]:"</span> <span class="token operator">+</span> a4<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 </li>
 <li><p>二维</p>
-<pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-    <span class="hljs-comment">//block1</span>
-    <span class="hljs-keyword">int</span> [][]a;
-    a=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">4</span>][];
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>,len=a.length;i&lt;len;i++) &#123;
-        out.println(a[i]);
-    &#125;
-    a[<span class="hljs-number">0</span>]=<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">2</span>];
-    a[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]=<span class="hljs-number">6</span>;
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>,len=a[<span class="hljs-number">0</span>].length;i&lt;len;i++) &#123;
-        out.println(a[<span class="hljs-number">0</span>][i]);
-    &#125;
-    Arrays.sort(a[<span class="hljs-number">0</span>]);
-    out.println(Arrays.toString(a[<span class="hljs-number">0</span>]));
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">//block1</span>
+    <span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span>a<span class="token punctuation">;</span>
+    a<span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token operator">=</span>a<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>len<span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="hljs-comment">//block2</span>
-    String[][] str1= &#123;
-        <span class="hljs-comment">//3, 会报错：cannot convert from int to String[]</span>
-        <span class="hljs-keyword">new</span> String[<span class="hljs-number">3</span>],
-        <span class="hljs-keyword">new</span> String[]&#123;<span class="hljs-string">&quot;hello&quot;</span>&#125;
-    &#125;;
-    <span class="hljs-keyword">int</span> [][] arr= &#123;
-        <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span> [] &#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>&#125;,
-        <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span> [<span class="hljs-number">2</span>]
-    &#125;;
-&#125;</code></pre>
+    <span class="token comment">//block2</span>
+    <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> str1<span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//3, 会报错：cannot convert from int to String[]</span>
+        <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">&#123;</span><span class="token string">"hello"</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">new</span> <span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token keyword">new</span> <span class="token keyword">int</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -1063,53 +1069,53 @@ InnerClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment"
 <li><p>try块与if不同，try后面的{}不能省略，即使只有一行代码。catch也不能省略。</p>
 </li>
 <li><p>try里声明的变量是代码块内的局部变量，catch不能访问。</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">myException</span> </span>&#123;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-		<span class="hljs-keyword">try</span> &#123;
-			<span class="hljs-keyword">int</span> a=Integer.parseInt(args[<span class="hljs-number">0</span>]);
-			<span class="hljs-keyword">int</span> b=Integer.parseInt(args[<span class="hljs-number">1</span>]);
-			<span class="hljs-keyword">int</span> c=a/b;
-			out.println(<span class="hljs-string">&quot;c:&quot;</span>+c);
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> myException <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+			<span class="token keyword">int</span> a<span class="token operator">=</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">int</span> b<span class="token operator">=</span><span class="token class-name">Integer</span><span class="token punctuation">.</span><span class="token function">parseInt</span><span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">int</span> c<span class="token operator">=</span>a<span class="token operator">/</span>b<span class="token punctuation">;</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"c:"</span><span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
 			
-		&#125;
-		<span class="hljs-comment">//catch (RuntimeException re)&#123;&#125; //后面会unreachable，应该先小后大</span>
-		<span class="hljs-keyword">catch</span>(IndexOutOfBoundsException ie) &#123;
-			out.println(<span class="hljs-string">&quot;数组越界，输入的参数不够&quot;</span>);
-		&#125;
-		<span class="hljs-comment">//catch(IndexOutOfBoundsException ie) &#123;// already handled by last</span>
-		<span class="hljs-comment">//java7之后一个catch可以捕获多种异常</span>
-		<span class="hljs-keyword">catch</span> (NumberFormatException|ArithmeticException ne) &#123;
-			out.println(<span class="hljs-string">&quot;数字格式异常/算术异常&quot;</span>);
-			<span class="hljs-comment">//捕获多异常时，异常变量默认有final修饰，因此下列错误：</span>
-			<span class="hljs-comment">//ne =new ArithmeticException(&quot;test&quot;);</span>
-		&#125;
-		<span class="hljs-keyword">catch</span>(Exception e) &#123;
-			out.println(<span class="hljs-string">&quot;未知异常&quot;</span>);
-			<span class="hljs-comment">//捕获一种异常时，final修饰</span>
-			e=<span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;test&quot;</span>);
-		&#125;
-		<span class="hljs-comment">//不管try是否异常、执行了哪一个catch、甚至try/catch里执行了return，finally总会执行</span>
-		<span class="hljs-keyword">finally</span> &#123;
-			out.println(<span class="hljs-string">&quot;finally总是被执行&quot;</span>);
-			<span class="hljs-comment">//不要在finally里使用return/throw这些强制终止方法的语句;</span>
-		&#125;
-	&#125;
-&#125;</code></pre>
+		<span class="token punctuation">&#125;</span>
+		<span class="token comment">//catch (RuntimeException re)&#123;&#125; //后面会unreachable，应该先小后大</span>
+		<span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">IndexOutOfBoundsException</span> ie<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"数组越界，输入的参数不够"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token comment">//catch(IndexOutOfBoundsException ie) &#123;// already handled by last</span>
+		<span class="token comment">//java7之后一个catch可以捕获多种异常</span>
+		<span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">NumberFormatException</span><span class="token operator">|</span><span class="token class-name">ArithmeticException</span> ne<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"数字格式异常/算术异常"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">//捕获多异常时，异常变量默认有final修饰，因此下列错误：</span>
+			<span class="token comment">//ne =new ArithmeticException("test");</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"未知异常"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">//捕获一种异常时，final修饰</span>
+			e<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Exception</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token comment">//不管try是否异常、执行了哪一个catch、甚至try/catch里执行了return，finally总会执行</span>
+		<span class="token keyword">finally</span> <span class="token punctuation">&#123;</span>
+			out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"finally总是被执行"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token comment">//不要在finally里使用return/throw这些强制终止方法的语句;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 </li>
 <li><p>throws</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">myThrows</span> </span>&#123;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception</span>&#123;
-		test();<span class="hljs-comment">//因为test声明跑出IO异常，因此调用test的方法要么在try-catch中，</span>
-				<span class="hljs-comment">//要么在另一个声明throws的方法中</span>
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException</span>&#123;
-		<span class="hljs-comment">//FIS的构造器声明抛出IO异常，因此调用FIS的代码在try-catch或throws中</span>
-		FileInputStream fis=<span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;a.txt&quot;</span>);
-	&#125;
-&#125;
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sub</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">myThrows</span></span>&#123;
-	<span class="hljs-comment">//public void test() throws Exception&#123;&#125;//子类不能声明比父类更大的异常	</span>
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> myThrows <span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span><span class="token punctuation">&#123;</span>
+		<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//因为test声明跑出IO异常，因此调用test的方法要么在try-catch中，</span>
+				<span class="token comment">//要么在另一个声明throws的方法中</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">&#123;</span>
+		<span class="token comment">//FIS的构造器声明抛出IO异常，因此调用FIS的代码在try-catch或throws中</span>
+		<span class="token class-name">FileInputStream</span> fis<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span><span class="token string">"a.txt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">class</span> <span class="token class-name">Sub</span> <span class="token keyword">extends</span> myThrows<span class="token punctuation">&#123;</span>
+	<span class="token comment">//public void test() throws Exception&#123;&#125;//子类不能声明比父类更大的异常	</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -1123,14 +1129,14 @@ InnerClass.<span class="hljs-keyword">this</span>.str	<span class="hljs-comment"
 </ul>
 <h4 id="六、Swing"><a href="#六、Swing" class="headerlink" title="六、Swing"></a>六、Swing</h4><ul>
 <li><p><img src="https://user-images.githubusercontent.com/49241298/72427675-3f67ac80-37c7-11ea-9657-30cb5f39a94c.png" srcset="/img/loading.gif" alt="12"></p>
-<pre><code class="hljs java"><span class="hljs-comment">//Component类提供了几个常用方法，见P_383</span>
-setLocation(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> y);
-setSize(<span class="hljs-keyword">int</span> width,<span class="hljs-keyword">int</span> height);
-setBounds(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> y,<span class="hljs-keyword">int</span> w,<span class="hljs-keyword">int</span> h);
-setVisvle(Boolean b);
-<span class="hljs-function">Component <span class="hljs-title">add</span><span class="hljs-params">(Component comp)</span></span>;
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getComponentCount</span><span class="hljs-params">()</span></span>;
-Component[] getComponents();</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//Component类提供了几个常用方法，见P_383</span>
+<span class="token function">setLocation</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setSize</span><span class="token punctuation">(</span><span class="token keyword">int</span> width<span class="token punctuation">,</span><span class="token keyword">int</span> height<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setBounds</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">,</span><span class="token keyword">int</span> w<span class="token punctuation">,</span><span class="token keyword">int</span> h<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">setVisvle</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Component</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">Component</span> comp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">getComponentCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Component</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">getComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
 
 
@@ -1145,65 +1151,65 @@ Component[] getComponents();</code></pre>
 </li>
 <li></li>
 </ul>
-<h5 id="1-ActionListener"><a href="#1-ActionListener" class="headerlink" title="1. ActionListener:"></a>1. ActionListener:</h5><pre><code class="hljs java"><span class="hljs-keyword">final</span> String COMMAND_OK = <span class="hljs-string">&quot;OK&quot;</span>;
-<span class="hljs-keyword">final</span> String COMMAND_CANCEL = <span class="hljs-string">&quot;Cancel&quot;</span>;
+<h5 id="1-ActionListener"><a href="#1-ActionListener" class="headerlink" title="1. ActionListener:"></a>1. ActionListener:</h5><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">final</span> <span class="token class-name">String</span> COMMAND_OK <span class="token operator">=</span> <span class="token string">"OK"</span><span class="token punctuation">;</span>
+<span class="token keyword">final</span> <span class="token class-name">String</span> COMMAND_CANCEL <span class="token operator">=</span> <span class="token string">"Cancel"</span><span class="token punctuation">;</span>
 
-JButton okBtn = <span class="hljs-keyword">new</span> JButton(<span class="hljs-string">&quot;OK&quot;</span>);
-okBtn.setActionCommand(COMMAND_OK);             <span class="hljs-comment">// 按钮绑定动作命令</span>
+<span class="token class-name">JButton</span> okBtn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"OK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+okBtn<span class="token punctuation">.</span><span class="token function">setActionCommand</span><span class="token punctuation">(</span>COMMAND_OK<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// 按钮绑定动作命令</span>
 
-JButton cancelBtn = <span class="hljs-keyword">new</span> JButton(<span class="hljs-string">&quot;Cancel&quot;</span>);
-cancelBtn.setActionCommand(COMMAND_CANCEL);     <span class="hljs-comment">// 按钮绑定动作命令</span>
+<span class="token class-name">JButton</span> cancelBtn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"Cancel"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cancelBtn<span class="token punctuation">.</span><span class="token function">setActionCommand</span><span class="token punctuation">(</span>COMMAND_CANCEL<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 按钮绑定动作命令</span>
 
-<span class="hljs-comment">// 创建一个动作监听器实例</span>
-ActionListener listener = <span class="hljs-keyword">new</span> ActionListener() &#123;
-    <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> </span>&#123;
-        <span class="hljs-comment">// 获取事件源，即触发事件的组件（按钮）本身</span>
-        <span class="hljs-comment">// e.getSource();</span>
+<span class="token comment">// 创建一个动作监听器实例</span>
+<span class="token class-name">ActionListener</span> listener <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 获取事件源，即触发事件的组件（按钮）本身</span>
+        <span class="token comment">// e.getSource();</span>
     
-        <span class="hljs-comment">// 获取动作命令</span>
-        String command = e.getActionCommand();
+        <span class="token comment">// 获取动作命令</span>
+        <span class="token class-name">String</span> command <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getActionCommand</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         
-        <span class="hljs-comment">// 根据动作命令区分被点击的按钮</span>
-        <span class="hljs-keyword">if</span> (COMMAND_OK.equals(command)) &#123;
-            System.out.println(<span class="hljs-string">&quot;OK 按钮被点击&quot;</span>);
+        <span class="token comment">// 根据动作命令区分被点击的按钮</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>COMMAND_OK<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"OK 按钮被点击"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             
-        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (COMMAND_CANCEL.equals(command)) &#123;
-            System.out.println(<span class="hljs-string">&quot;Cancel 按钮被点击&quot;</span>);
-        &#125;
-    &#125;
-&#125;;
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>COMMAND_CANCEL<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Cancel 按钮被点击"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// 设置两个按钮的动作监听器（使用同一个监听器实例）</span>
-okBtn.addActionListener(listener);
-cancelBtn.addActionListener(listener);</code></pre>
+<span class="token comment">// 设置两个按钮的动作监听器（使用同一个监听器实例）</span>
+okBtn<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>listener<span class="token punctuation">)</span><span class="token punctuation">;</span>
+cancelBtn<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span>listener<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 
-<h5 id="2-JButton"><a href="#2-JButton" class="headerlink" title="2. JButton"></a>2. JButton</h5><pre><code class="hljs java"><span class="hljs-keyword">import</span> javax.swing.*;
-<span class="hljs-keyword">import</span> java.awt.event.ActionEvent;
-<span class="hljs-keyword">import</span> java.awt.event.ActionListener;
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-        JFrame jf = <span class="hljs-keyword">new</span> JFrame(<span class="hljs-string">&quot;测试窗口&quot;</span>);
-        jf.setSize(<span class="hljs-number">200</span>, <span class="hljs-number">200</span>);
-        jf.setLocationRelativeTo(<span class="hljs-keyword">null</span>);
-        jf.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        JPanel panel = <span class="hljs-keyword">new</span> JPanel();
-        <span class="hljs-comment">// 创建一个按钮</span>
-        <span class="hljs-keyword">final</span> JButton btn = <span class="hljs-keyword">new</span> JButton(<span class="hljs-string">&quot;测试按钮&quot;</span>);
-        <span class="hljs-comment">// 添加按钮的点击事件监听器</span>
-        btn.addActionListener(<span class="hljs-keyword">new</span> ActionListener() &#123;
-            <span class="hljs-meta">@Override</span>
-            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> </span>&#123;
-                <span class="hljs-comment">// 获取到的事件源就是按钮本身</span>
-                <span class="hljs-comment">// JButton btn = (JButton) e.getSource();</span>
-                System.out.println(<span class="hljs-string">&quot;按钮被点击&quot;</span>);
-            &#125;
-        &#125;);
-        panel.add(btn);
-        jf.setContentPane(panel);
-        jf.setVisible(<span class="hljs-keyword">true</span>);
-    &#125;
-&#125;</code></pre>
+<h5 id="2-JButton"><a href="#2-JButton" class="headerlink" title="2. JButton"></a>2. JButton</h5><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>swing<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>awt<span class="token punctuation">.</span>event<span class="token punctuation">.</span></span><span class="token class-name">ActionListener</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">JFrame</span> jf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JFrame</span><span class="token punctuation">(</span><span class="token string">"测试窗口"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jf<span class="token punctuation">.</span><span class="token function">setSize</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jf<span class="token punctuation">.</span><span class="token function">setLocationRelativeTo</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jf<span class="token punctuation">.</span><span class="token function">setDefaultCloseOperation</span><span class="token punctuation">(</span><span class="token class-name">WindowConstants</span><span class="token punctuation">.</span>EXIT_ON_CLOSE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">JPanel</span> panel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JPanel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 创建一个按钮</span>
+        <span class="token keyword">final</span> <span class="token class-name">JButton</span> btn <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JButton</span><span class="token punctuation">(</span><span class="token string">"测试按钮"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 添加按钮的点击事件监听器</span>
+        btn<span class="token punctuation">.</span><span class="token function">addActionListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ActionListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">actionPerformed</span><span class="token punctuation">(</span><span class="token class-name">ActionEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token comment">// 获取到的事件源就是按钮本身</span>
+                <span class="token comment">// JButton btn = (JButton) e.getSource();</span>
+                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"按钮被点击"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        panel<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>btn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jf<span class="token punctuation">.</span><span class="token function">setContentPane</span><span class="token punctuation">(</span>panel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        jf<span class="token punctuation">.</span><span class="token function">setVisible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
@@ -1211,24 +1217,24 @@ cancelBtn.addActionListener(listener);</code></pre>
 <li><p>创建线程类</p>
 <ul>
 <li><p>继承Thread类：多个线程不能共享线程类的实例变量</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FirstThread</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Thread</span></span>&#123;
-	<span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> i;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;
-		<span class="hljs-keyword">for</span>(;i&lt;<span class="hljs-number">10</span>;i++) &#123;
-			System.out.println(getName()+<span class="hljs-string">&quot; &quot;</span>+i);	
-			<span class="hljs-comment">//System.out.println(this.getName()+&quot;&quot;+i);	</span>
-		&#125;
-	&#125;
-	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;
-		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">10</span>;i++) &#123;
-			System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot; &quot;</span>+i);
-			<span class="hljs-keyword">if</span>(i==<span class="hljs-number">4</span>) &#123;
-				<span class="hljs-keyword">new</span> FirstThread().start();
-				<span class="hljs-keyword">new</span> FirstThread().start();
-			&#125;
-		&#125;
-	&#125;
-&#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FirstThread</span> <span class="token keyword">extends</span> <span class="token class-name">Thread</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">private</span> <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>	
+			<span class="token comment">//System.out.println(this.getName()+""+i);	</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">" "</span><span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token keyword">new</span> <span class="token class-name">FirstThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token keyword">new</span> <span class="token class-name">FirstThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 <p><img src="https://user-images.githubusercontent.com/49241298/72427676-4098d980-37c7-11ea-8593-557851f20737.png" srcset="/img/loading.gif" alt="13"></p>
 </li>
@@ -1274,8 +1280,8 @@ cancelBtn.addActionListener(listener);</code></pre>
 <li><p>Java 具有简单、面向对象、稳定、与平台无关、解释型、多线程、动态等特点。</p>
 </li>
 <li><p>jdb.exe是Java调试器，如果编译器返回程序代码的错误，可以用它对程序进行调试；java.exe运行Java程序；javac.exe编译Java程序</p>
-<pre><code class="hljs java">javac Hello.java
-java Hello</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java">javac <span class="token class-name">Hello</span><span class="token punctuation">.</span>java
+java <span class="token class-name">Hello</span></code></pre>
 
 
 
@@ -1283,21 +1289,21 @@ java Hello</code></pre>
 </ul>
 <ul>
 <li><p>序列化</p>
-<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">java</span>.<span class="hljs-title">io</span>.<span class="hljs-title">Serializable</span></span>
-<span class="hljs-class"></span>&#123;
-   <span class="hljs-keyword">public</span> String name;
-   <span class="hljs-keyword">public</span> String address;
-   <span class="hljs-keyword">public</span> <span class="hljs-keyword">transient</span> <span class="hljs-keyword">int</span> SSN;
-   <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> number;
-   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">mailCheck</span><span class="hljs-params">()</span></span>
-<span class="hljs-function">   </span>&#123;
-      System.out.println(<span class="hljs-string">&quot;Mailing a check to &quot;</span> + name
-                           + <span class="hljs-string">&quot; &quot;</span> + address);
-   &#125;
-&#125;
-<span class="hljs-comment">//请注意，一个类的对象要想序列化成功，必须满足两个条件：</span>
-<span class="hljs-comment">//该类必须实现 java.io.Serializable 接口。</span>
-<span class="hljs-comment">//该类的所有属性必须是可序列化的。如果有一个属性不是可序列化的，则该属性必须注明是短暂的。</span>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> java<span class="token punctuation">.</span>io<span class="token punctuation">.</span><span class="token class-name">Serializable</span>
+<span class="token punctuation">&#123;</span>
+   <span class="token keyword">public</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token class-name">String</span> address<span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">transient</span> <span class="token keyword">int</span> SSN<span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">int</span> number<span class="token punctuation">;</span>
+   <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">mailCheck</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+   <span class="token punctuation">&#123;</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Mailing a check to "</span> <span class="token operator">+</span> name
+                           <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//请注意，一个类的对象要想序列化成功，必须满足两个条件：</span>
+<span class="token comment">//该类必须实现 java.io.Serializable 接口。</span>
+<span class="token comment">//该类的所有属性必须是可序列化的。如果有一个属性不是可序列化的，则该属性必须注明是短暂的。</span>
 </code></pre>
 
 </li>
@@ -1427,6 +1433,8 @@ java Hello</code></pre>
 
 
 
+  
+    
   
 
 

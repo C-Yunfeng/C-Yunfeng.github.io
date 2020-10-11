@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -196,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      794 字
+      768 字
     </span>
   
 
@@ -267,121 +273,121 @@
 <h4 id="二、Python代码"><a href="#二、Python代码" class="headerlink" title="二、Python代码"></a>二、Python代码</h4><h5 id="2-1-迭代计算-详细代码可以查看：Fuzzy-Cmeans"><a href="#2-1-迭代计算-详细代码可以查看：Fuzzy-Cmeans" class="headerlink" title="2.1 迭代计算(详细代码可以查看：Fuzzy-Cmeans)"></a>2.1 迭代计算(详细代码可以查看：<a target="_blank" rel="noopener" href="https://github.com/C-Yunfeng/ML-algorithms/blob/master/Fuzzy-Cmeans.ipynb">Fuzzy-Cmeans</a>)</h5><ul>
 <li>初始化隶属矩阵：</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_proba_mat</span>(<span class="hljs-params">X,k</span>):</span>
-    proba_mat = []
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X.shape[<span class="hljs-number">0</span>]):
-        random_list = [random.random() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(k)]
-        proba_lst = [x/sum(random_list) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> random_list]
-        proba_mat.append(proba_lst)
-    <span class="hljs-keyword">return</span> proba_mat</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_proba_mat</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    proba_mat <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        random_list <span class="token operator">=</span> <span class="token punctuation">[</span>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        proba_lst <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token operator">/</span><span class="token builtin">sum</span><span class="token punctuation">(</span>random_list<span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> random_list<span class="token punctuation">]</span>
+        proba_mat<span class="token punctuation">.</span>append<span class="token punctuation">(</span>proba_lst<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> proba_mat</code></pre>
 
 <ul>
 <li>计算簇中心：</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_center_lst</span>(<span class="hljs-params">X,proba_mat,k,m</span>):</span>
-    <span class="hljs-comment">#计算聚类中心</span>
-    proba_mat_T = np.array(proba_mat).T
-    center_lst = []
-    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
-        center_proba_lst = proba_mat_T[j]  <span class="hljs-comment">#1*10</span>
-        proba_power_lst=[center_proba ** m <span class="hljs-keyword">for</span> center_proba <span class="hljs-keyword">in</span> center_proba_lst]
-        denominator = sum(proba_power_lst) <span class="hljs-comment">#分母</span>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_center_lst</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>proba_mat<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#计算聚类中心</span>
+    proba_mat_T <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>proba_mat<span class="token punctuation">)</span><span class="token punctuation">.</span>T
+    center_lst <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        center_proba_lst <span class="token operator">=</span> proba_mat_T<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token comment">#1*10</span>
+        proba_power_lst<span class="token operator">=</span><span class="token punctuation">[</span>center_proba <span class="token operator">**</span> m <span class="token keyword">for</span> center_proba <span class="token keyword">in</span> center_proba_lst<span class="token punctuation">]</span>
+        denominator <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>proba_power_lst<span class="token punctuation">)</span> <span class="token comment">#分母</span>
         
-        product_lst = []
-        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X.shape[<span class="hljs-number">0</span>]):
-            point = X.iloc[i]
-            product = [proba_power_lst[i] * x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> point]  <span class="hljs-comment">#element like [proba*x,proba*y]</span>
-            product_lst.append(product)
+        product_lst <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            point <span class="token operator">=</span> X<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            product <span class="token operator">=</span> <span class="token punctuation">[</span>proba_power_lst<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> x <span class="token keyword">for</span> x <span class="token keyword">in</span> point<span class="token punctuation">]</span>  <span class="token comment">#element like [proba*x,proba*y]</span>
+            product_lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span>product<span class="token punctuation">)</span>
         
-        numerator = np.sum(product_lst,axis=<span class="hljs-number">0</span>)  <span class="hljs-comment">#分子</span>
-        center = [x/denominator <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> numerator]
-        center_lst.append(center)
-    lst_course.append(center_lst)
-    <span class="hljs-keyword">return</span> center_lst</code></pre>
+        numerator <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>product_lst<span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment">#分子</span>
+        center <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token operator">/</span>denominator <span class="token keyword">for</span> x <span class="token keyword">in</span> numerator<span class="token punctuation">]</span>
+        center_lst<span class="token punctuation">.</span>append<span class="token punctuation">(</span>center<span class="token punctuation">)</span>
+    lst_course<span class="token punctuation">.</span>append<span class="token punctuation">(</span>center_lst<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> center_lst</code></pre>
 
 <ul>
 <li>更新隶属矩阵</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update_proba_mat</span>(<span class="hljs-params">X,center_lst,proba_mat,k,m</span>):</span>
-    <span class="hljs-comment">#更新隶属矩阵</span>
-    p = <span class="hljs-number">2</span>/(m<span class="hljs-number">-1</span>)
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X.shape[<span class="hljs-number">0</span>]):
-        x = X.iloc[i]
-        distances = [np.linalg.norm(x-center_lst[j]) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k)]
-        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
-            den = sum([(distances[j]/distances[c])**p <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> range(k)])
-            proba_mat[i][j] = <span class="hljs-number">1</span>/den
-    <span class="hljs-keyword">return</span> proba_mat</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">update_proba_mat</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>center_lst<span class="token punctuation">,</span>proba_mat<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#更新隶属矩阵</span>
+    p <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">/</span><span class="token punctuation">(</span>m<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>X<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        x <span class="token operator">=</span> X<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        distances <span class="token operator">=</span> <span class="token punctuation">[</span>np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>norm<span class="token punctuation">(</span>x<span class="token operator">-</span>center_lst<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            den <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span>distances<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">/</span>distances<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">**</span>p <span class="token keyword">for</span> c <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            proba_mat<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">/</span>den
+    <span class="token keyword">return</span> proba_mat</code></pre>
 
 <ul>
 <li>迭代</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-comment">#迭代</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fuzzyCMeansClustering</span>(<span class="hljs-params">X,proba_mat,center_lst,k,m,max_iter</span>):</span>
-    curr = <span class="hljs-number">0</span>
-    <span class="hljs-keyword">while</span> curr &lt;= max_iter:
-        center_lst = get_center_lst(X,proba_mat,k,m)
-        proba_mat = update_proba_mat(X,center_lst,proba_mat,k,m)
-        curr += <span class="hljs-number">1</span>
-    <span class="hljs-keyword">return</span> proba_mat,center_lst</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#迭代</span>
+<span class="token keyword">def</span> <span class="token function">fuzzyCMeansClustering</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>proba_mat<span class="token punctuation">,</span>center_lst<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">,</span>max_iter<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    curr <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> curr <span class="token operator">&lt;=</span> max_iter<span class="token punctuation">:</span>
+        center_lst <span class="token operator">=</span> get_center_lst<span class="token punctuation">(</span>X<span class="token punctuation">,</span>proba_mat<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">)</span>
+        proba_mat <span class="token operator">=</span> update_proba_mat<span class="token punctuation">(</span>X<span class="token punctuation">,</span>center_lst<span class="token punctuation">,</span>proba_mat<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">)</span>
+        curr <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> proba_mat<span class="token punctuation">,</span>center_lst</code></pre>
 
 <ul>
 <li>主函数：</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
-df = pd.DataFrame(&#123;
-    <span class="hljs-string">&#x27;x&#x27;</span>: [<span class="hljs-number">12</span>, <span class="hljs-number">20</span>, <span class="hljs-number">28</span>, <span class="hljs-number">18</span>, <span class="hljs-number">29</span>, <span class="hljs-number">33</span>, <span class="hljs-number">24</span>, <span class="hljs-number">45</span>, <span class="hljs-number">45</span>, <span class="hljs-number">52</span>, <span class="hljs-number">51</span>, <span class="hljs-number">52</span>, <span class="hljs-number">55</span>, <span class="hljs-number">53</span>, <span class="hljs-number">55</span>, <span class="hljs-number">61</span>, <span class="hljs-number">64</span>, <span class="hljs-number">69</span>, <span class="hljs-number">72</span>],
-    <span class="hljs-string">&#x27;y&#x27;</span>: [<span class="hljs-number">39</span>, <span class="hljs-number">36</span>, <span class="hljs-number">30</span>, <span class="hljs-number">52</span>, <span class="hljs-number">54</span>, <span class="hljs-number">46</span>, <span class="hljs-number">55</span>, <span class="hljs-number">59</span>, <span class="hljs-number">63</span>, <span class="hljs-number">70</span>, <span class="hljs-number">66</span>, <span class="hljs-number">63</span>, <span class="hljs-number">58</span>, <span class="hljs-number">23</span>, <span class="hljs-number">14</span>, <span class="hljs-number">8</span>, <span class="hljs-number">19</span>, <span class="hljs-number">7</span>, <span class="hljs-number">24</span>]
-&#125;)
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
+    <span class="token string">'x'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">29</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">51</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">53</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">61</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">69</span><span class="token punctuation">,</span> <span class="token number">72</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'y'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">39</span><span class="token punctuation">,</span> <span class="token number">36</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">52</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">,</span> <span class="token number">46</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">59</span><span class="token punctuation">,</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">66</span><span class="token punctuation">,</span> <span class="token number">63</span><span class="token punctuation">,</span> <span class="token number">58</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
 
-X=df
-k=<span class="hljs-number">3</span>
-m=<span class="hljs-number">2</span>
-max_iter=<span class="hljs-number">15</span>
-lst_course=[]
+X<span class="token operator">=</span>df
+k<span class="token operator">=</span><span class="token number">3</span>
+m<span class="token operator">=</span><span class="token number">2</span>
+max_iter<span class="token operator">=</span><span class="token number">15</span>
+lst_course<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-begin_mat=get_proba_mat(X,k)
-begin_centers=get_center_lst(X,begin_mat,k,m)
-end_mat,end_centers=fuzzyCMeansClustering(X,begin_mat,begin_centers,k,m,max_iter)</code></pre>
+begin_mat<span class="token operator">=</span>get_proba_mat<span class="token punctuation">(</span>X<span class="token punctuation">,</span>k<span class="token punctuation">)</span>
+begin_centers<span class="token operator">=</span>get_center_lst<span class="token punctuation">(</span>X<span class="token punctuation">,</span>begin_mat<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">)</span>
+end_mat<span class="token punctuation">,</span>end_centers<span class="token operator">=</span>fuzzyCMeansClustering<span class="token punctuation">(</span>X<span class="token punctuation">,</span>begin_mat<span class="token punctuation">,</span>begin_centers<span class="token punctuation">,</span>k<span class="token punctuation">,</span>m<span class="token punctuation">,</span>max_iter<span class="token punctuation">)</span></code></pre>
 
-<h5 id="2-2-可视化迭代过程："><a href="#2-2-可视化迭代过程：" class="headerlink" title="2.2 可视化迭代过程："></a>2.2 可视化迭代过程：</h5><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plot_course</span>(<span class="hljs-params">X,lst_course</span>):</span>
-    plt.figure(figsize=(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>))
+<h5 id="2-2-可视化迭代过程："><a href="#2-2-可视化迭代过程：" class="headerlink" title="2.2 可视化迭代过程："></a>2.2 可视化迭代过程：</h5><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">plot_course</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>lst_course<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-    plt.scatter(X.iloc[:,<span class="hljs-number">0</span>], X.iloc[:,<span class="hljs-number">1</span>],c=X[<span class="hljs-string">&#x27;label&#x27;</span>])
+    plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>c<span class="token operator">=</span>X<span class="token punctuation">[</span><span class="token string">'label'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     
-    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(lst_course)<span class="hljs-number">-1</span>):
-        plt.scatter(np.array(lst_course[i]).T[<span class="hljs-number">0</span>], np.array(lst_course[i]).T[<span class="hljs-number">1</span>],marker=<span class="hljs-string">&quot;s&quot;</span>,s=<span class="hljs-number">20</span>,color=<span class="hljs-string">&#x27;r&#x27;</span>)
-        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
-            x1=lst_course[i][j][<span class="hljs-number">0</span>]
-            y1=lst_course[i][j][<span class="hljs-number">1</span>]
-            x2=lst_course[i+<span class="hljs-number">1</span>][j][<span class="hljs-number">0</span>]
-            y2=lst_course[i+<span class="hljs-number">1</span>][j][<span class="hljs-number">1</span>]
-            dx = (x2 - x1)
-            dy = (y2 - y1)
-            <span class="hljs-keyword">if</span> i!=len(lst_course)<span class="hljs-number">-2</span>:
-                plt.arrow(x1, y1, dx, dy,color=<span class="hljs-string">&#x27;red&#x27;</span>)
-            <span class="hljs-keyword">else</span>:
-                plt.arrow(x1, y1, dx, dy,head_width=<span class="hljs-number">1</span>,head_length=<span class="hljs-number">1.5</span>,color=<span class="hljs-string">&#x27;r&#x27;</span>)
-        fname=<span class="hljs-string">&#x27;&#123;&#125;/imgs/&#123;&#125;.png&#x27;</span>.format(cwd,i)
-        plt.savefig(fname, dpi=<span class="hljs-literal">None</span>, facecolor=<span class="hljs-string">&#x27;w&#x27;</span>, edgecolor=<span class="hljs-string">&#x27;w&#x27;</span>)
-    plt.show()</code></pre>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>lst_course<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>lst_course<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>T<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>lst_course<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>T<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">"s"</span><span class="token punctuation">,</span>s<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            x1<span class="token operator">=</span>lst_course<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            y1<span class="token operator">=</span>lst_course<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            x2<span class="token operator">=</span>lst_course<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            y2<span class="token operator">=</span>lst_course<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            dx <span class="token operator">=</span> <span class="token punctuation">(</span>x2 <span class="token operator">-</span> x1<span class="token punctuation">)</span>
+            dy <span class="token operator">=</span> <span class="token punctuation">(</span>y2 <span class="token operator">-</span> y1<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> i<span class="token operator">!=</span><span class="token builtin">len</span><span class="token punctuation">(</span>lst_course<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span>
+                plt<span class="token punctuation">.</span>arrow<span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> dx<span class="token punctuation">,</span> dy<span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                plt<span class="token punctuation">.</span>arrow<span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> dx<span class="token punctuation">,</span> dy<span class="token punctuation">,</span>head_width<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>head_length<span class="token operator">=</span><span class="token number">1.5</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+        fname<span class="token operator">=</span><span class="token string">'&#123;&#125;/imgs/&#123;&#125;.png'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>cwd<span class="token punctuation">,</span>i<span class="token punctuation">)</span>
+        plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span>fname<span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> facecolor<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">,</span> edgecolor<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
 <ul>
 <li>可视化主函数：</li>
 </ul>
-<pre><code class="hljs python">plot_course(X_end,lst_course)</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python">plot_course<span class="token punctuation">(</span>X_end<span class="token punctuation">,</span>lst_course<span class="token punctuation">)</span></code></pre>
 
 <p><img src="https://user-images.githubusercontent.com/49241298/72425740-50aeba00-37c3-11ea-8377-22b3319c5cb3.png" srcset="/img/loading.gif"></p>
 <ul>
 <li>导出为gif：(装moviepy遇到已存在不能安装的问题时，可以用pip install –ignore –installed moviepy –user)</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> moviepy.editor <span class="hljs-keyword">import</span> ImageSequenceClip
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> moviepy<span class="token punctuation">.</span>editor <span class="token keyword">import</span> ImageSequenceClip
 
-path=<span class="hljs-string">&#x27;&#123;&#125;/imgs&#x27;</span>.format(cwd)
-img_names = [<span class="hljs-string">&#x27;&#123;&#125;/&#123;&#125;.png&#x27;</span>.format(path,i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,<span class="hljs-number">16</span>)]
+path<span class="token operator">=</span><span class="token string">'&#123;&#125;/imgs'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>cwd<span class="token punctuation">)</span>
+img_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'&#123;&#125;/&#123;&#125;.png'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 
-clip = ImageSequenceClip(img_names,fps=<span class="hljs-number">3</span>)
-clip.write_gif(<span class="hljs-string">&#x27;&#123;&#125;/demo.gif&#x27;</span>.format(path))</code></pre>
+clip <span class="token operator">=</span> ImageSequenceClip<span class="token punctuation">(</span>img_names<span class="token punctuation">,</span>fps<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+clip<span class="token punctuation">.</span>write_gif<span class="token punctuation">(</span><span class="token string">'&#123;&#125;/demo.gif'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 
 <p><img src="https://user-images.githubusercontent.com/49241298/72425744-53111400-37c3-11ea-9637-516f178cdea3.gif" srcset="/img/loading.gif"></p>
 
@@ -509,6 +515,8 @@ clip.write_gif(<span class="hljs-string">&#x27;&#123;&#125;/demo.gif&#x27;</span
 
 
 
+  
+    
   
 
 

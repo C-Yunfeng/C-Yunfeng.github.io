@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -275,56 +281,56 @@
 <p>ps:协方差矩阵的无偏估计的系数为$\frac{1}{m-1}$，但无论$\sum$的系数不影响最终的特征向量，只影响特征值，因此实际计算时也可以省略$\frac{1}{m-1}$。但<code>np.cov是按照m-1计算的</code>,所以这里我们也用$\frac{1}{m-1}$。</p>
 </li>
 <li><p>代码：</p>
-<pre><code class="hljs python"><span class="hljs-comment"># X为要降维的数据，类型为DataFrame</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pca</span>(<span class="hljs-params">X,k</span>):</span>
-    n_samples,n_features=X.shape
-    <span class="hljs-comment"># 零均值化</span>
-    nor_X=X-np.mean(X,axis=<span class="hljs-number">0</span>)
-    <span class="hljs-comment"># 求协方差矩阵</span>
-    C=<span class="hljs-number">1</span>/(n_samples<span class="hljs-number">-1</span>)*np.dot(np.transpose(nor_X),nor_X)
-    <span class="hljs-comment"># 求特征值和特征向量</span>
-    eig_val,eig_vec=np.linalg.eig(C)
-    <span class="hljs-comment"># 组成矩阵，并保留k个向量</span>
-    eig_pairs=[(np.abs(eig_val[i]),eig_vec[:,i]) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n_features)]
-    eig_pairs.sort(key=<span class="hljs-keyword">lambda</span> x:x[<span class="hljs-number">0</span>],reverse=<span class="hljs-literal">True</span>)
-    feature=np.array([ele[<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> ele <span class="hljs-keyword">in</span> eig_pairs[:k]])
-    <span class="hljs-comment"># 将原数据转换</span>
-    data=np.dot(nor_X,np.transpose(feature))
-    <span class="hljs-keyword">return</span> data</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># X为要降维的数据，类型为DataFrame</span>
+<span class="token keyword">def</span> <span class="token function">pca</span><span class="token punctuation">(</span>X<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n_samples<span class="token punctuation">,</span>n_features<span class="token operator">=</span>X<span class="token punctuation">.</span>shape
+    <span class="token comment"># 零均值化</span>
+    nor_X<span class="token operator">=</span>X<span class="token operator">-</span>np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>X<span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token comment"># 求协方差矩阵</span>
+    C<span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span><span class="token punctuation">(</span>n_samples<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>np<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>nor_X<span class="token punctuation">)</span><span class="token punctuation">,</span>nor_X<span class="token punctuation">)</span>
+    <span class="token comment"># 求特征值和特征向量</span>
+    eig_val<span class="token punctuation">,</span>eig_vec<span class="token operator">=</span>np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>eig<span class="token punctuation">(</span>C<span class="token punctuation">)</span>
+    <span class="token comment"># 组成矩阵，并保留k个向量</span>
+    eig_pairs<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">abs</span><span class="token punctuation">(</span>eig_val<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>eig_vec<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_features<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    eig_pairs<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    feature<span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>ele<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> ele <span class="token keyword">in</span> eig_pairs<span class="token punctuation">[</span><span class="token punctuation">:</span>k<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment"># 将原数据转换</span>
+    data<span class="token operator">=</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>nor_X<span class="token punctuation">,</span>np<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>feature<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> data</code></pre>
 <p>还用我们前面的数据：</p>
-<pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
-X_train=[[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],
-         [<span class="hljs-number">2</span>,<span class="hljs-number">6</span>],
-         [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>],
-         [<span class="hljs-number">6</span>,<span class="hljs-number">6</span>],
-         [<span class="hljs-number">8</span>,<span class="hljs-number">8</span>]]
-X_train=pd.DataFrame(X_train,columns=[<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>])</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+X_train<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+X_train<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <p>则PCA转化之后的数据，可见结果和之前的图<a href="#anchor1">之前的图</a>相符合。</p>
-<pre><code class="hljs python"><span class="hljs-comment">#其中数字2表示：保留2个主成分</span>
-PCA_X_train=pd.DataFrame(pca(X_train,<span class="hljs-number">2</span>))
-print(PCA_X_train)
-<span class="hljs-comment"># Output:</span>
-<span class="hljs-comment">#           0             1</span>
-<span class="hljs-comment"># 0 -3.959798  3.920609e-16</span>
-<span class="hljs-comment"># 1 -1.131371  2.828427e+00</span>
-<span class="hljs-comment"># 2 -1.131371 -2.828427e+00</span>
-<span class="hljs-comment"># 3  1.697056 -1.630506e-16</span>
-<span class="hljs-comment"># 4  4.525483 -4.961175e-16</span></code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment">#其中数字2表示：保留2个主成分</span>
+PCA_X_train<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>pca<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>PCA_X_train<span class="token punctuation">)</span>
+<span class="token comment"># Output:</span>
+<span class="token comment">#           0             1</span>
+<span class="token comment"># 0 -3.959798  3.920609e-16</span>
+<span class="token comment"># 1 -1.131371  2.828427e+00</span>
+<span class="token comment"># 2 -1.131371 -2.828427e+00</span>
+<span class="token comment"># 3  1.697056 -1.630506e-16</span>
+<span class="token comment"># 4  4.525483 -4.961175e-16</span></code></pre>
 <h5 id="4-2使用sklearn验证"><a href="#4-2使用sklearn验证" class="headerlink" title="4.2使用sklearn验证"></a>4.2使用sklearn验证</h5></li>
 </ul>
 <p>使用sklearn的PCA验证：</p>
-<pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA
-<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-pca=PCA(n_components=<span class="hljs-number">1</span>)
-pca.fit(X_train)
-print(pca.transform(X_train))
-<span class="hljs-comment"># Output:</span>
-<span class="hljs-comment"># [[-3.95979797]</span>
-<span class="hljs-comment">#  [-1.13137085]</span>
-<span class="hljs-comment">#  [-1.13137085]</span>
-<span class="hljs-comment">#  [ 1.69705627]</span>
-<span class="hljs-comment">#  [ 4.5254834 ]]</span></code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>decomposition <span class="token keyword">import</span> PCA
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+pca<span class="token operator">=</span>PCA<span class="token punctuation">(</span>n_components<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+pca<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>pca<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>X_train<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># Output:</span>
+<span class="token comment"># [[-3.95979797]</span>
+<span class="token comment">#  [-1.13137085]</span>
+<span class="token comment">#  [-1.13137085]</span>
+<span class="token comment">#  [ 1.69705627]</span>
+<span class="token comment">#  [ 4.5254834 ]]</span></code></pre>
 
 <h4 id="5-使用PCA的一些建议"><a href="#5-使用PCA的一些建议" class="headerlink" title="5.使用PCA的一些建议"></a>5.使用PCA的一些建议</h4><h5 id="5-1优点"><a href="#5-1优点" class="headerlink" title="5.1优点"></a>5.1优点</h5><ul>
 <li>PCA的参数<code>均通过拟合train</code>来获得，之后在cross_validation或test上用<code>拟合好的PCA映射</code>来完成验证或预测。</li>
@@ -337,26 +343,26 @@ print(pca.transform(X_train))
 <li>在设计机器学习系统时，不应该先把PCA设置为一个步骤。应该先使用<code>原始数据</code>来进行拟合预测。而当有<code>足够的原因</code>，如磁盘不够，运算太太太慢等，才考虑使用PCA。</li>
 </ul>
 <h4 id="6-计算协方差的两种方法"><a href="#6-计算协方差的两种方法" class="headerlink" title="6.计算协方差的两种方法"></a>6.计算协方差的两种方法</h4><p>比如我们有如下数据：</p>
-<pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-X=[[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],
-   [<span class="hljs-number">2</span>,<span class="hljs-number">6</span>],
-   [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>],
-   [<span class="hljs-number">6</span>,<span class="hljs-number">6</span>],
-   [<span class="hljs-number">8</span>,<span class="hljs-number">8</span>]]
-X=X-np.mean(X,axis=<span class="hljs-number">0</span>)
-print(X)</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+X<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+   <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+X<span class="token operator">=</span>X<span class="token operator">-</span>np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>X<span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span></code></pre>
 <ul>
 <li>方法1：$\frac{1}{m-1}X^TX$：</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-number">1</span>/(len(X)<span class="hljs-number">-1</span>)*np.dot(np.transpose(X),X)</code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token number">1</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>np<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">,</span>X<span class="token punctuation">)</span></code></pre>
 <ul>
 <li>方法2：使用numpy的cov函数：</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-comment"># 注意要将X转置，因为在cov接受的参数矩阵里：行是特征，列是记录</span>
-print(np.cov(X.T))
-<span class="hljs-comment"># Output:</span>
-<span class="hljs-comment"># [[7.2 3.2]</span>
-<span class="hljs-comment">#  [3.2 7.2]]</span></code></pre>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># 注意要将X转置，因为在cov接受的参数矩阵里：行是特征，列是记录</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>cov<span class="token punctuation">(</span>X<span class="token punctuation">.</span>T<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># Output:</span>
+<span class="token comment"># [[7.2 3.2]</span>
+<span class="token comment">#  [3.2 7.2]]</span></code></pre>
             </div>
             <hr>
             <div>
@@ -497,6 +503,8 @@ print(np.cov(X.T))
 
 
 
+  
+    
   
 
 

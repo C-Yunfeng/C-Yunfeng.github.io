@@ -29,7 +29,13 @@
     
     
       
-      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+      
+        
+        
+        
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/prism/1.21.0/themes/prism-coy.min.css" />
+      
     
   
 
@@ -247,7 +253,7 @@
 <ul>
 <li>Octave代码</li>
 </ul>
-<pre><code class="hljs octave">function g &#x3D; sigmoid(z)
+<pre class="language-octave" data-language="octave"><code class="language-octave">function g &#x3D; sigmoid(z)
 g&#x3D;1.&#x2F;(1+e.^(-z));
 end</code></pre>
 
@@ -281,7 +287,7 @@ end</code></pre>
 <li>梯度下降：</li>
 </ul>
 <p>$$<br>\theta:=\theta-\frac{\alpha}{m}[X^T(sigmoid(X\theta)-y)]<br>$$</p>
-<h5 id="3-梯度下降代码-Octave"><a href="#3-梯度下降代码-Octave" class="headerlink" title="3.梯度下降代码(Octave)"></a>3.梯度下降代码(Octave)</h5><pre><code class="hljs octave">function [J, grad] &#x3D; costFunction(theta, X, y)
+<h5 id="3-梯度下降代码-Octave"><a href="#3-梯度下降代码-Octave" class="headerlink" title="3.梯度下降代码(Octave)"></a>3.梯度下降代码(Octave)</h5><pre class="language-octave" data-language="octave"><code class="language-octave">function [J, grad] &#x3D; costFunction(theta, X, y)
 m &#x3D; length(y); % number of training examples
 J &#x3D; 1&#x2F;m*(-(y&#39;)*log(sigmoid(X*theta))-(1-y)&#39;*log(1-sigmoid(X*theta))); %计算代价函数
 grad &#x3D; 1&#x2F;m*X&#39;*(sigmoid(X*theta)-y);  %求梯度,shape as zeros(size(theta))
@@ -316,7 +322,7 @@ end</code></pre>
 <li>梯度下降：</li>
 </ul>
 <p>$$<br>\begin{aligned}<br>\theta:&amp;=\theta-\frac{\alpha}{m}[X^T(sigmoid(X\theta)-y)]-\alpha\frac{\lambda E}{m}\theta\<br>&amp;=\theta(1-\alpha\frac{\lambda E}{m})-\frac{\alpha}{m}[X^T(sigmoid(X\theta)-y)]<br>\end{aligned}<br>$$</p>
-<h5 id="3-梯度下降代码-Octave-1"><a href="#3-梯度下降代码-Octave-1" class="headerlink" title="3.梯度下降代码(Octave)"></a>3.梯度下降代码(Octave)</h5><pre><code class="hljs octave">function [J, grad] &#x3D; costFunctionReg(theta, X, y, lambda)
+<h5 id="3-梯度下降代码-Octave-1"><a href="#3-梯度下降代码-Octave-1" class="headerlink" title="3.梯度下降代码(Octave)"></a>3.梯度下降代码(Octave)</h5><pre class="language-octave" data-language="octave"><code class="language-octave">function [J, grad] &#x3D; costFunctionReg(theta, X, y, lambda)
 m &#x3D; length(y); % number of training examples
 J &#x3D; 1&#x2F;m*(-(y&#39;)*log(sigmoid(X*theta))-(1-y)&#39;*log(1-sigmoid(X*theta)))+(1&#x2F;(2*m))*lambda*(sum(theta .^2) - theta(1)^2); %正规化时不用对θ1正规化？
 
@@ -336,7 +342,7 @@ end</code></pre>
 <h4 id="五、代码补充："><a href="#五、代码补充：" class="headerlink" title="五、代码补充："></a>五、代码补充：</h4><ul>
 <li>预测(Octave)</li>
 </ul>
-<pre><code class="hljs octave">function p &#x3D; predict(theta, X)
+<pre class="language-octave" data-language="octave"><code class="language-octave">function p &#x3D; predict(theta, X)
 m &#x3D; size(X, 1); % Number of training examples
 p&#x3D;floor(sigmoid(X*theta).*2); %因为使用了floor()函数，所以函数值要扩大二倍
 end</code></pre>
@@ -344,39 +350,39 @@ end</code></pre>
 <ul>
 <li>分类结果可视化(Python)</li>
 </ul>
-<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">visualize_classifier</span>(<span class="hljs-params">model, X, y, ax=None, cmap=<span class="hljs-string">&#x27;rainbow&#x27;</span></span>):</span>
-    <span class="hljs-comment">#既可以在ax上画，也可以在figure上画</span>
-    ax = ax <span class="hljs-keyword">or</span> plt.gca()
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">visualize_classifier</span><span class="token punctuation">(</span>model<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> ax<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'rainbow'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment">#既可以在ax上画，也可以在figure上画</span>
+    ax <span class="token operator">=</span> ax <span class="token keyword">or</span> plt<span class="token punctuation">.</span>gca<span class="token punctuation">(</span><span class="token punctuation">)</span>
     
-    <span class="hljs-comment">#训练集-散点图</span>
-    ax.scatter(X[:, <span class="hljs-number">0</span>], X[:, <span class="hljs-number">1</span>], c=y, s=<span class="hljs-number">30</span>, cmap=cmap)
+    <span class="token comment">#训练集-散点图</span>
+    ax<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y<span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span>cmap<span class="token punctuation">)</span>
     
-    ax.axis(<span class="hljs-string">&#x27;tight&#x27;</span>)<span class="hljs-comment">#调整axes之间的间距</span>
-    ax.axis(<span class="hljs-string">&#x27;off&#x27;</span>)<span class="hljs-comment">#隐藏坐标轴</span>
+    ax<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'tight'</span><span class="token punctuation">)</span><span class="token comment">#调整axes之间的间距</span>
+    ax<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'off'</span><span class="token punctuation">)</span><span class="token comment">#隐藏坐标轴</span>
     
-    xlim = ax.get_xlim()
-    ylim = ax.get_ylim()
-    <span class="hljs-comment">#对于底盘上每一个点进行分类</span>
-    model.fit(X, y)
-    xx, yy = np.meshgrid(np.linspace(*xlim, num=<span class="hljs-number">200</span>),np.linspace(*ylim, num=<span class="hljs-number">200</span>))
-    Z = model.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)
-    <span class="hljs-comment">#根据分类画出底色</span>
-    n_classes = len(np.unique(y))
-    contours = ax.contourf(xx, yy, Z, alpha=<span class="hljs-number">0.3</span>,
-                           levels=np.arange(n_classes + <span class="hljs-number">1</span>) - <span class="hljs-number">0.5</span>,
-                           cmap=cmap)
-    <span class="hljs-comment">#当存在多个不同的数据集要可视化时，设置每个子图为自己的lim</span>
-    ax.set(xlim=xlim, ylim=ylim)</code></pre>
+    xlim <span class="token operator">=</span> ax<span class="token punctuation">.</span>get_xlim<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ylim <span class="token operator">=</span> ax<span class="token punctuation">.</span>get_ylim<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">#对于底盘上每一个点进行分类</span>
+    model<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+    xx<span class="token punctuation">,</span> yy <span class="token operator">=</span> np<span class="token punctuation">.</span>meshgrid<span class="token punctuation">(</span>np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">*</span>xlim<span class="token punctuation">,</span> num<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">,</span>np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">*</span>ylim<span class="token punctuation">,</span> num<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    Z <span class="token operator">=</span> model<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>np<span class="token punctuation">.</span>c_<span class="token punctuation">[</span>xx<span class="token punctuation">.</span>ravel<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> yy<span class="token punctuation">.</span>ravel<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>xx<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+    <span class="token comment">#根据分类画出底色</span>
+    n_classes <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    contours <span class="token operator">=</span> ax<span class="token punctuation">.</span>contourf<span class="token punctuation">(</span>xx<span class="token punctuation">,</span> yy<span class="token punctuation">,</span> Z<span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.3</span><span class="token punctuation">,</span>
+                           levels<span class="token operator">=</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>n_classes <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">0.5</span><span class="token punctuation">,</span>
+                           cmap<span class="token operator">=</span>cmap<span class="token punctuation">)</span>
+    <span class="token comment">#当存在多个不同的数据集要可视化时，设置每个子图为自己的lim</span>
+    ax<span class="token punctuation">.</span><span class="token builtin">set</span><span class="token punctuation">(</span>xlim<span class="token operator">=</span>xlim<span class="token punctuation">,</span> ylim<span class="token operator">=</span>ylim<span class="token punctuation">)</span></code></pre>
 
-<pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np 
-<span class="hljs-keyword">from</span> sklearn.datasets <span class="hljs-keyword">import</span> make_blobs
-<span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LogisticRegression
-<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> make_blobs
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 
-X, y = make_blobs(n_samples=<span class="hljs-number">300</span>, centers=<span class="hljs-number">2</span>,
-                  random_state=<span class="hljs-number">0</span>, cluster_std=<span class="hljs-number">1.0</span>)
-model = LogisticRegression()
-visualize_classifier(model, X, y)</code></pre>
+X<span class="token punctuation">,</span> y <span class="token operator">=</span> make_blobs<span class="token punctuation">(</span>n_samples<span class="token operator">=</span><span class="token number">300</span><span class="token punctuation">,</span> centers<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>
+                  random_state<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> cluster_std<span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">)</span>
+model <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span><span class="token punctuation">)</span>
+visualize_classifier<span class="token punctuation">(</span>model<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">)</span></code></pre>
 
 <center>结果↓</center>
 ![1](https://user-images.githubusercontent.com/49241298/75753545-0038ef00-5d66-11ea-96b3-4b5868a76f6d.png)
@@ -504,6 +510,8 @@ visualize_classifier(model, X, y)</code></pre>
 
 
 
+  
+    
   
 
 
