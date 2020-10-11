@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="杂乱无章 所以记录">
+  <meta name="author" content="尘云风">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>尘云风</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Lab
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
+                    
+                    蓝雨
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                    
+                    你的名字
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://blogjallery.oss-cn-beijing.aliyuncs.com/other/Snipaste_2020-07-21_09-31-03.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-11 17:48" pubdate>
+        2020年10月11日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      28
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>目录：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190829115257748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZmFuZ2NoZW55dW5mZW5n,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif"></p>
+<p>(学了新东西再更)</p>
+<a id="more"></a>
+
+<p><strong>train.csv = X |y</strong> </p>
+<p>​        <strong>=  X_train |y_trian</strong></p>
+<p>​           <strong>X_test  |y_test</strong></p>
+<p><a target="_blank" rel="noopener" href="http://chenyunfeng.com/wp-content/uploads/2019/06/Train.csv">Train.csv</a> （浏览器打开下载）</p>
+<p><img src="https://user-images.githubusercontent.com/49241298/75753097-f5ca2580-5d64-11ea-95da-40ed53b3cf40.png" srcset="/img/loading.gif"></p>
+<h4 id="1-数据预览"><a href="#1-数据预览" class="headerlink" title="1.    数据预览"></a>1.    数据预览</h4><h5 id="1-1-DataFrame预览："><a href="#1-1-DataFrame预览：" class="headerlink" title="1.1    DataFrame预览："></a>1.1    DataFrame预览：</h5><pre><code class="hljs python">train.head() <span class="hljs-comment"># 查看前五行</span></code></pre>
+
+<pre><code class="hljs python">train.describe() <span class="hljs-comment"># 查看数值型列</span></code></pre>
+
+<pre><code class="hljs python">train.shape <span class="hljs-comment"># 查看行数，列数</span></code></pre>
+
+<pre><code class="hljs python">train.columns <span class="hljs-comment">#取columns，可.tolist()转化</span></code></pre>
+<pre><code class="hljs python">train.columns.values <span class="hljs-comment">#直接获取列的值</span></code></pre>
+<pre><code class="hljs python">pd.set_option(<span class="hljs-string">&#x27;display.max_columns&#x27;</span>,<span class="hljs-number">25</span>) 
+<span class="hljs-comment">#↑ 在notebook里，如果train的列太多，train.head()只能显示部分列。可以通过pd.set_opition()来设置任意想显示的列数。之后还可以通过pd.reset_option(&#x27;display.max_columns&#x27;)恢复默认设置</span></code></pre>
+
+<h5 id="1-2-DataFrame查看特定行、列："><a href="#1-2-DataFrame查看特定行、列：" class="headerlink" title="1.2    DataFrame查看特定行、列："></a>1.2    DataFrame查看特定行、列：</h5><pre><code class="hljs python">train[<span class="hljs-string">&#x27;age&#x27;</span>] <span class="hljs-comment">#age列，type=Series</span></code></pre>
+
+<pre><code class="hljs python">train.age   <span class="hljs-comment">#和train[&#x27;age&#x27;]相同</span></code></pre>
+
+<pre><code class="hljs python">train.loc[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>,<span class="hljs-string">&#x27;age&#x27;</span>,<span class="hljs-string">&#x27;job&#x27;</span>] <span class="hljs-comment">#双闭，前6行，前2列</span></code></pre>
+
+<pre><code class="hljs python">train.iloc[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>,<span class="hljs-number">0</span>:<span class="hljs-number">1</span>] <span class="hljs-comment">#左闭右开，前5行，前1列</span></code></pre>
+
+<pre><code class="hljs python">train[<span class="hljs-string">&#x27;age&#x27;</span>][<span class="hljs-number">0</span>:<span class="hljs-number">5</span>] <span class="hljs-comment">#左闭右开，age列，前5行</span></code></pre>
+
+<pre><code class="hljs python">train[[<span class="hljs-string">&#x27;age&#x27;</span>,<span class="hljs-string">&#x27;marital&#x27;</span>]] <span class="hljs-comment">#取两列</span></code></pre>
+
+<h5 id="1-3-DataFrame查看列的级别（即“取值范围”）："><a href="#1-3-DataFrame查看列的级别（即“取值范围”）：" class="headerlink" title="1.3    DataFrame查看列的级别（即“取值范围”）："></a>1.3    DataFrame查看列的级别（即“取值范围”）：</h5><pre><code class="hljs python"><span class="hljs-comment">#方法一：</span>
+train[<span class="hljs-string">&#x27;age&#x27;</span>].value_counts().index <span class="hljs-comment">#获取级别，按计数降序排列</span></code></pre>
+
+<pre><code class="hljs python"><span class="hljs-comment">#方法二：（不常用， 一般使用方法一。假装已经&#x27;import pandas as pd&#x27;了）</span>
+pd.Series(train[<span class="hljs-string">&#x27;age&#x27;</span>].values).unique() <span class="hljs-comment">#type=array,顺序为该值在train中的出现顺序，数值型可.sort()排序</span></code></pre>
+
+<pre><code class="hljs python"><span class="hljs-comment">#from sklearn.utils.multiclass import unique_labels</span>
+unique_labels(train[<span class="hljs-string">&#x27;age&#x27;</span>]) <span class="hljs-comment">#output:array([17, 18, 19, 20, 21, 22, 23,...</span></code></pre>
+
+<h5 id="1-4-DataFrame计数："><a href="#1-4-DataFrame计数：" class="headerlink" title="1.4    DataFrame计数："></a>1.4    DataFrame计数：</h5><pre><code class="hljs python">train[<span class="hljs-string">&#x27;age&#x27;</span>].values <span class="hljs-comment">#type=array,顺序为df.index的顺序</span></code></pre>
+
+<pre><code class="hljs python">train[<span class="hljs-string">&#x27;age&#x27;</span>].value_counts() <span class="hljs-comment">#type=Series,已按number降序排列</span></code></pre>
+
+<pre><code class="hljs python">train[<span class="hljs-string">&#x27;age&#x27;</span>].value_counts().index <span class="hljs-comment">#获取级别（即“索引”）</span></code></pre>
+
+<pre><code class="hljs python">train[<span class="hljs-string">&#x27;age&#x27;</span>].value_counts().values <span class="hljs-comment">#获取number</span></code></pre>
+
+<p>↑，注意上面这三行代码的结果都是按照number降序排列的</p>
+<ul>
+<li>使用numpy的函数</li>
+</ul>
+<pre><code class="hljs python">np.mean(y_train==<span class="hljs-string">&#x27;no&#x27;</span>),np.mean(y_train==<span class="hljs-string">&#x27;yes&#x27;</span>) <span class="hljs-comment">#查看标签列的值分布</span></code></pre>
+
+
+<ul>
+<li>使用计数器Counter</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter
+Counter(y_train)  <span class="hljs-comment">#Counter参数可以为：series,array,list</span></code></pre>
+
+
+<h4 id="2-数据清洗："><a href="#2-数据清洗：" class="headerlink" title="2.    数据清洗："></a>2.    数据清洗：</h4><h5 id="2-1-值缺失："><a href="#2-1-值缺失：" class="headerlink" title="2.1    值缺失："></a>2.1    值缺失：</h5><blockquote>
+<p>数值型变量有缺失，可以使用中位数/均值填充，且中位数一般比均值更稳健；类别型变量有缺失，可以使用众数填充；若缺失程度太高，则可以舍弃此变量；</p>
+<p>另外，还可以使用KNN类的算法来选择最近似的样本进行填充；</p>
+<p>缺失信息有时也可以作为一种特征表达，例如人的性别：男、女、不详都有不同的含义。</p>
+</blockquote>
+<ul>
+<li>查看缺失情况</li>
+</ul>
+<pre><code class="hljs python">train.isnull()
+train.isnull().sum()
+train.isnull().any()</code></pre>
+
+<ul>
+<li>填补</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment">#因为此例中的train里没有NaN，所以把age列值为50~99的置空，实际操作不需要第一步</span>
+train.replace(&#123;<span class="hljs-string">&#x27;age&#x27;</span>:range(<span class="hljs-number">50</span>,<span class="hljs-number">100</span>)&#125;,np.NaN,inplace=<span class="hljs-literal">True</span>)
+train[<span class="hljs-string">&#x27;age&#x27;</span>].fillna(train[<span class="hljs-string">&#x27;age&#x27;</span>].mean(),inplace=<span class="hljs-literal">True</span>)</code></pre>
+
+<ul>
+<li>删除</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment">#因此例中train里没有NaN，所以我们先随意把一些值置空，然后再删除</span>
+train.replace(&#123;<span class="hljs-string">&#x27;education&#x27;</span>:<span class="hljs-string">&#x27;unknown&#x27;</span>&#125;,np.NaN,inplace=<span class="hljs-literal">True</span>)
+train.dropna(subset=[<span class="hljs-string">&#x27;education&#x27;</span>],inplace=<span class="hljs-literal">True</span>)</code></pre>
+
+
+<h5 id="2-2-重复："><a href="#2-2-重复：" class="headerlink" title="2.2    重复："></a>2.2    重复：</h5><pre><code class="hljs python">train.duplicated() <span class="hljs-comment">#遍历所有行，每行返回True/False</span></code></pre>
+
+
+<pre><code class="hljs python">train[train.duplicated()==<span class="hljs-literal">True</span>] <span class="hljs-comment">#显示重复的行</span></code></pre>
+
+
+<pre><code class="hljs python">train=train.drop_duplicates(keep=<span class="hljs-string">&#x27;first&#x27;</span>) <span class="hljs-comment">#删除重复的行，保留一个</span></code></pre>
+
+<h5 id="2-3-异常："><a href="#2-3-异常：" class="headerlink" title="2.3    异常："></a>2.3    异常：</h5><ul>
+<li>异常值可视化</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment">#box检测异常值</span>
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> seaborn <span class="hljs-keyword">as</span> sns
+
+columns=train.select_dtypes(exclude=[<span class="hljs-string">&#x27;object&#x27;</span>]).columns.tolist() 
+columns.remove(<span class="hljs-string">&#x27;y&#x27;</span>)
+
+fig,ax=plt.subplots(<span class="hljs-number">1</span>,len(columns),figsize=(<span class="hljs-number">16</span>,<span class="hljs-number">4</span>))
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(columns)):
+    sns.boxplot(data=train[columns[i]],ax=ax[i])
+    ax[i].set_title(columns[i])
+plt.show()</code></pre>
+
+<ul>
+<li>根据boxplot删除有异常值的样本：</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment">#保留age&lt;70的样本（即删除≥70的样本）</span>
+train=train[train[<span class="hljs-string">&#x27;age&#x27;</span>]&lt;=<span class="hljs-number">70</span>]</code></pre>
+
+
+<h4 id="3-区间缩放"><a href="#3-区间缩放" class="headerlink" title="3.    区间缩放"></a>3.    区间缩放</h4><h5 id="3-1-preprocessing-scale"><a href="#3-1-preprocessing-scale" class="headerlink" title="3.1    preprocessing.scale"></a>3.1    preprocessing.scale</h5><p>公式：(X-mean)/std ；可以缩放指定列，包括1维和多维；缩放之后，所有维数总均值→0，总方差→1(均值并不总是等于0)；</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> preprocessing
+
+<span class="hljs-comment"># train[&#x27;cons.price.idx&#x27;]列原来的取值范围为92~95左右</span>
+train[<span class="hljs-string">&#x27;cons.price.idx&#x27;</span>]=preprocessing.scale(train[<span class="hljs-string">&#x27;cons.price.idx&#x27;</span>])
+<span class="hljs-comment"># 处理之后每个feature的分布不变(当样本很少时分布变化可能会比较大)</span></code></pre>
+
+
+<h5 id="3-2-preprocessing-StandardScaler"><a href="#3-2-preprocessing-StandardScaler" class="headerlink" title="3.2    preprocessing.StandardScaler"></a>3.2    preprocessing.StandardScaler</h5><p>公式同上，(X-mean)/std；只能处理多维；处理之后总均值→0，总方差→1；</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> StandardScaler
+
+data = [[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>,<span class="hljs-number">0</span>], [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>,<span class="hljs-number">2</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>,<span class="hljs-number">4</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">1</span>,<span class="hljs-number">0</span>]]
+scaler = StandardScaler(copy=<span class="hljs-literal">False</span>) <span class="hljs-comment">#参数with_maen和with_std默认为True，即去中心化并将方差缩放为1</span>
+data=scaler.fit_transform(data) <span class="hljs-comment">#copy=False表示在原数据上缩放，但一般没有用，所以需要赋值一下</span>
+<span class="hljs-comment"># 结果：data.mean()=9.25185853854297e-18，data.std()=1.0</span></code></pre>
+
+
+<h4 id="4-特征编码"><a href="#4-特征编码" class="headerlink" title="4.    特征编码"></a>4.    特征编码</h4><h5 id="4-1-独热编码，增维"><a href="#4-1-独热编码，增维" class="headerlink" title="4.1    独热编码，增维"></a>4.1    独热编码，增维</h5><ul>
+<li>方法1：pd.get_dummies</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment"># #将所有非数值型变量改为哑变量</span>
+train_not_value=X.select_dtypes(include=[<span class="hljs-string">&#x27;object&#x27;</span>])
+column_names=train_not_value.columns.tolist()
+
+<span class="hljs-comment">#转为one_hot:</span>
+<span class="hljs-keyword">for</span> column_name <span class="hljs-keyword">in</span> column_names:
+    dummy_ranks = pd.get_dummies(X[column_name], prefix=column_name)
+    cols_to_keep = X.columns.tolist()
+    cols_to_keep.remove(column_name)
+    X = X[cols_to_keep].join(dummy_ranks.loc[:, column_name:])
+
+<span class="hljs-comment">#结果：</span>
+<span class="hljs-comment">#marital 转化为四列： marital_divorced, marital_married,marital_single,marital_unknown</span></code></pre>
+
+
+<ul>
+<li>方法2：label_binarize </li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment"># 方法2</span>
+<span class="hljs-keyword">from</span> sklearn.preprocessing <span class="hljs-keyword">import</span> label_binarize
+
+classes=[<span class="hljs-string">&#x27;divorced&#x27;</span>, <span class="hljs-string">&#x27;married&#x27;</span>,<span class="hljs-string">&#x27;single&#x27;</span>,<span class="hljs-string">&#x27;unknown&#x27;</span>]
+label_binarize(X[<span class="hljs-string">&#x27;marital&#x27;</span>], classes=classes)
+<span class="hljs-comment">#结果：相当于把get_dummy返回的df中的值导出为array</span>
+<span class="hljs-comment"># [[0 0 1 0]</span>
+<span class="hljs-comment">#  [0 1 0 0]</span>
+<span class="hljs-comment">#  [0 0 1 0]</span>
+<span class="hljs-comment">#  ...</span>
+<span class="hljs-comment">#  [0 1 0 0]</span>
+<span class="hljs-comment">#  [0 1 0 0]</span>
+<span class="hljs-comment">#  [0 0 1 0]]</span></code></pre>
+
+
+<h5 id="4-2-字典编码，不增维"><a href="#4-2-字典编码，不增维" class="headerlink" title="4.2    字典编码，不增维"></a>4.2    字典编码，不增维</h5><blockquote>
+<p>在使用树形模型时，用LabelEncoder的效果一般比OneHotEncoder好？</p>
+</blockquote>
+<ul>
+<li>方法1：LabelEncoder，标签编码</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment"># #将所有非数值型变量改为哑变量</span>
+train_not_value=X.select_dtypes(include=[<span class="hljs-string">&#x27;object&#x27;</span>])
+column_names=train_not_value.columns.tolist()
+
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> preprocessing
+
+<span class="hljs-comment">#encoder</span>
+<span class="hljs-keyword">for</span> column_name <span class="hljs-keyword">in</span> column_names:
+    le = preprocessing.LabelEncoder()
+    le.fit(X[column_name].unique())
+    X[column_name]=le.transform(X[column_name])
+
+<span class="hljs-comment">#结果： martial：&#x27;divorced&#x27;,&#x27;married&#x27; 转化为 martial：0,1</span>
+<span class="hljs-comment"># X[&#x27;marital&#x27;].value_counts()：</span>
+<span class="hljs-comment"># 1    18018</span>
+<span class="hljs-comment"># 2     8441</span>
+<span class="hljs-comment"># 0     3333</span>
+<span class="hljs-comment"># 3       50</span>
+<span class="hljs-comment"># Name: marital, dtype: int64</span></code></pre>
+
+
+<ul>
+<li>方法2： pd.factorize</li>
+</ul>
+<pre><code class="hljs python">a=pd.factorize(train[<span class="hljs-string">&#x27;job&#x27;</span>]) 
+<span class="hljs-comment">#结果如下：</span>
+<span class="hljs-comment"># (array([0, 1, 2, ..., 7, 3, 3], dtype=int64),</span>
+<span class="hljs-comment">#  Index([&#x27;blue-collar&#x27;, &#x27;technician&#x27;, &#x27;services&#x27;, &#x27;admin.&#x27;, &#x27;housemaid&#x27;,</span>
+<span class="hljs-comment">#         &#x27;management&#x27;, &#x27;retired&#x27;, &#x27;self-employed&#x27;, &#x27;entrepreneur&#x27;, &#x27;student&#x27;,</span>
+<span class="hljs-comment">#         &#x27;unemployed&#x27;, &#x27;unknown&#x27;],</span>
+<span class="hljs-comment">#        dtype=&#x27;object&#x27;))</span></code></pre>
+
+
+<h5 id="4-3-序列编码"><a href="#4-3-序列编码" class="headerlink" title="4.3    序列编码"></a>4.3    序列编码</h5><blockquote>
+<p>有时需要转码之后的数字包含权重信息，如温度的高、中和低。这是一般使用字典序列来编码，这样就保留了高＞中＞低的信息；</p>
+</blockquote>
+<pre><code class="hljs python"><span class="hljs-comment"># 假设我们有一个DataFrame，其中有一个特征‘温度’，取值为‘high’，‘medium’，‘low’</span>
+map_dict=&#123;<span class="hljs-string">&#x27;low&#x27;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;mediun&#x27;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&#x27;high&#x27;</span>:<span class="hljs-number">2</span>&#125;
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map_values</span>(<span class="hljs-params">x</span>):</span>
+    <span class="hljs-keyword">return</span> map_dict[x]
+DataFrame[<span class="hljs-string">&#x27;temperature&#x27;</span>]=DataFrame[<span class="hljs-string">&#x27;temperature&#x27;</span>].apply(lambla x:map_values(x))</code></pre>
+
+
+<p>除此之外，HashingEncoder、BinaryEncoder还没用过……</p>
+<h4 id="5-平衡数据"><a href="#5-平衡数据" class="headerlink" title="5.    平衡数据"></a>5.    平衡数据</h4><h5 id="5-1-上采样-增加少数类样本量-SMOTE："><a href="#5-1-上采样-增加少数类样本量-SMOTE：" class="headerlink" title="5.1    上采样(增加少数类样本量)SMOTE："></a>5.1    上采样(增加少数类样本量)SMOTE：</h5><pre><code class="hljs python"><span class="hljs-comment"># smote平衡</span>
+<span class="hljs-keyword">from</span> imblearn.over_sampling <span class="hljs-keyword">import</span> SMOTE
+
+smo = SMOTE(random_state=<span class="hljs-number">42</span>)
+X_smo, y_smo = smo.fit_sample(X_train, y_train)
+
+<span class="hljs-comment">#除了1:1，还可以选择其他比例：</span>
+smo = SMOTE(ratio=&#123;<span class="hljs-number">1</span>: <span class="hljs-number">300</span> &#125;,random_state=<span class="hljs-number">42</span>) <span class="hljs-comment">#使1的数量为300</span></code></pre>
+
+
+<h4 id="6-EDA-Exploratory-data-analysis，探索性数据分析"><a href="#6-EDA-Exploratory-data-analysis，探索性数据分析" class="headerlink" title="6.    EDA(Exploratory data analysis，探索性数据分析)"></a>6.    EDA(Exploratory data analysis，探索性数据分析)</h4><pre><code class="hljs python"><span class="hljs-comment">#在以下可视化之前，将no/yes 转 0/1，方便统计</span>
+train.loc[train[<span class="hljs-string">&#x27;y&#x27;</span>]==<span class="hljs-string">&#x27;no&#x27;</span>,<span class="hljs-string">&#x27;y&#x27;</span>]=<span class="hljs-number">0</span>
+train.loc[train[<span class="hljs-string">&#x27;y&#x27;</span>]==<span class="hljs-string">&#x27;yes&#x27;</span>,<span class="hljs-string">&#x27;y&#x27;</span>]=<span class="hljs-number">1</span></code></pre>
+
+
+<h5 id="6-1-查看不同类别（买-不买）下所有features的分布"><a href="#6-1-查看不同类别（买-不买）下所有features的分布" class="headerlink" title="6.1    查看不同类别（买/不买）下所有features的分布"></a>6.1    查看不同类别（买/不买）下所有features的分布</h5><pre><code class="hljs python"><span class="hljs-keyword">import</span> seaborn <span class="hljs-keyword">as</span> sns
+<span class="hljs-comment">#import matplotlib.pyplot as plt</span>
+
+columns=train.select_dtypes(exclude=[<span class="hljs-string">&#x27;object&#x27;</span>]).columns.tolist() 
+columns.remove(<span class="hljs-string">&#x27;y&#x27;</span>)
+
+<span class="hljs-keyword">for</span> column <span class="hljs-keyword">in</span> columns:
+    _min=train[column].min()
+    _max=train[column].max()
+    facet = sns.FacetGrid(train,hue=<span class="hljs-string">&quot;y&quot;</span>,aspect=<span class="hljs-number">4</span>)
+    facet.map(sns.kdeplot,column,shade=<span class="hljs-literal">True</span>)
+    facet.set(xlim=(<span class="hljs-number">0</span>,_max))
+    facet.add_legend() 
+plt.show()</code></pre>
+
+
+<ul>
+<li>输出（只截取一部分）：</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190829111759518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZmFuZ2NoZW55dW5mZW5n,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif"></p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h5 id="6-2-查看不同job、不同类别-买-不买-的情况下age的分布-小提琴图"><a href="#6-2-查看不同job、不同类别-买-不买-的情况下age的分布-小提琴图" class="headerlink" title="6.2    查看不同job、不同类别(买/不买)的情况下age的分布(小提琴图)"></a>6.2    查看不同job、不同类别(买/不买)的情况下age的分布(小提琴图)</h5><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> seaborn <span class="hljs-keyword">as</span> sns
+
+plt.figure(figsize = (<span class="hljs-number">15</span>,<span class="hljs-number">4</span>))
+
+<span class="hljs-comment">#设置y轴值域</span>
+age_min=train[<span class="hljs-string">&#x27;age&#x27;</span>].min()
+age_max=train[<span class="hljs-string">&#x27;age&#x27;</span>].max()
+plt.yticks(range(age_min,age_max,<span class="hljs-number">10</span>))
+
+sns.violinplot(<span class="hljs-string">&quot;job&quot;</span>,<span class="hljs-string">&quot;age&quot;</span>,hue=<span class="hljs-string">&quot;y&quot;</span>,data=train,split=<span class="hljs-literal">True</span>)
+plt.title(<span class="hljs-string">&#x27;job+age vs y&#x27;</span>) 
+plt.show()</code></pre>
+
+
+<ul>
+<li>输出：</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20190829112358930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZmFuZ2NoZW55dW5mZW5n,size_16,color_FFFFFF,t_70" srcset="/img/loading.gif"></p>
+<h5 id="6-3-相关系数矩阵"><a href="#6-3-相关系数矩阵" class="headerlink" title="6.3    相关系数矩阵"></a>6.3    相关系数矩阵</h5><pre><code class="hljs python"><span class="hljs-comment"># 仅显示类型为数值型的特征之间的关系;</span>
+<span class="hljs-comment"># 因为相关系数矩阵是对称矩阵，所以画图时仅取其对应的下三角矩阵；</span>
+mask = np.zeros_like(train.corr()) 
+mask[np.triu_indices_from(mask)] = <span class="hljs-literal">True</span>
+sns.heatmap(train.corr(),annot=<span class="hljs-literal">False</span>,mask=mask,cmap=<span class="hljs-string">&#x27;YlGnBu&#x27;</span>)
+<span class="hljs-comment"># 常用的cmap:https://matplotlib.org/examples/color/colormaps_reference.html</span>
+<span class="hljs-comment"># 结果如图：</span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/20190719110839257.png" srcset="/img/loading.gif"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/11/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%81%E6%98%8E/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/11/%E6%9E%81%E9%99%90/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

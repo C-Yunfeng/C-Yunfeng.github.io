@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="杂乱无章 所以记录">
+  <meta name="author" content="尘云风">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>尘云风</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Lab
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
+                    
+                    蓝雨
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                    
+                    你的名字
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://blogjallery.oss-cn-beijing.aliyuncs.com/other/Snipaste_2020-07-21_09-31-03.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-11 17:48" pubdate>
+        2020年10月11日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      50
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h4 id="二、数列极限"><a href="#二、数列极限" class="headerlink" title="二、数列极限"></a>二、数列极限</h4><h5 id="0-引言"><a href="#0-引言" class="headerlink" title="0.引言"></a>0.引言</h5><ul>
+<li><p>极限是一个“无限趋近的过程”</p>
+</li>
+<li><p>【例1.2.1】[大纲有，但未考过]用定义证明$\lim_{n→\infty}[1+\frac{(-1)^n}{n}]=1$.</p>
+<p>①写$|1+\frac{(-1)^n}{n}-1|&lt;\epsilon$</p>
+<p>②$\frac{1}{n}&lt;\epsilon\Longrightarrow n&gt;\frac{1}{\epsilon}$</p>
+<p>③取$N=[\frac{1}{\epsilon}]+1$</p>
+<p>所以，$\forall n&gt;0$，当$n&gt;N$时，有$n&gt;[\frac{1}{\epsilon}]+1$，使得$|1+\frac{(-1)^n}{n}-1|&lt;\epsilon$</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h5 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h5><ul>
+<li><p>设${x_n}$是一个无穷数列，<strong>若存在常数a</strong>，对于$\forall \epsilon&gt;0$，$\exists N&gt;0$，当$n&gt;N$时，$|x_n-a|&lt;\epsilon$，则称数列${x_n}$收敛于$a$，或称其极限为$a$，记为$\lim_{n→\infty}x_n=a$。若不存在这样的$a$，则数列是发散的。<font color='red'>【专指$+\infty$】</font>.</p>
+</li>
+<li><p>常用语言：$lim_{n→\infty}=a\Leftarrow=\Rightarrow\forall \epsilon&gt;0,\exists N&gt;0,当n&gt;N时,|x_n-a|&lt;\epsilon恒成立$.</p>
+<p>【例1.2.2】已知$lim_{n→\infty}x_n=a,求证lin_{n→\infty}|x_n|=|a|$.</p>
+<p>【660-144】”$f(x)$在$x_0$处连续“是”$|f(x)|$在$x_0$处连续“的___条件。</p>
+<blockquote>
+<p>常用不等式：$|a±b|≤|a|±|b|$，$||a|-|b||≤|a-b|$，</p>
+</blockquote>
+</li>
+<li><p>数列收敛于子列收敛的关系</p>
+<ul>
+<li><p>若数列${a_n}$收敛，则其所有子数列${a_{nk}}$均收敛，且收敛于同一极限。</p>
+<p><font color='deepskyblue'>【660-121】</font>是否正确？：数列$lim_{n→\infty}{x_n}=a\Leftarrow\Rightarrow lim_{n→\infty}{x_{2n}}=lim_{n→\infty}{x_{2n+1}}=a$.</p>
+</li>
+<li><p>↑若至少一个子列发散，则原数列发散；若存在两个子列收敛于不同的值，则原数列发散。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-性质"><a href="#2-性质" class="headerlink" title="2. 性质"></a>2. 性质</h5><ul>
+<li>唯一性</li>
+<li>有界性</li>
+<li><font color='red'><strong>保号性</strong></font>【改到函数的保号性那里！！！！！】<ul>
+<li>脱帽性：$lim_{n→\infty}a_n=a&gt;0\Longrightarrow a_n&gt;0$，<font color='red'>$(n&gt;N)$</font></li>
+<li>戴帽性：如果从第$n$项开始，$a_n&gt;0$，且$lim_{n→\infty}a_n=a$，则<font color='red'>$a≥0$</font>.<font color='red'>带帽结果<strong>一定要加等号</strong></font>$^{【费马定理】}$，如$a_n&gt;0,但lima_n=0$.</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-极限运算法则"><a href="#3-极限运算法则" class="headerlink" title="3. 极限运算法则"></a>3. 极限运算法则</h5><ul>
+<li><p>+-*/的极限等于极限的+-*/</p>
+<p>【例1.2.4】已知$lim_{n→\infty}(a_n+b_n)=2,lim_{n→\infty}(a_n-b_n)=1$，证明数列${a_n}和{b_n}$极限均存在，并求出具体值</p>
+</li>
+</ul>
+<h5 id="4-夹逼准则"><a href="#4-夹逼准则" class="headerlink" title="4. 夹逼准则"></a>4. 夹逼准则</h5><ul>
+<li><p>对于数列$x_n,y_n,z_n$，如果有$x_n&lt;y_n&lt;z_n$，且$lim_{n→\infty}x_n=lim_{n→\infty}z_n=A,lim_{n→\infty}y_n$存在，则$lim_{n→\infty}y_n=A$.</p>
+</li>
+<li><p>$x_n,y_n,z_n$不验证等号</p>
+<p>【例1.2.5】求极限$lim_{n→\infty}(\frac{n}{n^2+1}+\frac{n}{n^2+2}+…+\frac{n}{n^2+n})$.</p>
+<p>【习1.2.2】求极限$lim_{n→\infty}(\frac{1}{\sqrt{n^2+1}}+\frac{1}{\sqrt{n^2+2}}+…+\frac{1}{\sqrt{n^2+n}})$.</p>
+<p>【习1.2.3】求极限$lim_{n→\infty}(\frac{1}{n^2+n+1}+\frac{1}{n^2+n+2}+…+\frac{1}{n^2+n+n})$.</p>
+<p>[<strong>放缩只动分母，不动分子</strong>]</p>
+</li>
+</ul>
+<h5 id="5-单调有界准则（压轴题考点）"><a href="#5-单调有界准则（压轴题考点）" class="headerlink" title="5. 单调有界准则（压轴题考点）"></a>5. <font color='red'>单调有界准则（压轴题考点）</font></h5><ul>
+<li>单调有界数列必有极限：数列${x_n}$<font color='red'><u>单调</u></font>增（或单调减），且<font color='red'><u>有上界</u></font>（或有下界），则$lim_{n→\infty}x_n$存在.</li>
+<li><font color='red'>见到<strong>递推公式$a_{n+1}=f(a_n)$</strong>$\Longrightarrow$一般用单调有界准则</font>.</li>
+<li><font color='deepskyblue'>【660-121】</font>数列极限$lim_{n→\infty}x_n\exist\Leftarrow\Rightarrow lim_{n→\infty}{\frac{x_{n+1}}{x_n}}=1$是否正确？.</li>
+<li><font color='deepskyblue'>【例1.2.4】</font>设数列$$..</li>
+</ul>
+<h4 id="三、函数极限"><a href="#三、函数极限" class="headerlink" title="三、函数极限"></a>三、函数极限</h4><h5 id="1-邻域"><a href="#1-邻域" class="headerlink" title="1. 邻域"></a>1. 邻域</h5><ul>
+<li>【<del>点$x_0$周围的一片区域，成为邻域，计作$U(x_0)$</del>】以点$x_0$为中心的任何开区间成为$x_0$的邻域，记为$U(x_0)$.</li>
+<li>$\delta$邻域：设$\delta&gt;0$，则开区间$(x-\delta,x+\delta)$为$x_0$的邻域，计作$U(x_0,\delta)$</li>
+<li>左邻域，右邻域</li>
+</ul>
+<h5 id="2-极限定义"><a href="#2-极限定义" class="headerlink" title="2. 极限定义"></a>2. 极限定义</h5><ul>
+<li>对于函数$f(x)$，对于$\forall \epsilon&gt;0$，存在$\xi&gt;0$，当$0&lt;|x-x_0|&lt;\xi$时，使得$|f(x)-A|&lt;\epsilon$，则称函数$f(x)$在$x$趋近于$x_0$收敛于A，或称$f(x)$在$x$趋于$x_0$时的极限为A.</li>
+<li>对于函数$f(x)$，对于任意的$\epsilon&gt;0$，存在正整数$X&gt;0$，当$\color{Red}|x|&gt;X$时，有$|f(x)-A|&lt;\epsilon$，则记为$lim_{x→\infty}f(x)=A$</li>
+<li>$lim_{x→x_0}f(x)=A\Leftarrow\Rightarrow lim_{x→x_0^+}f(x)=lim_{x→x_0^-}f(x)=A$.【多元极限此方法有稳定性和可靠性】</li>
+<li>$lim_{x→x_0}f(x)=A\Leftarrow\Rightarrow f(x)=A+\alpha(x)$，其中$lim_{x→x_0}\alpha(x)=0$.</li>
+</ul>
+<h5 id="3-性质"><a href="#3-性质" class="headerlink" title="3. 性质"></a>3. 性质</h5><ul>
+<li><p>唯一性：$lim_{x→x_0}f(x)=A\Leftarrow=\Rightarrow lim_{x→x_0^-}f(x)=lim_{x→x_0^+}f(x)=A$.</p>
+</li>
+<li><p>局部有界性：若$lim_{x→x_0}f(x)=A\Longrightarrow \exists M&gt;0,\delta&gt;0$，当$0&lt;|x-x_0|&lt;\delta$时，$|f(x)|≤M$.【$lim_{x→\infty}f(x)=A\Longrightarrow\exist M&gt;0,\exist X&gt;0,当|x|&gt;X时,|f(x)|≤M$】</p>
+<ul>
+<li><p>判断局部有界的四种方法：</p>
+<ul>
+<li>$limf(x)=A\Rightarrow|f(x)|≤M$.</li>
+<li>设$f(x)$在$[a,b]$上连续，则$f(x)$在$[a,b]$上有界.</li>
+<li><strong>有限个有界函数的和、差、积仍为有界函数</strong>.</li>
+<li>若$f’(x)$在$(a,b)$内有界，则$f(x)$在$(a,b)$内有界.</li>
+</ul>
+</li>
+<li><p><strong>无穷大与无界的关系</strong>：</p>
+<ul>
+<li><p>$lim_{x→x_0}f(x)=\infty\cancel{\Leftarrow}\Rightarrow f(x)$在$x_0$的任意去心邻域内无界.</p>
+</li>
+<li><p>$\exist x_n,lim_{n→\infty}x_n=x_0$，使得$lim_{n→\infty}f(x_n)=\infty\Leftarrow\Rightarrow f(x)$在$x_0$的任意去心邻域内无界.</p>
+<blockquote>
+<p>证明：<font color='red'>【$lim_{n→\infty}x_n=x_0$等价于$x→x_0$】</font>.</p>
+<p>充分性：左边→$\forall M&gt;0,\delta&gt;0$，<font color='blue'>$\exist N&gt;0，当n&gt;N时，0&lt;|x_n-x_0|&lt;\delta$</font>，$|f(x_n)|&gt;M$.</p>
+<p>必要性：右边→$f(x)在\forall U(x_0,\frac{1}{n}),(n=1,2,…)内无界$→$\forall M=n&gt;0,\exist x_n\in(x_0,\frac{1}{n}),|f(x_n)|&gt;M$→左边</p>
+</blockquote>
+</li>
+<li><p><font color='deepskyblue'>【660-145】</font>$f(x)在[a,+\infty)连续$，则”$\exist n\in[a,+\infty),使得lim_{n→\infty}x_n=+\infty,且lim_{n→\infty}f(x_n)=+\infty$“是$f(x)在[a,+\infty)上无界$的___条件。</p>
+<blockquote>
+<p>$f(x)$在某区间内无界$\Leftarrow\Rightarrow\forall M,f(x)$在此区间内无界</p>
+</blockquote>
+</li>
+<li><p><font color='deepskyblue'>【660-124】</font>下列正确的是：</p>
+<p>（A）如果$f(x)$在$x_0$的任意去心邻域内无界，则$lim_{x→x_0}f(x)=\infty$.</p>
+<p>（B）如果$lim_{x→x_0}f(x)=\infty$，则$f(x)$在$x_0$的任意去心邻域内无界.</p>
+<p>（C）如果$lim_{x→x_0}f(x)=0$，则$lim_{x→x_0}\frac{1}{f(x)}=\infty$.</p>
+<blockquote>
+<p>对于D，若$lim_{x→x_0}f(x)=0$，且$f(x)\not=0$，则$lim_{x→x_0}\frac{1}{f(x)}=\infty$.若$f(x)$在0处无定义，则不行。</p>
+<p>对于A，举例，设$f(x)=\frac{1}{x}sin\frac{1}{x}$，令$x_n=\frac{1}{2n\pi+\frac{\pi}{2}},y_n=\frac{1}{n\pi}$，则$n→\infty时，x_n→0,y_n→0$，但$lim_{n→\infty}f(x_n)=lim_{n→\infty}2n\pi+\frac{\pi}{2}=\infty$，$lim_{n→\infty}f(y_n)=0$，极限不是无穷大，而是不存在（在0和无穷大反复震荡）</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>局部保号性</p>
+<ul>
+<li>脱帽性：$lim_{x→x_0}f(x)=A&gt;0$，则当$x→x_0$时，$f(x)&gt;0$.$^{\color{BurntOrange}{导数零点定理的证明}}$.【注意是$x_0$的去心邻域内$f(x)&gt;0$，与$x_0$点处的函数值无关系】<ul>
+<li><font color='deepskyblue'>【660-125】</font>若$lim_{x→x_0}f(x)≥lim_{x→x_0}g(x)$，则$\exist \delta&gt;0,当0&lt;|x-x_0|&lt;\delta$时，有$f(x)≥g(x)$.</li>
+</ul>
+</li>
+<li>戴帽性：在$x_0$的邻域内，$f(x)&gt;0$且极限存在，则$lim_{x→x_0}f(x)≥0$.$\color{Red}^{费马定理的证明}$.</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-运算法则"><a href="#4-运算法则" class="headerlink" title="4. 运算法则"></a>4. 运算法则</h5><ul>
+<li><p>+-×/的极限等于极限的+-×/</p>
+</li>
+<li><p>$limf(x)=A,limg(x)=B\Rightarrow lim\frac{f(x)}{g(x)}=\frac{A}{B}$，$limf(x)g(x)=A*B$.</p>
+</li>
+<li><p><strong>常用结论</strong>：</p>
+<p>对于<strong>七个</strong>趋向过程，</p>
+<ul>
+<li>若$limf(x)=A,limg(x)\cancel{\exist}$，则$lim[f(x)+g(x)]\ \cancel{\exist}$.<ul>
+<li>若$A\not=0$，则$limf(x)g(x)\cancel{\exist}$.</li>
+<li>若$A=0$，则$limf(x)g(x)$可能存在，也可能不存在</li>
+</ul>
+</li>
+<li>若$limf(x),limg(x)均\cancel{\exist}$，则$lim[f(x)+g(x)]$和$limf(x)g(x)$都不存在</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-夹逼准则"><a href="#5-夹逼准则" class="headerlink" title="5. 夹逼准则"></a>5. 夹逼准则</h5><ul>
+<li>对于函数$f(x),g(x),h(x)$如果有$f(x)&lt;g(x)&lt;h(x)$，且$lim_{x→\infty}f(x)=lim_{x→\infty}h(x)=A$，$g(x)$极限存在，则有$lim_{x→\infty}g(x)=A$.</li>
+</ul>
+<h5 id="6-洛必达法则"><a href="#6-洛必达法则" class="headerlink" title="6. 洛必达法则"></a>6. 洛必达法则</h5><ul>
+<li><p>若①<font color='red'>在$x→a$或者$x→\infty$时，函数$f(x)$及$F(x)$趋近于$0$或$\infty$</font>.②函数$f(x),g(x)$均可导，$limg’(x)≠0$；②$lim\frac{f’(x)}{g’(x)}存在或无穷大$，则$lim\frac{f(x)}{g(x)}=lim\frac{f^{‘}(x)}{g^{‘’}(x)}$，$x→a或\infty$.</p>
+<blockquote>
+<p>①<font color='red'>一定要$\frac{0}{0}\ or\ \frac{\infty}{\infty}$，不能是非零常数</font>，如$lim_{x→0}\frac{2x-1}{x^2-x+1}$是$-1$，而非$-2$【不能用洛必达】</p>
+<p>②不存在的情况：$lim_{x→\infty}\frac{cosx}{x}\not=lim_{x→\infty}\frac{-sinx}{1}震荡不存在$，所以不能用洛必达，而应该是：$\frac{有界}{\infty}=0$。</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="7-泰勒公式"><a href="#7-泰勒公式" class="headerlink" title="7. 泰勒公式"></a>7. 泰勒公式</h5><ul>
+<li><p>任何连续函数都可以写成基本初等函数的复合？</p>
+</li>
+<li><p>当$\color{Red}x→0$时，常用的8个公式$^{\color{red}{【带佩亚诺余项的n阶泰勒公式】}}$<br>$sinx=x-\frac{1}{3!}x^3+o(x^3)$.          $cosx=1-\frac{1}{2!}x^2+\frac{1}{4!}x^4+o(x^4)$.</p>
+<p>$tanx=x+\frac{1}{3}x^3+o(x^3)$.                      $arcsinx=x+\frac{1}{3!}x^3+o(x^3)$.</p>
+<p>$arctanx=x-\frac{1}{3}x^3+o(x^3)$.</p>
+<p>$e^x=1+x+\frac{1}{2!}x^2+\frac{1}{3!}x^3+o(x^3)$.         $ln(1+x)=x-\frac{1}{2}x^2+\frac{1}{3}x^3+o(x^3)$.</p>
+<p>$(1+x)^\alpha=1+\frac{\alpha}{1!}x+\frac{\alpha(\alpha-1)}{2!}x^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}x^3+o(x^3)$.     </p>
+</li>
+<li><p>无穷小运算</p>
+<ul>
+<li>$o(x^m)±o(x^n)=o(x^l),l=min{m,n},m\not=n$.<ul>
+<li>当同阶，即$m=n$时，$o(x^m)±o(x^n)$的阶数不变或增加</li>
+</ul>
+</li>
+<li>$o(x^m)*o(x^n)=o(x^{m+n})$.</li>
+<li><font color='#FF4500'>${o(x^m)=o(kx^m)=k*o(x^m),k≠0且为常数}$</font>.</li>
+</ul>
+</li>
+<li><p><strong>泰勒展开到多少阶</strong></p>
+</li>
+<li><p>$\frac{A}{B}$型：展开到上下同阶</p>
+<ul>
+<li>$A-B$型：幂次最低</li>
+</ul>
+</li>
+</ul>
+<h6 id="7-n-等价无穷小替换"><a href="#7-n-等价无穷小替换" class="headerlink" title="7.n 等价无穷小替换"></a>7.n 等价无穷小替换</h6><ul>
+<li><p>如图：</p>
+<p><img src="https://pic4.zhimg.com/v2-0b9b50889edb01fc3f5467a071a323fa_1200x500.jpg" srcset="/img/loading.gif" alt="高数常见坑点：等价无穷小" style="zoom:50%;" />.</p>
+</li>
+<li><p>对于$\sqrt[n]{1+f(x)}-1→\frac{f(x)}{n}$，等价于$[1+f(x)]^\beta→1+\beta f(x)$.【注意趋于0！！！】</p>
+</li>
+</ul>
+<h5 id="8-归结原则"><a href="#8-归结原则" class="headerlink" title="8. 归结原则"></a>8. 归结原则</h5><h5 id="9-无穷小比阶"><a href="#9-无穷小比阶" class="headerlink" title="9. 无穷小比阶"></a>9. 无穷小比阶</h5><ul>
+<li><p>当$x→0$时</p>
+<ul>
+<li>若$lim\frac{f(x)}{g(x)}=0$，则$f(x)$是$g(x)$的高阶无穷小</li>
+<li>若$lim\frac{f(x)}{g(x)}=c$，则$f(x)$是$g(x)$的同阶无穷小</li>
+<li>若$lim\frac{f(x)}{[g(x)]^k}=c$，则$f(x)$是$g(x)$的$k$阶无穷小</li>
+<li>若$lim\frac{f(x)}{g(x)}=1$，则$f(x)$和$g(x)$是<strong>等价</strong>无穷小</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>0是特殊的无穷小，也是<strong>最高阶</strong>的无穷小</li>
+<li>例题<ul>
+<li>【例1.3.17】$lim_{x→0}\frac{e^x-(ax^2+bx+1)}{x^2}=0$，则$a=?,b=?$.</li>
+<li>【例1.3.19】排顺序：$\alpha_1=x(cos\sqrt{x}-1),\alpha_2=\sqrt x*ln(1+\sqrt{x^3}),\alpha_3=^3\sqrt{x+1}-1$.</li>
+</ul>
+</li>
+</ul>
+<h5 id="10-七种未定式的计算"><a href="#10-七种未定式的计算" class="headerlink" title="10. 七种未定式的计算"></a>10. 七种未定式的计算</h5><ul>
+<li><p><font color='red'>第一步：化简</font></p>
+<ol>
+<li><p>提出极限不为0的因式，</p>
+</li>
+<li><p>等价无穷小替换</p>
+<blockquote>
+<p>拆分进行等价替换的前提条件是，拆分之后的极限都存在。如：</p>
+<p>$lim_{x→0}\frac{e^{tanx}-e^x}{x^3}$不应该直接替换为$lim_{x→0}\frac{(tanx-1)-(x-1)}{x^3}$，而是应该拆分为$lim_{x→0}\frac{e^x(e^{tanx-x}-1)}{x^3}$，然后再进行替换.</p>
+</blockquote>
+</li>
+<li><p>恒等变形</p>
+</li>
+</ol>
+</li>
+<li><p>第二步：判断类型</p>
+<ul>
+<li><p>$\frac{0}{0},\frac{\infty}{\infty}$：</p>
+</li>
+<li><p>$0*\infty$：<strong>设置分母有原则，简单因式才下放：</strong></p>
+<p>$\begin{cases}简单:x^\alpha,\alpha^x\复杂:lnx,arcsinx\end{cases}$</p>
+</li>
+<li><p>$\infty-\infty$：<strong>提取+通分</strong>【提取非零因式。有分母通分，没有分母创造分母(如<strong>倒代换</strong>)也要通分】</p>
+<p><font color='deepskyblue'>【660-17】</font>设$a,b$是常数，且$lim_{n→\infty}(\sqrt[3]{1-x^6}-ax^2-b)=0$，则$a=__,b=__$.</p>
+<p><font color='deepskyblue'>【660-126】</font>$lim_{n\rightarrow\infty}sin^2(\pi\sqrt{n^2+n})$.【公式$sin(\alpha+n\pi)=(-1)^2sin(\alpha)$】</p>
+</li>
+<li><p>$\infty^0,0^0,1^\infty$：</p>
+<ul>
+<li>$\begin{cases}\infty^0→e^{\infty0}\0^0→e^{0\infty}\1^\infty→e^{\infty0}\end{cases}$.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>例题</p>
+<ul>
+<li>【例1.3.3】求$lim_{x→0}\frac{e^{-\frac{1}{x^2}}*2x^{-3}}{100x^{99}}$.【分母下放】</li>
+<li>【例1.3.6】求$lim_{x→\infty}x(\sqrt {x^2+100}+x)$.【负代换】</li>
+<li>【例1.3.7】求$lim_{x→1^-}lnxln(1-x)$.【无穷小替换，因式下放】</li>
+<li>【例1.3.10】求$lim_{x→0}(\frac{1}{sin^2x}-\frac{cos^2x}{x^2})$.【通分】</li>
+<li>【例1.3.11】求$lim_{x→+\infty}[x^2(e^{\frac{1}{x}}-1)-x]$.【倒代换】</li>
+<li>【例1.3.12】求$lim_{x→+\infty}(x+\sqrt{1+x^2})^\frac{1}{x}$.【基本公式$ln’(x+\sqrt{1+x^2})=\frac{1}{\sqrt{1+x^2}}$】【$e^{vlnu}$】</li>
+<li><font color='deepskyblue'>【660-8】</font>$I=lim_{n→\infty}(e^{x^2}+x^3)^{\frac{1}{x^2}}$.【提取】</li>
+</ul>
+</li>
+<li><p>泰勒方法</p>
+<ul>
+<li>【例1.3.8】求$lim_{x→0}\frac{arcsinx-arctanx}{sinx-tanx}$.</li>
+</ul>
+</li>
+<li><p>已知极限反求参数</p>
+<ul>
+<li>$lim_{x→0}\frac{ln(1+x)-(ax+bx^2)}{x^2}=2$，求常数a和b【同阶，或$*x$再拆分】</li>
+</ul>
+</li>
+</ul>
+<h6 id="10-n-已知某一极限，求另一极限"><a href="#10-n-已知某一极限，求另一极限" class="headerlink" title="10.n 已知某一极限，求另一极限"></a><strong>10.n 已知某一极限，求另一极限</strong></h6><p>  如果其他普通办法求不出来，就用脱帽法。</p>
+<ul>
+<li>如果$lim_{x→0}\frac{x-sinx+f(x)}{x^4}$存在，则$lim_{x→0}\frac{x^3}{f(x)}=$<strong><strong>____</strong></strong>.<font color='#FF4500'>【脱帽法($A+\alpha(x)$)，或同阶，或$lim()<em>x=limA</em>x=0$然后拆分】</font>.</li>
+<li><font color='deepskyblue'>【660-135】</font>设$lim_{x→0}\frac{sin6x-(sinx)f(x)}{x^3}=0$，求$lim_{x→0}\frac{6-f(x)}{x^2}$.</li>
+</ul>
+<h5 id="11-连续点与间断点"><a href="#11-连续点与间断点" class="headerlink" title="11. 连续点与间断点"></a>11. 连续点与间断点</h5><ul>
+<li><p>连续点定义</p>
+<ul>
+<li><strong>$f(x)$在$U(x_0,\delta)$内有定义</strong>，且$lim_{x→x_0}f(x)=f(x_0)$，则称函数$f(x)$在$x_{0}$处连续。【“邻域内有定义”这个条件是给极限的】【$x_0$两侧都要有定义】【是对<strong>过程</strong>的研究，<strong>与$x_0$处无关</strong>】</li>
+</ul>
+</li>
+<li><p>间断点的定义与分类<font color='red'>【间断点也一定要满足$U(x_0,\delta)$内有定义吗】【联系：与铅锤渐近线的区别】</font>.</p>
+<ul>
+<li>若$lim_{x→x_0^-}f(x),lim_{x→x_0^+}f(x),f(x_0)$三者中有任意二者不相等，则函数$f(x)$在点$x_{0}$出间断.</li>
+<li>第一类间断点<ul>
+<li>可去间断点：$lim_{x→x_0}f(x)=A≠f(x_0)$，<strong>或$f(x_0)$直接不存在，$x_0$无定义</strong>.</li>
+<li>跳跃间断点：$lim_{x→x_0^-}f(x)≠lim_{x→x_0^+f(x)}$.</li>
+</ul>
+</li>
+<li>第二类间断点<ul>
+<li>无穷间断点：$lim_{x→x_0}f(x)=\infty$.【两侧均为无穷大？至少一个无穷大？】</li>
+<li>振荡间断点：$lim_{x→x_0}$振荡不存在</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>例题</p>
+<ul>
+<li><p>【例1.3.20】$f(x)=\begin{cases}2x+a,x≤0\e^x(sinx+cosx),x&gt;0\end{cases}$在$(0,+\infty)$上连续，则a=__<em>__\</em>.</p>
+<blockquote>
+<p><font color='red'><strong>讨论间断，只看两类点</strong></font>：</p>
+<p><font color='red'><strong>①分段函数的分段点</strong></font>.</p>
+<p><font color='red'><strong>②无定义点</strong></font>.</p>
+</blockquote>
+</li>
+<li><p>【例1.3.22】$f(x)=\frac{ln|x|}{|x-1|}sinx$，则$f(x)$的间断点情况为:____.</p>
+</li>
+<li><p>【习】求$f(x)=ln(1+x)+\frac{x-x^3}{tan\pi x}$的间断点.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/11/%E6%95%B0%E6%8D%AE%E9%A2%84%E8%A7%88%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/11/%E9%AB%98%E6%95%B0%E9%94%99%E9%A2%98%E6%9C%AC/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

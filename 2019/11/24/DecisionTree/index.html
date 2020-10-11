@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="杂乱无章 所以记录">
+  <meta name="author" content="尘云风">
+  <meta name="keywords" content="">
+  <title>DecisionTree - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>尘云风</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Lab
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
+                    
+                    蓝雨
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                    
+                    你的名字
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://blogjallery.oss-cn-beijing.aliyuncs.com/other/Snipaste_2020-07-21_09-31-03.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-11-24 20:34" pubdate>
+        2019年11月24日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      31
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">DecisionTree</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <blockquote>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/5d2051dae51d454fbe24a6f7">https://juejin.im/post/5d2051dae51d454fbe24a6f7</a></li>
+<li>李航-《统计学习方法》</li>
+</ul>
+</blockquote>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.    简介"></a>1.    简介</h4><p><code>blablabla........</code>此文中忽略结点和节点的区别，，，</p>
+<h4 id="2-分支结束条件"><a href="#2-分支结束条件" class="headerlink" title="2.分支结束条件."></a><font color='red'>2.分支结束条件</font>.</h4><ul>
+<li>当前结点包含的样本全属于同一类别，无需划分；例如：样本当中都是决定去相亲的，属于同一类别，就是不管特征如何改变都不会影响结果，这种就不需要划分了。</li>
+<li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分；例如：所有的样本特征都是一样的，就造成无法划分了，训练集太单一。</li>
+<li>当前结点包含的样本集合为空，不能划分。</li>
+</ul>
+<!--more-->
+
+<h4 id="3-树的成长过程"><a href="#3-树的成长过程" class="headerlink" title="3.树的成长过程.."></a><font color='red'>3.树的成长过程.</font>.</h4><ul>
+<li>信息熵(简称熵，Entropy)越低，纯度越高。</li>
+<li><code>信息熵</code>：<br>$$Ent(D)=-\sum_{k=1}^{|y|}p_klog_2p_k$$<br>其中，D为<code>此分支的样本集合</code>；$|y|$为<code>标签列Y的类别数</code>；$p_k$为样本集合D中<code>属于k类别</code>的<code>样本占比</code>。<blockquote>
+<p>可以证明，当$p_1=p_2=…=p_{|y|}$时，熵最大，即<code>不确定性最大</code>。</p>
+</blockquote>
+</li>
+<li>信息增益：<br>$$<br>\begin{aligned}<br>Gain(D,A)&amp;=Ent(D)-\sum_{v=1}^{V}\frac{|D^v|}{|D|}Ent(D^v)\<pre><code>&amp;=Ent(D)-\sum_&#123;v=1&#125;^&#123;V&#125;\frac&#123;|D^v|&#125;&#123;|D|&#125;(-\sum_&#123;k=1&#125;^&#123;|y|&#125;\frac&#123;|D^v_k|&#125;&#123;D^v&#125;log_2\frac&#123;|D^v_k|&#125;&#123;D^v&#125;)</code></pre>
+\end{aligned}<br>$$<br>其中，$|D^v|$为<code>第v个分支</code>的样本集合的<code>样本数</code>，$A$为分枝所用的<code>特征</code>；<br>公式的含义为：<strong>划分前的信息熵-划分后的信息熵</strong>。</li>
+</ul>
+<h4 id="4-决策树的三个类型"><a href="#4-决策树的三个类型" class="headerlink" title="4.决策树的三个类型"></a>4.决策树的三个类型</h4><h5 id="4-1-ID3"><a href="#4-1-ID3" class="headerlink" title="4.1 ID3"></a>4.1 ID3</h5><ol>
+<li><p>原理：</p>
+<p><code>1.</code>选取一个特征，计算<code>父亲节点</code>的信息熵；<br><code>2.</code>使用<code>此特征</code>的<code>所有取值</code>进行<code>预分枝</code>，并分别<code>计算信息增益</code>；<br><code>3.</code>从上面所有的信息增益中，选取信息增益<code>最大</code>的<code>特征值</code>，并进行分枝；<br><code>4.</code>将子节点作为<code>另一个特征</code>的父亲节点，<code>重复1~3</code>，进行下一层的分枝操作。</p>
+</li>
+<li><p>图例：</p>
+<img src="https://img-blog.csdnimg.cn/2019071516014771.png" srcset="/img/loading.gif" width="70%">
+<img src="https://img-blog.csdnimg.cn/20190715160235460.png" srcset="/img/loading.gif" width="70%">
+<img src="https://img-blog.csdnimg.cn/20190715160255742.png" srcset="/img/loading.gif" width="70%">
+<img src="https://img-blog.csdnimg.cn/20190715160317899.png" srcset="/img/loading.gif" width="70%">
+
+
+</li>
+</ol>
+<ol start="3">
+<li>缺点</li>
+</ol>
+<ul>
+<li>不过，信息增益有一个问题：对可取值数目较多的属性有所偏好，例如：考虑将“编号”作为一个属性。为了解决这个问题，引出了另一个 算法C4.5。<h5 id="4-2-C4-5"><a href="#4-2-C4-5" class="headerlink" title="4.2 C4.5"></a>4.2 C4.5</h5></li>
+</ul>
+<ol>
+<li>信息增益率：</li>
+</ol>
+<ul>
+<li>为了解决<code>信息增益偏向于取值多的特征</code>的问题，引入一个新的表示方法：信息增益率：<br>$$Gain_ratio(D,A)=\frac{Gain(D,a)}{IV(A)}$$<br>其中，$IV(A)$为<code>惩罚项</code>，$IV(A)=-\sum_{v=1}^{V}\frac{|D^v|}{|D|}log_2\frac{|D^v|}{|D|}$，意为*D关于特征A的值的熵$Ent_A(D)$*，不同于$Ent(D,A)$。<br>当：属性$A$的取值数目越多(即V越大)，则惩罚项IV(A)的值通常就越大，惩罚参数$\frac{1}{IV(A)}$越小，信息增益率$Gain_ratio$越小。这样就可以避免模型偏好特征值多的属性。</li>
+</ul>
+<ol start="2">
+<li>原理：</li>
+</ol>
+<ul>
+<li>和ID3生成树的过程类似，只是选择的标准换成的信息增益率。</li>
+</ul>
+<ol start="3">
+<li>缺点：</li>
+</ol>
+<ul>
+<li>信息增益率偏向取值较少的特征。如果简单的按照这个规则来分割，模型又会偏向特征数少的特征。因此C4.5决策树先从候选划分属性中找出<code>信息增益高于平均水平</code>的属性，在从中选择<code>增益率最高</code>的。</li>
+</ul>
+<h5 id="4-3-CART-Classification-and-Regression-Tree"><a href="#4-3-CART-Classification-and-Regression-Tree" class="headerlink" title="4.3 CART(Classification and Regression Tree)"></a>4.3 CART(Classification and Regression Tree)</h5><ul>
+<li><p>简介：</p>
+<ul>
+<li>CART和普通的决策树类似，过程也是特征选择、树的生成及剪枝。但既可以用于分类也可以用于回归。</li>
+</ul>
+</li>
+<li><p>回归树的生成：</p>
+<ul>
+<li>原理：<br>CART回归树是假设树为<code>二叉树</code>，通过不断将特征进行分裂。比如当前树结点是基于<code>第j个特征值</code>进行分裂的，设该特征值小于<code>阈值s</code>的样本划分为左子树，大于s的样本划分为右子树。<br>$$R_1(j,s)={x|x_j≤s} $$$$R_2(j,s)={x|x_j&gt;s}$$<br>典型CART回归树使用<code>平方误差</code>来表示回归树在Train上的预测误差，即：<br>$$\sum_{x^{(i)}∈R_m}(y^{(i)}-f(x^{(i)}))^2$$<br>因此，当我们为了求解<code>最优的切分特征</code>$x_j$和<code>最优的切分点s</code>，就转化为求解这么一个目标函数：<br>$$min_{j,s}[min_{c_1}\sum_{x^{(i)}∈R_1(j,s)}(y^{(i)}-c_1)^2+\sum_{x^{(i)}∈R_2(j,s)}min_{c_2}(y^{(i)}-c_2)^2]$$<br>所以我们只要遍历所有特征的的所有切分点，就能找到最优的切分特征和切分点。最终得到一棵回归树。</li>
+<li>实现过程：将D的每个特征空间分别划分成两个子区域并决定输出值，构建二叉决策树。<ul>
+<li>input：训练集D</li>
+<li>选择最优切分特征$x_j$和阈值s，即：<br>对此切分特征$x_j$，选取损失函数能取最小值的对$(j,s)$<br>$$min_{j,s}[min_{c_1}\sum_{x^{(i)}∈R_1(j,s)}(y^{(i)}-c_1)^2+\sum_{x^{(i)}∈R_2(j,s)}min_{c_2}(y^{(i)}-c_2)^2]$$</li>
+<li>用选定的对$(j,s)$划分区域，输出对应值：</li>
+<li>对于<code>划分出的两个区域</code>，重复上面两两步，直到满足结束条件；</li>
+<li>output：决策树</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>分类树的生成：</p>
+<ul>
+<li>简介：<br>分类树用<code>基尼指数</code>（和熵的含义类似）选择最优特征，同时决定该特征的切分点。<ul>
+<li>基尼指数：</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>基尼指数表示在样本集合中一个随机选中的样本被分错的概率。**$Gini(D,A)$越小，数据集D的纯度越高**。<br>$$Gini(D)=\sum_{k=1}^{|y|}\sum_{k’≠k}p_kp_k’=1-\sum_{k=1}^{|y|}p_k^2$$<br>其中，$|y|$仍表示<code>标签列</code>可取值的个数。等式后半部分也容易证明，此处不再赘述。</p>
+</li>
+<li><p>实现过程：</p>
+<ul>
+<li>input：训练集D，结束条件；</li>
+<li>遍历所有特征，对每个特征的所有取值，根据$A==a$<code>为T/F</code>将D分割为$D_1$和$D_2$，并计算基尼指数；</li>
+<li>在所有特征的所有取值中，选取Gini最小的特征及其切分点，从现结点生成两个子节点；</li>
+<li>重复上面两步；</li>
+<li>output：CART决策树</li>
+</ul>
+</li>
+<li><p>举个栗子：</p>
+</li>
+<li><p>假设现在有特征 “学历”，此特征有三个特征取值： “本科”，“硕士”， “博士”，<br>当使用“学历”这个特征对样本集合D进行划分时，划分值分别有三个，因而有三种划分的可能集合，划分后的子集如下：</p>
+<ul>
+<li>1.划分点： “本科”，划分后的子集合 ： {本科}，{硕士，博士}</li>
+<li>2.划分点： “硕士”，划分后的子集合 ： {硕士}，{本科，博士}</li>
+<li>3.划分点： “博士”，划分后的子集合 ： {博士}，{本科，硕士}}</li>
+</ul>
+</li>
+<li><p>对于上述的每一种划分，都可以求出对应的基尼指数$Gini(D,A^{(i)})$：<br>$$Gini(D,A^{(i)})=\frac{D_1}{D}Gini(D_2)+\frac{D_2}{D}Gini(D_2)$$<br>上式中，$A^{(i)}$表示学历的第i个特征值，如“本科”、“硕士”或“博士”。。<br>然后从所有的可能划分的$Gini(D,A^{(i)})$中找出$Gini$指数<code>最小</code>的划分，这个划分的划分点，便是使用特征A对样本集合D进行划分的最佳划分点。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-4-三种类型总结"><a href="#4-4-三种类型总结" class="headerlink" title="4.4 三种类型总结."></a><font color='red'>4.4 三种类型总结</font>.</h5><ul>
+<li>ID3：</li>
+<li>取值多的属性，更容易使数据更纯，其信息增益更大。</li>
+<li>训练得到的是一棵庞大且深度浅的树：不合理。</li>
+<li>C4.5：采用信息增益率替代信息增益。</li>
+<li>CART：</li>
+<li>以基尼系数替代熵，最小化不纯度，而不是最大化信息增益。</li>
+<li>相比ID3和C4.5，CART应用要多一些，既可以用于分类也可以用于回归。</li>
+</ul>
+<h4 id="5-剪枝"><a href="#5-剪枝" class="headerlink" title="5.剪枝"></a>5.剪枝</h4><h5 id="5-1-ID3剪枝"><a href="#5-1-ID3剪枝" class="headerlink" title="5.1 ID3剪枝"></a>5.1 ID3剪枝</h5><ul>
+<li>简介：ID3剪枝是一种简单的决策树学习的剪枝算法。</li>
+<li>原理：<br>决策树的剪枝通常是<code>最小化决策树整体的损失函数</code>：<br>$$<br>\begin{aligned}<br>C_\alpha(T)&amp;=C(T)+\alpha|T|\<br>&amp;=\sum_{t=1}^{|T|}N_tH_t(T)+\alpha|T|\<br>&amp;=\sum_{t=1}^{|T|}N_t(-\sum_{k=1}^{K}\frac{N_{tk}}{N_t}log\frac{N_{tk}}{N_t})+\alpha|T|\<br>&amp;=-\sum_{t=1}^{|T|}\sum_{k=1}^{K}N_{tk}log\frac{N_{tk}}{N_t}+\alpha|T|<br>\end{aligned}<br>$$<br>其中$H_t(T)$表示<code>叶节点t</code>上的熵，相当于前面的$Ent(D^v)$，|T|为<code>树T</code>的<code>叶节点个数</code>，第t个叶节点有$N_t$个样本点，其中属于k类的样本点有$N_{tk}$个。<code>α|T|</code>为惩罚项，用于控制模型复杂度。</li>
+<li>实现过程：<ul>
+<li>input：生成的树T，参数α</li>
+<li>计算每个节点的熵；</li>
+<li>递归地从树的叶节点向上回缩，<br>设这一组叶节点回缩<code>前后</code>整体树分别为$T$和$T’$，若$C_\alpha(T’)≤C_\alpha(T)$，则剪枝，即父节点变为新的叶节点；</li>
+<li>返回前一步，知道满足结束条件；</li>
+<li>output：修剪后的树$T_\alpha$</li>
+</ul>
+</li>
+<li>可以看出，决策树的生成只考虑了通过提高Gain或Gain_ratio对训练数据进行更好的拟合，而决策树剪枝通过极小化损失函数降低了模型的复杂度。即<code>决策树生成</code>学习局部的模型，而<code>决策树剪枝</code>学习整体的模型。<h5 id="5-2-CART剪枝"><a href="#5-2-CART剪枝" class="headerlink" title="5.2 CART剪枝"></a>5.2 CART剪枝</h5><h4 id="6-应用的建议"><a href="#6-应用的建议" class="headerlink" title="6.应用的建议."></a><font color='red'>6.应用的建议</font>.</h4></li>
+<li>优缺点<ul>
+<li>优点：<ul>
+<li>可解释性强，有助于人工分析；</li>
+<li><code>blablabla</code></li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>决策树结果不稳定，数据中很小的改变可能对生成的树产生很大的影响；</li>
+<li>需要平衡数据； </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>树形结构为何不需要归一化？<ul>
+<li>因为树模型是将特征值排列之后选取阈值来进行分枝的，<code>只关注特征值的分布</code>，而非具体数值。所以数值缩放<code>不影响分裂点</code>的位置。</li>
+<li>另外，Tree不能进行GD：因为树模型是通过寻找分裂点来最优化的，即<code>间断式</code>。间断点是<code>不可导</code>的，且求导<code>无意思</code>，所以不需要归一化。</li>
+<li>算法案例：DT、RF</li>
+<li>需要归一化的算法：<br>许多非树形结构，如<code>Adaboost、SVM、LR、KNN、K-means...</code>归一化之后，在GB时可以减少迭代次数来加快速度。</li>
+</ul>
+</li>
+<li>DT如何剪枝？<ul>
+<li>预剪枝：其中的核心思想就是，在每一次实际对结点进行进一步划分之前，先采用验证集的数据来验证如果划分是否能提高划分的准确性。如果不能，就把结点标记为叶结点并退出进一步划分；如果可以就继续递归生成节点。</li>
+<li>后剪枝：后剪枝则是先从训练集生成一颗完整的决策树，然后自底向上地对非叶结点进行考察，若将该结点对应的子树替换为叶结点能带来泛化性能提升，则将该子树替换为叶结点。<h4 id="7-sklearn-tree代码："><a href="#7-sklearn-tree代码：" class="headerlink" title="7.sklearn.tree代码："></a>7.sklearn.tree代码：</h4></li>
+</ul>
+</li>
+</ul>
+<p><em><a target="_blank" rel="noopener" href="https://github.com/NLP-LOVE/ML-NLP/blob/master/Machine%20Learning/3.Desition%20Tree/DecisionTree.ipynb" >用决策树分类并可视化</a></em></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/ML/">ML</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/11/hexo%E4%B8%BB%E9%A2%98fluid%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/11/15/Fuzzy-Cmeans/">
+                        <span class="hidden-mobile">Fuzzy-Cmeans</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "DecisionTree&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

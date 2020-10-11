@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="杂乱无章 所以记录">
+  <meta name="author" content="尘云风">
+  <meta name="keywords" content="">
+  <title>Fuzzy-Cmeans - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>尘云风</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Lab
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
+                    
+                    蓝雨
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                    
+                    你的名字
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://blogjallery.oss-cn-beijing.aliyuncs.com/other/Snipaste_2020-07-21_09-31-03.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-11-15 20:24" pubdate>
+        2019年11月15日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      794 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Fuzzy-Cmeans</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Fuzzy_clustering">Fuzzy clustering - Wikipedia</a></li>
+</ul>
+<h4 id="一、原理简述"><a href="#一、原理简述" class="headerlink" title="一、原理简述"></a>一、原理简述</h4><p>​    Fuzzy-Cmeans（Fuzzy clustering means，模糊均值聚类）</p>
+<p>​    设原数据$X，shape=(m*n)$，要分为$k$个类：</p>
+<ol>
+<li>初始化隶属矩阵，第$i$个样本$x^{(i)}$的隶属矩阵如下（需要归一化，确保概率和为1。$M_{origin}^{(i)}$、$M^{(i)}$分别为归一化前后的隶属矩阵矩阵，$M.shape=(m*k)$）</li>
+</ol>
+<p>$$<br>M_{origin}^{(i)}=[random()\ for\ j\ in\ range(k)]\<br>M^{(i)}=M_{origin}^{(i)}/sum(M_{origin}^{(i)})<br>$$</p>
+<a id="more"></a>
+
+<ol start="2">
+<li><p>计算类中心：</p>
+<p>其中，$w_j^{(i)}$表示第$i$个样本属于第$j$个类的概率</p>
+</li>
+</ol>
+<p>$$<br>c_j=\frac{\sum_i^m\omega_j^{(i)}x^{(i)}}{\sum_i^m\omega_j^{(i)}},j=1,2…k<br>$$</p>
+<ol start="3">
+<li><p>更新隶属矩阵(相当于K-means中归类的步骤)：</p>
+<p>其中，$c_j$为第$j$个类中心的坐标<br>$$<br>w_j^{(i)}=\frac{1}{\sum_{t=1}^{k}(\frac{||x^{(i)}-c_j||}{||x^{(i)}-c_t||})^2}<br>$$</p>
+</li>
+<li><p>损失函数：<br>$$<br>J=\sum_i^m\sum_j^kw_{ij}||x^{(i)}-c_j||^2<br>$$</p>
+</li>
+</ol>
+<h4 id="二、Python代码"><a href="#二、Python代码" class="headerlink" title="二、Python代码"></a>二、Python代码</h4><h5 id="2-1-迭代计算-详细代码可以查看：Fuzzy-Cmeans"><a href="#2-1-迭代计算-详细代码可以查看：Fuzzy-Cmeans" class="headerlink" title="2.1 迭代计算(详细代码可以查看：Fuzzy-Cmeans)"></a>2.1 迭代计算(详细代码可以查看：<a target="_blank" rel="noopener" href="https://github.com/C-Yunfeng/ML-algorithms/blob/master/Fuzzy-Cmeans.ipynb">Fuzzy-Cmeans</a>)</h5><ul>
+<li>初始化隶属矩阵：</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_proba_mat</span>(<span class="hljs-params">X,k</span>):</span>
+    proba_mat = []
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X.shape[<span class="hljs-number">0</span>]):
+        random_list = [random.random() <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(k)]
+        proba_lst = [x/sum(random_list) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> random_list]
+        proba_mat.append(proba_lst)
+    <span class="hljs-keyword">return</span> proba_mat</code></pre>
+
+<ul>
+<li>计算簇中心：</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_center_lst</span>(<span class="hljs-params">X,proba_mat,k,m</span>):</span>
+    <span class="hljs-comment">#计算聚类中心</span>
+    proba_mat_T = np.array(proba_mat).T
+    center_lst = []
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
+        center_proba_lst = proba_mat_T[j]  <span class="hljs-comment">#1*10</span>
+        proba_power_lst=[center_proba ** m <span class="hljs-keyword">for</span> center_proba <span class="hljs-keyword">in</span> center_proba_lst]
+        denominator = sum(proba_power_lst) <span class="hljs-comment">#分母</span>
+        
+        product_lst = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X.shape[<span class="hljs-number">0</span>]):
+            point = X.iloc[i]
+            product = [proba_power_lst[i] * x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> point]  <span class="hljs-comment">#element like [proba*x,proba*y]</span>
+            product_lst.append(product)
+        
+        numerator = np.sum(product_lst,axis=<span class="hljs-number">0</span>)  <span class="hljs-comment">#分子</span>
+        center = [x/denominator <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> numerator]
+        center_lst.append(center)
+    lst_course.append(center_lst)
+    <span class="hljs-keyword">return</span> center_lst</code></pre>
+
+<ul>
+<li>更新隶属矩阵</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">update_proba_mat</span>(<span class="hljs-params">X,center_lst,proba_mat,k,m</span>):</span>
+    <span class="hljs-comment">#更新隶属矩阵</span>
+    p = <span class="hljs-number">2</span>/(m<span class="hljs-number">-1</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(X.shape[<span class="hljs-number">0</span>]):
+        x = X.iloc[i]
+        distances = [np.linalg.norm(x-center_lst[j]) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k)]
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
+            den = sum([(distances[j]/distances[c])**p <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> range(k)])
+            proba_mat[i][j] = <span class="hljs-number">1</span>/den
+    <span class="hljs-keyword">return</span> proba_mat</code></pre>
+
+<ul>
+<li>迭代</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment">#迭代</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fuzzyCMeansClustering</span>(<span class="hljs-params">X,proba_mat,center_lst,k,m,max_iter</span>):</span>
+    curr = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> curr &lt;= max_iter:
+        center_lst = get_center_lst(X,proba_mat,k,m)
+        proba_mat = update_proba_mat(X,center_lst,proba_mat,k,m)
+        curr += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">return</span> proba_mat,center_lst</code></pre>
+
+<ul>
+<li>主函数：</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+df = pd.DataFrame(&#123;
+    <span class="hljs-string">&#x27;x&#x27;</span>: [<span class="hljs-number">12</span>, <span class="hljs-number">20</span>, <span class="hljs-number">28</span>, <span class="hljs-number">18</span>, <span class="hljs-number">29</span>, <span class="hljs-number">33</span>, <span class="hljs-number">24</span>, <span class="hljs-number">45</span>, <span class="hljs-number">45</span>, <span class="hljs-number">52</span>, <span class="hljs-number">51</span>, <span class="hljs-number">52</span>, <span class="hljs-number">55</span>, <span class="hljs-number">53</span>, <span class="hljs-number">55</span>, <span class="hljs-number">61</span>, <span class="hljs-number">64</span>, <span class="hljs-number">69</span>, <span class="hljs-number">72</span>],
+    <span class="hljs-string">&#x27;y&#x27;</span>: [<span class="hljs-number">39</span>, <span class="hljs-number">36</span>, <span class="hljs-number">30</span>, <span class="hljs-number">52</span>, <span class="hljs-number">54</span>, <span class="hljs-number">46</span>, <span class="hljs-number">55</span>, <span class="hljs-number">59</span>, <span class="hljs-number">63</span>, <span class="hljs-number">70</span>, <span class="hljs-number">66</span>, <span class="hljs-number">63</span>, <span class="hljs-number">58</span>, <span class="hljs-number">23</span>, <span class="hljs-number">14</span>, <span class="hljs-number">8</span>, <span class="hljs-number">19</span>, <span class="hljs-number">7</span>, <span class="hljs-number">24</span>]
+&#125;)
+
+X=df
+k=<span class="hljs-number">3</span>
+m=<span class="hljs-number">2</span>
+max_iter=<span class="hljs-number">15</span>
+lst_course=[]
+
+begin_mat=get_proba_mat(X,k)
+begin_centers=get_center_lst(X,begin_mat,k,m)
+end_mat,end_centers=fuzzyCMeansClustering(X,begin_mat,begin_centers,k,m,max_iter)</code></pre>
+
+<h5 id="2-2-可视化迭代过程："><a href="#2-2-可视化迭代过程：" class="headerlink" title="2.2 可视化迭代过程："></a>2.2 可视化迭代过程：</h5><pre><code class="hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">plot_course</span>(<span class="hljs-params">X,lst_course</span>):</span>
+    plt.figure(figsize=(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>))
+
+    plt.scatter(X.iloc[:,<span class="hljs-number">0</span>], X.iloc[:,<span class="hljs-number">1</span>],c=X[<span class="hljs-string">&#x27;label&#x27;</span>])
+    
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(lst_course)<span class="hljs-number">-1</span>):
+        plt.scatter(np.array(lst_course[i]).T[<span class="hljs-number">0</span>], np.array(lst_course[i]).T[<span class="hljs-number">1</span>],marker=<span class="hljs-string">&quot;s&quot;</span>,s=<span class="hljs-number">20</span>,color=<span class="hljs-string">&#x27;r&#x27;</span>)
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k):
+            x1=lst_course[i][j][<span class="hljs-number">0</span>]
+            y1=lst_course[i][j][<span class="hljs-number">1</span>]
+            x2=lst_course[i+<span class="hljs-number">1</span>][j][<span class="hljs-number">0</span>]
+            y2=lst_course[i+<span class="hljs-number">1</span>][j][<span class="hljs-number">1</span>]
+            dx = (x2 - x1)
+            dy = (y2 - y1)
+            <span class="hljs-keyword">if</span> i!=len(lst_course)<span class="hljs-number">-2</span>:
+                plt.arrow(x1, y1, dx, dy,color=<span class="hljs-string">&#x27;red&#x27;</span>)
+            <span class="hljs-keyword">else</span>:
+                plt.arrow(x1, y1, dx, dy,head_width=<span class="hljs-number">1</span>,head_length=<span class="hljs-number">1.5</span>,color=<span class="hljs-string">&#x27;r&#x27;</span>)
+        fname=<span class="hljs-string">&#x27;&#123;&#125;/imgs/&#123;&#125;.png&#x27;</span>.format(cwd,i)
+        plt.savefig(fname, dpi=<span class="hljs-literal">None</span>, facecolor=<span class="hljs-string">&#x27;w&#x27;</span>, edgecolor=<span class="hljs-string">&#x27;w&#x27;</span>)
+    plt.show()</code></pre>
+
+<ul>
+<li>可视化主函数：</li>
+</ul>
+<pre><code class="hljs python">plot_course(X_end,lst_course)</code></pre>
+
+<p><img src="https://user-images.githubusercontent.com/49241298/72425740-50aeba00-37c3-11ea-8377-22b3319c5cb3.png" srcset="/img/loading.gif"></p>
+<ul>
+<li>导出为gif：(装moviepy遇到已存在不能安装的问题时，可以用pip install –ignore –installed moviepy –user)</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> moviepy.editor <span class="hljs-keyword">import</span> ImageSequenceClip
+
+path=<span class="hljs-string">&#x27;&#123;&#125;/imgs&#x27;</span>.format(cwd)
+img_names = [<span class="hljs-string">&#x27;&#123;&#125;/&#123;&#125;.png&#x27;</span>.format(path,i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,<span class="hljs-number">16</span>)]
+
+clip = ImageSequenceClip(img_names,fps=<span class="hljs-number">3</span>)
+clip.write_gif(<span class="hljs-string">&#x27;&#123;&#125;/demo.gif&#x27;</span>.format(path))</code></pre>
+
+<p><img src="https://user-images.githubusercontent.com/49241298/72425744-53111400-37c3-11ea-9637-516f178cdea3.gif" srcset="/img/loading.gif"></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/11/24/DecisionTree/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">DecisionTree</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/11/15/K-means/">
+                        <span class="hidden-mobile">K-means</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Fuzzy-Cmeans&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

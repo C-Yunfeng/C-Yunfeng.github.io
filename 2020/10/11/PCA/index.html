@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="杂乱无章 所以记录">
+  <meta name="author" content="尘云风">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>尘云风</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Lab
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
+                    
+                    蓝雨
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                    
+                    你的名字
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://blogjallery.oss-cn-beijing.aliyuncs.com/other/Snipaste_2020-07-21_09-31-03.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-11 17:48" pubdate>
+        2020年10月11日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      19
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning/home/week/8">Coursera机器学习</a></li>
+<li><a target="_blank" rel="noopener" href="http://setosa.io/ev/principal-component-analysis/">PCA可视化网站</a></li>
+</ul>
+<h4 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h4><ol>
+<li>主成分分析（Principal component analysis，PCA）是一种常用的无监督学习方法。</li>
+<li>PCA是通过<code>正交变换</code>将<code>线性相关的变量</code>转换为<code>少数线性无关的变量</code>，这些线性无关的变量称为<code>主成分</code>。因为主成分数量通常小于原变量的个数，所以PCA属于<code>降维方法</code>。</li>
+<li>PCA的常见应用为：通过降维，可以提高算法的运行速度，也可以可视化高维的数据。</li>
+</ol>
+<a id="more"></a>
+
+<h4 id="2-数学角度"><a href="#2-数学角度" class="headerlink" title="2.数学角度"></a>2.数学角度</h4><h5 id="2-1几何意义（李航-p-298-）"><a href="#2-1几何意义（李航-p-298-）" class="headerlink" title="2.1几何意义（李航$p_{298}$）"></a>2.1几何意义（李航$p_{298}$）</h5><ul>
+<li>主成分分析旨在选取<code>正交变换中方差最大</code>的变量，即在旋转变换中选取离样本点<code>距离平方和最小</code>的轴为第一主成分，第二第三同理。</li>
+<li>如图，有5个原始数据点，坐标分别为：$(2,2),(2,6),(6,2),(6,6),(8,8)$；<a name="anchor1"></a><br>通过正交变换之后，坐标约等于$(-4,0),(-1.1,2.8),(-1.1,-2.8),(1.7,0),(4.5,0)$<br><img src="https://img-blog.csdnimg.cn/2019082410104065.png" srcset="/img/loading.gif" alt="在这里插入图片描述"></li>
+</ul>
+<h5 id="2-2公式表达（李航-p-299-）"><a href="#2-2公式表达（李航-p-299-）" class="headerlink" title="2.2公式表达（李航$p_{299}$）"></a>2.2公式表达（李航$p_{299}$）</h5><ul>
+<li><p><code>1.变量声明：</code><br>设X_train为m×n的样本矩阵<code>(m个样本，n个特征)</code>，其<code>转置</code>为$X$ (n*m)，$\sum$为$X$的协方差矩阵，$\sum$的特征值为$λ_1≥λ_2≥λ_3…≥λ_j≥0$，对应的<code>单位特征向量</code>$\alpha_1,\alpha_2,\alpha_3…\alpha_j$。</p>
+</li>
+<li><p><code>2.结论：</code><br>$X$的第$k$个主成分为：$$y_k=\alpha_k^TX =\left[\begin{matrix}\alpha_{1k}\\alpha_{2k}\.\.\\alpha_{jk}\end{matrix}\right]^T*\left[\begin{matrix}x_1\x_2\x_3\.\.\x_j\end{matrix}<br>\right]=\alpha_{1k}x_1+\alpha_{2k}x_2+…+\alpha_{jk}x_j,k=1,2,…,j$$</p>
+</li>
+</ul>
+<p>其中，$x_1$,$x_2$,$x_3$…均为1*m的向量。</p>
+<ul>
+<li><p>$X$的第k个主成分的方差为：<br>$var(y_k)=\alpha_k^TΣ\alpha_k=λ_k,k=1,2,…,j$，即协方差矩阵$Σ$的第$k$个特征值。<br>协方差为：<br>$cov(y_a,y_b)=\alpha_a^TΣ\alpha_b,a=1,2,…,j,b=1,2,…,j$<br>且所有主成分Y的方差之和等于原矩阵X的方差之和。</p>
+</li>
+<li><p><code>注：协方差矩阵C的计算：</code><br>假设X为<code>n*m</code>的矩阵，则协方差矩阵$Σ$为：<br>$$<br>\begin{aligned}<br>Σ&amp;=\frac{1}{m-1}XX^T\<br>&amp;=<br>\frac{1}{m-1}\left[\begin{matrix}<br>x_1^{(1)}&amp;x_2^{(1)}&amp;…\<br>x_1^{(2)}&amp;…&amp;…\<br>.\<br>x_1^{(m)}<br>\end{matrix}\right]<br>×<br>\left[\begin{matrix}<br>x_1^{(1)}&amp;x_1^{(2)}&amp;…\<br>x_2^{(1)}&amp;…&amp;…\<br>.\<br>x_n^{(1)}<br>\end{matrix}\right]\<br>\end{aligned}<br>$$</p>
+</li>
+</ul>
+<h4 id="3-案例"><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h4><h4 id="4-PCA代码实现"><a href="#4-PCA代码实现" class="headerlink" title="4.PCA代码实现"></a>4.PCA代码实现</h4><h5 id="4-1源码实现"><a href="#4-1源码实现" class="headerlink" title="4.1源码实现"></a>4.1源码实现</h5><ul>
+<li><p>PCA的步骤（已有m条n维数据<code>X_train</code>）：</p>
+<p>1.将X_train按列(即<code>属性</code>)进行零均值化，得$nor_X$    #$shape=(m,n)$；</p>
+<p>2.求协方差矩阵$\sum=\frac{1}{m-1}nor_X^Tnor_X$；<br>3.求协方差矩阵$\sum$的<code>特征值eig_val</code>和<code>对应特征向量eig_vec</code>；<br>4.根据特征值<code>降序</code>将对应特征向量从左至右组成矩阵，取<code>前k列</code>组成矩阵$P$    #$shape=(n,k)$；<br>5.降维之后的数据pca_X_train=$nor_X×P$     #$shape=(m*k)$</p>
+<p>ps:协方差矩阵的无偏估计的系数为$\frac{1}{m-1}$，但无论$\sum$的系数不影响最终的特征向量，只影响特征值，因此实际计算时也可以省略$\frac{1}{m-1}$。但<code>np.cov是按照m-1计算的</code>,所以这里我们也用$\frac{1}{m-1}$。</p>
+</li>
+<li><p>代码：</p>
+<pre><code class="hljs python"><span class="hljs-comment"># X为要降维的数据，类型为DataFrame</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pca</span>(<span class="hljs-params">X,k</span>):</span>
+    n_samples,n_features=X.shape
+    <span class="hljs-comment"># 零均值化</span>
+    nor_X=X-np.mean(X,axis=<span class="hljs-number">0</span>)
+    <span class="hljs-comment"># 求协方差矩阵</span>
+    C=<span class="hljs-number">1</span>/(n_samples<span class="hljs-number">-1</span>)*np.dot(np.transpose(nor_X),nor_X)
+    <span class="hljs-comment"># 求特征值和特征向量</span>
+    eig_val,eig_vec=np.linalg.eig(C)
+    <span class="hljs-comment"># 组成矩阵，并保留k个向量</span>
+    eig_pairs=[(np.abs(eig_val[i]),eig_vec[:,i]) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n_features)]
+    eig_pairs.sort(key=<span class="hljs-keyword">lambda</span> x:x[<span class="hljs-number">0</span>],reverse=<span class="hljs-literal">True</span>)
+    feature=np.array([ele[<span class="hljs-number">1</span>] <span class="hljs-keyword">for</span> ele <span class="hljs-keyword">in</span> eig_pairs[:k]])
+    <span class="hljs-comment"># 将原数据转换</span>
+    data=np.dot(nor_X,np.transpose(feature))
+    <span class="hljs-keyword">return</span> data</code></pre>
+<p>还用我们前面的数据：</p>
+<pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+X_train=[[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],
+         [<span class="hljs-number">2</span>,<span class="hljs-number">6</span>],
+         [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>],
+         [<span class="hljs-number">6</span>,<span class="hljs-number">6</span>],
+         [<span class="hljs-number">8</span>,<span class="hljs-number">8</span>]]
+X_train=pd.DataFrame(X_train,columns=[<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>])</code></pre>
+<p>则PCA转化之后的数据，可见结果和之前的图<a href="#anchor1">之前的图</a>相符合。</p>
+<pre><code class="hljs python"><span class="hljs-comment">#其中数字2表示：保留2个主成分</span>
+PCA_X_train=pd.DataFrame(pca(X_train,<span class="hljs-number">2</span>))
+print(PCA_X_train)
+<span class="hljs-comment"># Output:</span>
+<span class="hljs-comment">#           0             1</span>
+<span class="hljs-comment"># 0 -3.959798  3.920609e-16</span>
+<span class="hljs-comment"># 1 -1.131371  2.828427e+00</span>
+<span class="hljs-comment"># 2 -1.131371 -2.828427e+00</span>
+<span class="hljs-comment"># 3  1.697056 -1.630506e-16</span>
+<span class="hljs-comment"># 4  4.525483 -4.961175e-16</span></code></pre>
+<h5 id="4-2使用sklearn验证"><a href="#4-2使用sklearn验证" class="headerlink" title="4.2使用sklearn验证"></a>4.2使用sklearn验证</h5></li>
+</ul>
+<p>使用sklearn的PCA验证：</p>
+<pre><code class="hljs python"><span class="hljs-keyword">from</span> sklearn.decomposition <span class="hljs-keyword">import</span> PCA
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+pca=PCA(n_components=<span class="hljs-number">1</span>)
+pca.fit(X_train)
+print(pca.transform(X_train))
+<span class="hljs-comment"># Output:</span>
+<span class="hljs-comment"># [[-3.95979797]</span>
+<span class="hljs-comment">#  [-1.13137085]</span>
+<span class="hljs-comment">#  [-1.13137085]</span>
+<span class="hljs-comment">#  [ 1.69705627]</span>
+<span class="hljs-comment">#  [ 4.5254834 ]]</span></code></pre>
+
+<h4 id="5-使用PCA的一些建议"><a href="#5-使用PCA的一些建议" class="headerlink" title="5.使用PCA的一些建议"></a>5.使用PCA的一些建议</h4><h5 id="5-1优点"><a href="#5-1优点" class="headerlink" title="5.1优点"></a>5.1优点</h5><ul>
+<li>PCA的参数<code>均通过拟合train</code>来获得，之后在cross_validation或test上用<code>拟合好的PCA映射</code>来完成验证或预测。</li>
+<li>使用PCA可以大概把n_features减少1/10甚至1/5，而不影响性能（如accuracy）。</li>
+<li>PCA的两种主要应用：</li>
+</ul>
+<p>1.Compression（数据压缩→<code>提高算法的速度</code>）<br>2.Visualization（降维之后可视化），通常降至2D或3D</p>
+<h5 id="5-2PCA的误用"><a href="#5-2PCA的误用" class="headerlink" title="5.2PCA的误用"></a>5.2PCA的误用</h5><ul>
+<li>在处理过拟合问题时，虽然使用PCA降维可能会有一定的效果，但是<code>更推荐使用正则项</code>。因为PCA在降维时没有考虑标签列，这样做可能会<code>损失一些重要的信息</code>。而使用正则项时，很容易打到PCA的效果，而且因为$J(\theta)$中包含标签列，所以并不会忽略标签列的信息。</li>
+<li>在设计机器学习系统时，不应该先把PCA设置为一个步骤。应该先使用<code>原始数据</code>来进行拟合预测。而当有<code>足够的原因</code>，如磁盘不够，运算太太太慢等，才考虑使用PCA。</li>
+</ul>
+<h4 id="6-计算协方差的两种方法"><a href="#6-计算协方差的两种方法" class="headerlink" title="6.计算协方差的两种方法"></a>6.计算协方差的两种方法</h4><p>比如我们有如下数据：</p>
+<pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+X=[[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>],
+   [<span class="hljs-number">2</span>,<span class="hljs-number">6</span>],
+   [<span class="hljs-number">6</span>,<span class="hljs-number">2</span>],
+   [<span class="hljs-number">6</span>,<span class="hljs-number">6</span>],
+   [<span class="hljs-number">8</span>,<span class="hljs-number">8</span>]]
+X=X-np.mean(X,axis=<span class="hljs-number">0</span>)
+print(X)</code></pre>
+<ul>
+<li>方法1：$\frac{1}{m-1}X^TX$：</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-number">1</span>/(len(X)<span class="hljs-number">-1</span>)*np.dot(np.transpose(X),X)</code></pre>
+<ul>
+<li>方法2：使用numpy的cov函数：</li>
+</ul>
+<pre><code class="hljs python"><span class="hljs-comment"># 注意要将X转置，因为在cov接受的参数矩阵里：行是特征，列是记录</span>
+print(np.cov(X.T))
+<span class="hljs-comment"># Output:</span>
+<span class="hljs-comment"># [[7.2 3.2]</span>
+<span class="hljs-comment">#  [3.2 7.2]]</span></code></pre>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/PCA/">PCA</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/">主成分分析</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/11/Streamlit%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/11/Logistic-Regression/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="杂乱无章 所以记录">
+  <meta name="author" content="尘云风">
+  <meta name="keywords" content="">
+  <title>Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>尘云风</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-books"></i>
+                Lab
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
+                    
+                    蓝雨
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                    
+                    你的名字
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://blogjallery.oss-cn-beijing.aliyuncs.com/other/Snipaste_2020-07-21_09-31-03.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-10-11 17:48" pubdate>
+        2020年10月11日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      25
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h4 id="一、不定积分"><a href="#一、不定积分" class="headerlink" title="一、不定积分"></a>一、不定积分</h4><h5 id="1-概念，定义"><a href="#1-概念，定义" class="headerlink" title="1. 概念，定义"></a>1. 概念，定义</h5><h6 id="1-1-原函数（不定积分）存在定理"><a href="#1-1-原函数（不定积分）存在定理" class="headerlink" title="1.1 原函数（不定积分）存在定理"></a>1.1 原函数（不定积分）存在定理</h6><ul>
+<li>函数$f(x)$在$[a,b]$上连续，则在区间$[a,b]$上存在原函数$F(x)+C$，具体形式为$\int_a^xf(t)dt+C=\int f(x)dx$.【当$a$确定时，$\int_a^xf(t)dt$确定了，所以不能再加$C$，即不能表示所有爸】【函数有爸，则有无数个爸，且差C】</li>
+<li>含有第一类间断点，无穷间断点的函数$f(x)$在<strong>包含该点的区间</strong>内无原函数$F(x)$.<font color='0779e4'>【例1.1.1】</font>.【<strong>多次考到</strong>】</li>
+</ul>
+<a id="more"></a>
+
+<h6 id="1-2-原函数的性质"><a href="#1-2-原函数的性质" class="headerlink" title="1.2 原函数的性质"></a>1.2 原函数的性质</h6><ul>
+<li><p>$F(x)$在区间$[a,b]$上任意一点都有$F’(x)=f(x)$.</p>
+</li>
+<li><p>$(\int_0^{\phi(x)}f(t)dt)’=f(\phi(x))\phi’(x)$，不要把$\phi’(x)$丢了！！</p>
+</li>
+<li><p>奇偶周期性</p>
+<ul>
+<li><p>$\int_a^xf(t)dt=F(x)+C—–f(x)———f’(x)$.</p>
+<p>$偶函数————奇函数———偶函数$.</p>
+<p>$奇函数\stackrel{a=0时}{————}偶函数———奇函数$.</p>
+<p>$T\stackrel{\int_0^Tf(t)dt=0时}{————–}T———–T$.</p>
+<blockquote>
+<p>34年没考过偶函数且$a=0$时的爸</p>
+</blockquote>
+</li>
+<li><p>偶函数在对称区间上的积分可以化为“2×一般区间积分”</p>
+</li>
+<li><p><font color='red'>奇函数在对称区间上的积分为0！【有时很麻烦的三角函数可以直接=0】</font>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="1-3-变限积分存在定理"><a href="#1-3-变限积分存在定理" class="headerlink" title="1.3 变限积分存在定理"></a>1.3 变限积分存在定理</h6><ul>
+<li><p>若$f(x)$在$[a,b]$上有有限个第一类间断点(设为$x_1,x_2…x_n$)，则在$[a,b]$上存在变限积分$F(x)=\int_c^xf(t)dt$【注意，不是原函数】，且不论$c$是否等于$x_i$：</p>
+<ul>
+<li>$F(x)$在$[a,b]$上连续</li>
+<li>$F’(x)=(\int_a^xf(t)dt)’=f(x)$，当$x\not=x_1,x_2…x_n$.</li>
+<li>$F_-‘(x)=f(x_0^-),F_+’(x)=f(x_0^+)$.</li>
+</ul>
+</li>
+<li><p><font color='0779e4'>【例1.1.1】</font>设$f(x)=\begin{cases}e^x,x&lt;0\x,x≥0\end{cases},F(x)=\int_1^xf(t)dt$，则$F(x)$在$x=0$处：</p>
+<p>A）极限不存在  B）极限存在但不连续  C）连续但不可导   D）可导，且$F’(0)=0$</p>
+<blockquote>
+<p>在定义域内没有原函数，连续→该点出极限存在，$F’<em>-(0)=f(0^-)=lim</em>{x→0^-}f(x)=1,F’_+(0)=f(0^+)=0$，选C</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="2-四大积分法"><a href="#2-四大积分法" class="headerlink" title="2. 四大积分法"></a>2. 四大积分法</h5><h6 id="2-1-凑微分法"><a href="#2-1-凑微分法" class="headerlink" title="2.1 凑微分法"></a>2.1 凑微分法</h6><ul>
+<li>$\int g[f(x)]f’(x)dx=\int g[f(x)]df(x)【\stackrel{令t=f(x)}{===}\int g(t)dt】$.</li>
+<li>常见解题情况<ul>
+<li>有理分式$\frac{P_n(x)}{Q_m(x)}$的分母上有单独的$x^{n-1}$，则积分变量处配为$dx^n$【可以配出任意阶！！】【注，积分变量仍为$x$！】</li>
+<li>解有理分式，分子为$Ax+B$，分母有$ax^2+bx+c$时，将分子配出$\frac{1}{\alpha}(2ax+b)+\beta$，然后拆开将第一项凑微分【注，分子不要配成这样$2ax+b-(A-2a)x+(B-b)$，这样就更复杂了，因为拆分后因式更不能积分】</li>
+</ul>
+</li>
+</ul>
+<h6 id="2-2-换元法"><a href="#2-2-换元法" class="headerlink" title="2.2 换元法"></a>2.2 换元法</h6><ul>
+<li>普通换元（幂函数换元）【前提是凑微分】<ul>
+<li>如：令$t=x^2、t=x^2+1$.</li>
+</ul>
+</li>
+<li><h2 id="倒代换"><a href="#倒代换" class="headerlink" title="倒代换"></a>倒代换</h2></li>
+<li>三角换元<ul>
+<li>$\sqrt{a^2-x^2}\stackrel{令x=asint}{====}acost$，【注意换积分变量，定积分是换上下限】【令$x=acost$其实也可以】<font color='0779e4'>【全书P94】【660-56】</font>.</li>
+<li>$\sqrt{a^2+x^2}\stackrel{令x=atant}{====}a\frac{1}{cost}$.<font color='0779e4'>【全书P97】</font>.</li>
+</ul>
+</li>
+<li>根式换元<ul>
+<li>当根号下是一般二次因式$\sqrt{ax^2+bx+c}$时，一般可以尝试将其配成平方差公式/平方和公式，然后三角换元</li>
+<li>当有$\sqrt[m]{ax+b}$和$\sqrt[n]{cx+d}$时，令$t=\sqrt[l]{ex+f},l是m和n的最小公倍数$，</li>
+<li>有$\sqrt{\frac{ax+b}{cx+d}}$时，直接令$t=\sqrt{\frac{ax+b}{cx+d}}$，然后解出$x$【或者尝试乘以分子之后拆开，接下来看能否直接用公式/凑微分等基础工具！】【注，换元之后一般可以凑微分！！！】</li>
+</ul>
+</li>
+<li>换元之后记得回代！！！</li>
+</ul>
+<h6 id="2-3-分部积分法"><a href="#2-3-分部积分法" class="headerlink" title="2.3 分部积分法"></a>2.3 分部积分法</h6><ul>
+<li><p>$\int uv’=\int udv=uv-\int vdu$，$f(x)和g(x)$通常是不同类型的函数【一般先要凑微分】</p>
+<ul>
+<li>反对幂指三/三指，<ul>
+<li>前面的是$u$，后放，求导【求导是对分部之后的积分形式来说的】</li>
+<li>三指/指三可以互换，因为是积分再现</li>
+</ul>
+</li>
+<li>$f(x)和g(x)$也可以是不同类型的函数，<strong>如都是有理因式</strong>：</li>
+<li>并不是所有的不同类型函数相乘都可以用“分部积分”，有时只需用“凑微分”<font color='0779e4'>【例1.2.1】【例1.2.2】</font>.</li>
+</ul>
+</li>
+<li><p>被积函数中含有<strong>导数或变限函数</strong>时，有时可以用分部积分</p>
+</li>
+<li><p>积分表【交叉相乘，正负相间】</p>
+<ul>
+<li>反对幂指三，先点到谁，先写谁</li>
+<li>积分表长度的选择<ul>
+<li>如果幂求导，则一般是幂求导至0</li>
+<li>如果对求导，则一般至$\frac{1}{x}$.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>例题</p>
+<ul>
+<li><p><font color='0779e4'>【例1.2.1】</font>求$\int{\frac{x^2+1}{x(x-1)^2}}lnxdx$.</p>
+</li>
+<li><p><font color='0779e4'>【例1.2.2】</font>求$\int e^x(\frac{1-x}{1+x^2})^2dx$.</p>
+<blockquote>
+<p>中间一步，要对$e^x$求导，而非幂函数</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="2-4-有理函数积分法"><a href="#2-4-有理函数积分法" class="headerlink" title="2.4 有理函数积分法"></a>2.4 有理函数积分法</h6><ul>
+<li>常见拆解法<ul>
+<li>分母的一次因式$ax+b\rightarrow\frac{A}{ax+b}$.</li>
+<li>分母的2重一次因式$(ax+b)^2\rightarrow\frac{A}{ax+b}+\frac{Bx+C}{(ax+b)^2}$.</li>
+<li>分母的二次因式$ax^2+bx+c\rightarrow \frac{Ax+B}{ax^2+bx+c}$.</li>
+<li>分母的k重二次因式$(ax^2+bx+c)^k\rightarrow \frac{Ax+B}{ax^2+bx+c}+\frac{Cx+D}{(ax^2+bx+c)^2}+…+\frac{Mx+N}{(ax^2+bx+c)^k}$.</li>
+</ul>
+</li>
+<li>有理函数积分的目的是<font color='red'>拆分之后容易积分，或可以使用简单的凑微分/换元积分</font>，如果拆分之后的因式不能积分，则可能需要放弃此法</li>
+<li>并不是所有的有理函数都需要这样拆分，有的时候可以直接看着分母凑分子？</li>
+<li>有的有理函数本身就是最简因式，不需要再拆分，因为拆分之后还是自己，如$\frac{x+1}{(1+x^2)^2}$.</li>
+</ul>
+<h6 id="2-5-小结"><a href="#2-5-小结" class="headerlink" title="2.5 小结"></a>2.5 小结</h6><ul>
+<li>从上面四大积分法，其实可以看出，换元法之后可能用到“凑微分”；分部积分之后可能用到“换元法”和“凑微分”；有理函数积分则更经常用到“凑微分”和“换元”，有时还会用到”分部积分“。</li>
+</ul>
+<h4 id="3-倒三角"><a href="#3-倒三角" class="headerlink" title="3. 倒三角"></a>3. 倒三角</h4><ul>
+<li>三角因式</li>
+</ul>
+<h4 id="二、定积分"><a href="#二、定积分" class="headerlink" title="二、定积分"></a>二、定积分</h4><h5 id="1-概念、性质、定理"><a href="#1-概念、性质、定理" class="headerlink" title="1. 概念、性质、定理"></a>1. 概念、性质、定理</h5><h6 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h6><ul>
+<li><font color='red'>$lim_{n→\infty}\sum_{i=1}^n f(\frac{i}{n})\frac{1}{n}=\int_0^1f(x)dx$</font>【 ①提出$\frac{1}{n}$②凑出$\frac{i}{n}$③写出$\int_0^1f(d)dx$】</li>
+</ul>
+<h6 id="1-1-定积分存在定理【不是重点，不怎么考】"><a href="#1-1-定积分存在定理【不是重点，不怎么考】" class="headerlink" title="1.1 定积分存在定理【不是重点，不怎么考】"></a>1.1 定积分存在定理【不是重点，不怎么考】</h6><ul>
+<li><p>充分条件</p>
+<ul>
+<li><p>函数$f(x)$在$[a,b]$上连续，则存在定积分$\int_a^b{f(x)dx}$.</p>
+</li>
+<li><p>函数$f(x)$在$[a,b]$上<strong>有界</strong>且有有限个<strong>第一类间断点</strong>【无穷间断？】，则存在定积分$\int_a^b{f(x)dx}$.</p>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200520113706058.png" srcset="/img/loading.gif" alt="image-20200520113706058"></p>
+</li>
+</ul>
+</li>
+<li><p>必要条件</p>
+<ul>
+<li>可积函数必有界</li>
+</ul>
+</li>
+</ul>
+<h6 id="1-2-四大性质"><a href="#1-2-四大性质" class="headerlink" title="1.2 四大性质"></a>1.2 四大性质</h6><ul>
+<li><p>求区间长度，$\int_a^bdx=b-a$.</p>
+</li>
+<li><p>积分的线性性质</p>
+</li>
+<li><p>积分的可加/可拆行</p>
+</li>
+<li><p>保号性</p>
+<ul>
+<li><p>$f(x)≤g(x)$，则$\int_a^bf(x)dx≤\int g(x)dx$</p>
+<blockquote>
+<p>如果积分取等号，则函数恒等</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>估值定理（没考过）</p>
+</li>
+<li><p><font color='red'>中值定理</font>：设$f(x)在[a,b]$上连续，则$\exist\xi\in[a,b]$，使得$\int_a^bf(d)dx=f(\xi)(b-a)$.</p>
+<blockquote>
+<p>证明：令$F(x)=\int_a^xf(t)dt\stackrel{拉氏}{→}F(b)-F(a)=F’(\xi)(b-a)$.</p>
+<p>​            所以$\int_a^bf(x)dx=f(\xi)(b-a)$，$\xi\in(a,b)\in[a,b]$。</p>
+</blockquote>
+<p><strong>抽象函数的定积分则使用</strong>。</p>
+<ul>
+<li>可搞二阶导的定理：<ul>
+<li>拉氏</li>
+<li>三次罗尔</li>
+<li>一次泰勒</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="2-区间再现公式"><a href="#2-区间再现公式" class="headerlink" title="2. 区间再现公式"></a>2. 区间再现公式</h5><ul>
+<li><p>$\int_a^bf(x)dx=\int_a^bf(a+b-x)dx$.【常用于三角函数的积分】</p>
+<ul>
+<li><p>$\int_{a}^bf(x)dx=\int_a^{\frac{a+b}{2}}{[f(x)+f(a+b-x)]}$，</p>
+<p>【特殊的，对称区间时，常用这个变形公式，因为$a+b=0$，计算简单<font color='0779e4'>【全书P100】</font>】</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-华里士公式"><a href="#3-华里士公式" class="headerlink" title="3. 华里士公式"></a>3. 华里士公式</h5><ul>
+<li><p>$\int_0^{\frac{\pi}{2}}sin^nx=\int_0^{\frac{\pi}{2}}cos^nx=\begin{cases}\frac{n-1}{n}<em>\frac{n-3}{n-2}</em>…<em>\frac{1}{2}*\frac{\pi}{2}[点火成功]\\frac{n-1}{n}*\frac{n-3}{n-2}</em>…*\frac{2}{3}\end{cases}$.【年年考】</p>
+</li>
+<li></li>
+</ul>
+<h5 id="3-抽象函数定积分"><a href="#3-抽象函数定积分" class="headerlink" title="3. 抽象函数定积分"></a>3. 抽象函数定积分</h5><ul>
+<li>中值定理</li>
+</ul>
+<h4 id="三、积分的几何应用"><a href="#三、积分的几何应用" class="headerlink" title="三、积分的几何应用"></a>三、积分的几何应用</h4>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/10/11/%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/11/%E7%BD%91%E7%AB%99%E5%B0%8F%E6%8F%92%E4%BB%B6/">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
