@@ -202,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      916 字
+      1k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      12
        分钟
     </span>
   
@@ -365,19 +365,36 @@
 </ul>
 <h5 id="25公式渲染方案"><a class="markdownIt-Anchor" href="#25公式渲染方案"></a> 2.5	公式渲染方案</h5>
 <ul>
-<li>hexo官方插件hexo-math
+<li>
+<p>hexo官方插件hexo-math</p>
 <ul>
 <li>因为hexo5新加了hexo-math插件，渲染可以自定义样式。不过用的是<code>&#123;% %&#125;</code>，不能在markdown中预	览。</li>
 <li>可能的解决办法：<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-math/issues/56">How can I use inline style with $…$</a>，<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-math/issues/124">How to render math not in math tag</a>，</li>
 </ul>
 </li>
-<li>pandoc尝试
+<li>
+<p>pandoc尝试</p>
 <ul>
 <li>下载了不知道如何使用。。。</li>
 </ul>
 </li>
 <li>
-<h2 id="fluid自带的katex"><a class="markdownIt-Anchor" href="#fluid自带的katex"></a> fluid自带的katex</h2>
+<p>markdown-it-plus的katex</p>
+<ul>
+<li>
+<p>warning</p>
+<blockquote>
+<p>LaTeX-incompatible input and strict mode is set to ‘warn’: Unicode text character “服” used in math mode [unicodeTextInMathMode]<br />
+LaTeX-incompatible input and strict mode is set to ‘warn’: Unicode text character “从” used in math mode [unicodeTextInMathMode]<br />
+No character metrics for ‘服’ in style ‘Main-Regular’<br />
+No character metrics for ‘从’ in style ‘Main-Regular’</p>
+</blockquote>
+<p>即latex里的中文不会被渲染。</p>
+</li>
+<li>
+<p>个别渲染不成功，如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span></span></span></span>~<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>P</mi><mi>i</mi><mi>j</mi></msubsup></mrow><annotation encoding="application/x-tex">P_i^j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.219436em;vertical-align:-0.276864em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.942572em;"><span style="top:-2.4231360000000004em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.276864em;"><span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>X</mi><mtext> </mtext><msubsup><mi>P</mi><mi>i</mi><mi>j</mi></msubsup></mrow><annotation encoding="application/x-tex">X~P_i^j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.219436em;vertical-align:-0.276864em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace nobreak"> </span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.942572em;"><span style="top:-2.4231360000000004em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.276864em;"><span></span></span></span></span></span></span></span></span></span>，</p>
+</li>
+</ul>
 </li>
 </ul>
 <h4 id="3图床管理工具"><a class="markdownIt-Anchor" href="#3图床管理工具"></a> 3.	图床管理工具</h4>
