@@ -245,19 +245,21 @@
             <h1 style="display: none">Tas自动批改作业</h1>
             
             <div class="markdown-body" id="post-body">
-              <h5 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h5><ul>
+              <h5 id="爬虫"><a class="markdownIt-Anchor" href="#爬虫"></a> 爬虫</h5>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/dc932de13a6e">结构化数据操作——Xpath、BS4、正则</a></li>
 </ul>
-<h5 id="tkinter"><a href="#tkinter" class="headerlink" title="tkinter"></a>tkinter</h5><ul>
-<li><p>创建requests.Session</p>
+<h5 id="tkinter"><a class="markdownIt-Anchor" href="#tkinter"></a> tkinter</h5>
+<ul>
+<li>
+<p>创建requests.Session</p>
 <pre class="language-python" data-language="python"><code class="language-python">self<span class="token punctuation">.</span>s <span class="token operator">=</span> session</code></pre>
-
 </li>
 </ul>
 <a id="more"></a>
-
 <ul>
-<li><p>POST提交请求</p>
+<li>
+<p>POST提交请求</p>
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># 设置评分</span>
 params2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"__EVENTTARGET"</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>     <span class="token comment"># 注释掉的为非必须字段</span>
            <span class="token comment"># "__EVENTARGUMENT": "",</span>
@@ -272,17 +274,16 @@ params2 <span class="token operator">=</span> <span class="token punctuation">&#
     params2<span class="token punctuation">[</span>sbn<span class="token punctuation">]</span><span class="token operator">=</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>self<span class="token punctuation">.</span>lst_score<span class="token punctuation">)</span>      <span class="token comment"># 设置评分</span>
 self<span class="token punctuation">.</span>s<span class="token punctuation">.</span>post<span class="token punctuation">(</span>homework_aim_url<span class="token punctuation">,</span> data<span class="token operator">=</span>params2<span class="token punctuation">)</span>                    </code></pre>
 </li>
-<li><p>按钮</p>
+<li>
+<p>按钮</p>
 <pre class="language-python" data-language="python"><code class="language-python">self<span class="token punctuation">.</span>button3 <span class="token operator">=</span> Button<span class="token punctuation">(</span>self<span class="token punctuation">.</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"批阅"</span><span class="token punctuation">,</span> command<span class="token operator">=</span>self<span class="token punctuation">.</span>readover<span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">,</span> height<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> bg<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span> fg<span class="token operator">=</span><span class="token string">'white'</span><span class="token punctuation">)</span>
 self<span class="token punctuation">.</span>button3<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span></code></pre>
 </li>
-<li><p>复选框</p>
+<li>
+<p>复选框</p>
 <pre class="language-python" data-language="python"><code class="language-python">self<span class="token punctuation">.</span>download_all <span class="token operator">=</span> IntVar<span class="token punctuation">(</span><span class="token punctuation">)</span>
 self<span class="token punctuation">.</span>check_button <span class="token operator">=</span> Checkbutton<span class="token punctuation">(</span>self<span class="token punctuation">.</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">'下载所有作业'</span><span class="token punctuation">,</span> variable<span class="token operator">=</span>self<span class="token punctuation">.</span>download_all<span class="token punctuation">)</span>
 self<span class="token punctuation">.</span>check_button<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span></code></pre>
-
-
-
 </li>
 </ul>
 

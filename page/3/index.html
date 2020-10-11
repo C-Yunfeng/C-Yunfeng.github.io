@@ -254,10 +254,11 @@
 
 Fuzzy clustering - Wikipedia
 
-一、原理简述​    Fuzzy-Cmeans（Fuzzy clustering means，模糊均值聚类）
-​    设原数据$X，shape=(m*n)$，要分为$k$个类：
+ 一、原理简述
+​	Fuzzy-Cmeans（Fuzzy clustering means，模糊均值聚类）
+​	设原数据X，shape=(m∗n)X，shape=(m*n)X，shape=(m∗n)，要分为kkk个类：
 
-初始化隶属矩阵，第$i$个样本$x^{(i)}$的隶属矩阵如下（需要归一化，确保概率和为1。$M_{origin}^{(i)}$、$M^{(i)
+初始化隶属矩阵，第iii个样本x(i)x^{(i)}x(i)的隶属矩阵如下（需要归一化，确保概率和为1。
         </a>
       </p>
 
@@ -290,11 +291,13 @@ Fuzzy clustering - Wikipedia
           
             
           
-          一、原理简述
+           一、原理简述
+
 损失函数：
 
-$$J(c^{(i)}…c^{(m)},μ_1…μk)=\frac{1}{m}||x^{(i)}-μ{c^{(i)}}||^2$$
-​        设选定$k$个簇，则$c^{(i)}$表示$x^{(i)}$的标签，$即(c^{(i)}=1,2….k)$；$μk$表示第$k$个簇中心的坐标；$μ{c^{(i)}}$表示$x^{(i)}$所属簇的簇中心。
+J(c(i)...c(m),μ1...μk)=1m∣∣x(i)−μc(i)∣∣2J(c^{(i)}...c^{(m)},μ_1...μ_k)=\frac{1}{m}||x^{(i)}-μ_{c^{(i)}}||^2
+J(c(i)...c(m),μ1​...μk​)=m1​∣∣x(i)−μc(i)​∣∣2
+​		设选定kkk个簇，则c(i)c^{(i)}c(i)表示x
         </a>
       </p>
 
