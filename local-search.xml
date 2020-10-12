@@ -186,11 +186,11 @@
   
   
   <entry>
-    <title>test2</title>
+    <title></title>
     <link href="/2020/10/11/test2/"/>
     <url>/2020/10/11/test2/</url>
     
-    <content type="html"><![CDATA[<ul><li><p>1</p><ul><li><pre class="highlight"><code class="java"><span class="hljs-keyword">public</span><span class="hljs-comment">//列表顺延的缩进[实际是空格缩进]</span>&lt;!--code￼<span class="hljs-number">0</span>--&gt;</code></pre></li></ul></li></ul><pre class="language-java" data-language="java"><code class="language-java">没有缩进的java</code></pre><p>​```Tab缩进之后，输入java没有提示</p><p>​```Tab缩进之后，强行java的话，会变成高亮</p><p>一</p><p>​双行换行后用Tab，会添加断点</p><p>一<br />单行换行后用Tab，是长箭头</p><p>一</p><p>​    双行换行后四个空格，会添加断点</p><p>一<br />单行换行后四个空格，四个空格</p><p>多个空格           哈哈</p><blockquote><p>引用</p><p>双行换行<br />单行换行</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>一个小标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>]]></content>
     
     
     
