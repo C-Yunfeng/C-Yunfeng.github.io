@@ -187,23 +187,10 @@
   
   <entry>
     <title></title>
-    <link href="/2020/10/11/test2/"/>
-    <url>/2020/10/11/test2/</url>
-    
-    <content type="html"><![CDATA[<pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>一个小标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>test</title>
     <link href="/2020/10/11/test/"/>
     <url>/2020/10/11/test/</url>
     
-    <content type="html"><![CDATA[<ul><li><p>小标题下。对整个代码块缩进</p><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'缩进是两个空格'</span><span class="token punctuation">)</span></code></pre></li></ul><p>非小标题下。对整个代码块缩进</p>  <pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'缩进是两个空格'</span><span class="token punctuation">)</span></code></pre><p>仅对代码内容缩进</p><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'缩进是Tab'</span><span class="token punctuation">)</span></code></pre><p>没有缩进的代码</p><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'啥都没有的python'</span><span class="token punctuation">)</span></code></pre><p>试验：<br /><code>哈``python print('缩进是两个空格') ``啊</code></p>]]></content>
+    <content type="html"><![CDATA[<pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>note note-primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>一个小标签<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>label label-primary<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Label<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span></code></pre><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://hexo.fluid-dev.com/docs/guide/#tag-%E6%8F%92%E4%BB%B6<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>悬停显示<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre>]]></content>
     
     
     
