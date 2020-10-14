@@ -129,9 +129,9 @@
                   
                   
                   
-                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/yourname.html">
+                  <a class="dropdown-item" href="https://www.chenyunfeng.com/lab/bluerain.html">
                     
-                    你的名字
+                    蓝雨
                   </a>
                 
               </div>
@@ -623,6 +623,29 @@ f^{&#039;}(x)=0\stackrel{有区间}{\Longrightarrow}\begin{cases}费马定理\\�
   </div>
 </div>
   
+
+  
+    <!-- APlayer 音乐播放器 -->
+    <div id="aplayer"></div>
+    <script defer src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css" />
+<script type="text/javascript">
+  var oldLoadAp = window.onload;
+  window.onload = function () {
+    oldLoadAp && oldLoadAp();
+
+    new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      autoplay: 'false' === 'true',
+      loop: 'all',
+      order: 'random',
+      theme: '#b7daff',
+      preload: 'none',
+      audio: [{"name":"想想念念","artist":"artist","url":"http://blogjallery.oss-cn-beijing.aliyuncs.com/music/%E6%83%B3%E6%83%B3%E5%BF%B5%E5%BF%B5.m4a","cover":"http://blogjallery.oss-cn-beijing.aliyuncs.com/music/4473a3939d5befba1bf6554c63ce1c6.jpg"},{"name":"Search for More","artist":"artist","url":"http://blogjallery.oss-cn-beijing.aliyuncs.com/music/Search%20for%20More.m4a","cover":"http://blogjallery.oss-cn-beijing.aliyuncs.com/music/02ed1ac832b8648cd0d8ce747d34365.jpg"},{"name":"霜雪千年","artist":"artist","url":"http://blogjallery.oss-cn-beijing.aliyuncs.com/music/%E8%90%A7%E5%BF%86%E6%83%85-%E9%9C%9C%E9%9B%AA%E5%8D%83%E5%B9%B4.mp3","cover":"http://blogjallery.oss-cn-beijing.aliyuncs.com/music/8f875e1abbb02bd5f76847a79d4fd20.jpg"}]
+    });
+  }
+</script>
 
   
 
