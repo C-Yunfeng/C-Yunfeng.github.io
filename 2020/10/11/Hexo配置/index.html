@@ -17,7 +17,7 @@
   <meta name="description" content="杂乱无章 所以记录">
   <meta name="author" content="尘云风">
   <meta name="keywords" content="">
-  <title>hexo主题fluid的使用 - Hexo</title>
+  <title>Hexo配置 - 尘云风</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -202,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1k 字
+      1.1k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      13
+      15
        分钟
     </span>
   
@@ -242,17 +242,32 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">hexo主题fluid的使用</h1>
+            <h1 style="display: none">Hexo配置</h1>
             
             <div class="markdown-body" id="post-body">
-              <blockquote>
-<p>使用感受</p>
+              <h4 id="1预处理"><a class="markdownIt-Anchor" href="#1预处理"></a> 1.	预处理</h4>
+<h5 id="11git的修改"><a class="markdownIt-Anchor" href="#11git的修改"></a> 1.1	Git的修改</h5>
 <ul>
-<li>不支持pandoc</li>
+<li>
+<p>前几天把github的昵称改了，所以今天<code>hexo deploy</code>的时候报错了，说不认识了：</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">*** Please tell me <span class="token function">who</span> you are.
+
+Run
+
+  <span class="token function">git</span> config --global user.email <span class="token string">"you@example.com"</span>
+  <span class="token function">git</span> config --global user.name <span class="token string">"Your Name"</span>
+
+to <span class="token builtin class-name">set</span> your account<span class="token string">'s default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '</span><span class="token number">18810</span>@DESKTOP-VP1U5H5.<span class="token punctuation">(</span>none<span class="token punctuation">)</span>'<span class="token punctuation">)</span>
+Everything up-to-date</code></pre>
+</li>
+<li>
+<p>那就按他说的重新配一下，邮箱还是之前的邮箱，没有换。只改<code>user.name</code>就行了，改成github修改之后的昵称。</p>
+</li>
 </ul>
-</blockquote>
-<h4 id="1预处理"><a class="markdownIt-Anchor" href="#1预处理"></a> 1.	预处理</h4>
-<h5 id="11-公式渲染问题"><a class="markdownIt-Anchor" href="#11-公式渲染问题"></a> 1.1 公式渲染问题</h5>
+<h5 id="12-公式渲染问题"><a class="markdownIt-Anchor" href="#12-公式渲染问题"></a> 1.2 	公式渲染问题</h5>
 <ul>
 <li>
 <p>问题描述：</p>
@@ -286,7 +301,13 @@
 </ul>
 </li>
 </ul>
-<h4 id="2主题配置"><a class="markdownIt-Anchor" href="#2主题配置"></a> 2.	主题配置</h4>
+<h4 id="2fluid主题的配置"><a class="markdownIt-Anchor" href="#2fluid主题的配置"></a> 2.	fluid主题的配置</h4>
+<blockquote>
+<p>使用感受</p>
+<ul>
+<li>不支持Pandoc</li>
+</ul>
+</blockquote>
 <h5 id="21代码块重复"><a class="markdownIt-Anchor" href="#21代码块重复"></a> 2.1	代码块重复</h5>
 <ul>
 <li>
@@ -402,7 +423,7 @@ No character metrics for ‘从’ in style ‘Main-Regular’</p>
 </li>
 </ul>
 <h4 id="3图床管理工具"><a class="markdownIt-Anchor" href="#3图床管理工具"></a> 3.	图床管理工具</h4>
-<h5 id="21阿里云oss上传失败"><a class="markdownIt-Anchor" href="#21阿里云oss上传失败"></a> 2.1	阿里云OSS上传失败</h5>
+<h5 id="31阿里云oss上传失败"><a class="markdownIt-Anchor" href="#31阿里云oss上传失败"></a> 3.1	阿里云OSS上传失败</h5>
 <ul>
 <li>
 <p>问题描述：</p>
@@ -620,7 +641,7 @@ No character metrics for ‘从’ in style ‘Main-Regular’</p>
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "hexo主题fluid的使用&nbsp;",
+        "Hexo配置&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
