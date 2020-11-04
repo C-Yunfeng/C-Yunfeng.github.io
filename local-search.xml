@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title></title>
+    <title>常用软件安装及编程环境配置</title>
     <link href="/2020/11/02/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <url>/2020/11/02/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
     
     <content type="html"><![CDATA[<h5 id="1安装python37"><a class="markdownIt-Anchor" href="#1安装python37"></a> 1.安装Python3.7</h5><ul><li><p>在官网下载。这里选择ftp：<a href="https://www.python.org/ftp/python/3.7.0/">Index of /ftp/python/3.7.0/</a>，我下载的是<code>python-3.7.0-amd64.exe</code>版本。</p></li><li><p>打开安装程序，选择自定义安装。</p></li><li><p>修改Python3.7的默认路径</p></li></ul><h5 id="2修改jupyterlab的默认启动路径"><a class="markdownIt-Anchor" href="#2修改jupyterlab的默认启动路径"></a> 2.修改JupyterLab的默认启动路径</h5><ul><li><p><code>C:\Users\***\.jupyter</code>里没有<code>jupyter_notebook_config.py</code>文件，手动生成：</p><pre class="language-python" data-language="python"><code class="language-python">jupyter lab <span class="token operator">-</span><span class="token operator">-</span>generate<span class="token operator">-</span>config</code></pre><p>然后就生成了。打开。</p></li><li><p>搜索<code>c.NotebookApp.notebook_dir = ''</code>，填写想要启动的路径，如：</p><pre class="language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>notebook_dir <span class="token operator">=</span> <span class="token string">'D:/ProjectFiles/JupyterLab_Pj'</span></code></pre></li></ul><h5 id="3vscode配置c开发环境"><a class="markdownIt-Anchor" href="#3vscode配置c开发环境"></a> 3.VSCode配置C++开发环境</h5><p>参考：<a href="https://www.cnblogs.com/bpf-1024/p/11597000.html">VSCode配置C++环境</a>，</p><h5 id="4ffmpeg下载与配置"><a class="markdownIt-Anchor" href="#4ffmpeg下载与配置"></a> 4.FFmpeg下载与配置</h5><blockquote><p>我是win10的，而且不想用git装，所以不讲git的装法。</p></blockquote><h6 id="41下载"><a class="markdownIt-Anchor" href="#41下载"></a> 4.1下载</h6><ul><li><p>官网在这<a href="http://ffmpeg.org/">FFmpeg</a>，进去后点<code>Download</code>：</p><p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104180321.png" alt="" /></p></li><li><p>然后往下拉，找到Win版本，选择第一个<code>gyan.dev</code>：</p><blockquote><p>gyan.dev和btBN的都差不多，是不同人维护的，选哪个都行。</p></blockquote><p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104180436.png" alt="" /></p></li><li><p>进去后下拉，找到<code>Links</code>，然后选一个想装的：</p><blockquote><p>因为我目前只用ffmpeg，其他不用，所以选择的是第二个：<code>ffmpeg-release-essentials.7z</code>。</p></blockquote><p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104180722.png" alt="" /></p></li></ul><h6 id="42解压配置环境变量"><a class="markdownIt-Anchor" href="#42解压配置环境变量"></a> 4.2解压，配置环境变量</h6><ul><li><p>下载后解压到想装的目录，我解压到<code>D:\ProgramFiles\FFmpeg_Pg</code>下，如图：</p><p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104181103.png" alt="" /></p></li><li><p>然后添加环境变量[找不到百度去]，将刚才解压的目录添加上去：</p><p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104181611.png" alt="" /></p></li><li><p>打开命令行，输入<code>ffmpeg</code>，如下，就可以用了。</p><p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104181852.png" alt="" /></p></li></ul>]]></content>
     
     
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件安装,Python37,JupyterLab,FFmpeg</tag>
+      
+    </tags>
     
   </entry>
   
