@@ -17,7 +17,7 @@
   <meta name="description" content="杂乱无章 所以记录">
   <meta name="author" content="尘云风">
   <meta name="keywords" content="">
-  <title>常用软件安装及编程环境配置 - 尘云风</title>
+  <title>语料 - 尘云风</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -190,8 +190,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-11-02 10:06" pubdate>
-        2020年11月2日 上午
+      <time datetime="2020-11-23 23:00" pubdate>
+        2020年11月23日 晚上
       </time>
     </span>
   
@@ -202,7 +202,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      597 字
+      2.4k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      39
        分钟
     </span>
   
@@ -242,112 +242,240 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">常用软件安装及编程环境配置</h1>
+            <h1 style="display: none">语料</h1>
             
             <div class="markdown-body" id="post-body">
-              <h5 id="1安装python37"><a class="markdownIt-Anchor" href="#1安装python37"></a> 1.	安装Python3.7</h5>
-<ul>
-<li>
-<p>在官网下载。这里选择ftp：<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.7.0/">Index of /ftp/python/3.7.0/</a>，我下载的是<code>python-3.7.0-amd64.exe</code>版本。</p>
-</li>
-<li>
-<p>打开安装程序，选择自定义安装。</p>
-</li>
-<li>
-<p>修改Python3.7的默认路径</p>
-</li>
+              <ul>
+<li>摘录方法</li>
 </ul>
-<h5 id="2修改jupyterlab的默认启动路径"><a class="markdownIt-Anchor" href="#2修改jupyterlab的默认启动路径"></a> 2.	修改JupyterLab的默认启动路径</h5>
-<ul>
-<li>
-<p><code>C:\Users\***\.jupyter</code>里没有<code>jupyter_notebook_config.py</code>文件，手动生成：</p>
-<pre class="language-python" data-language="python"><code class="language-python">jupyter lab <span class="token operator">-</span><span class="token operator">-</span>generate<span class="token operator">-</span>config</code></pre>
-<p>然后就生成了。打开。</p>
-</li>
-<li>
-<p>搜索<code>c.NotebookApp.notebook_dir = ''</code>，填写想要启动的路径，如：</p>
-<pre class="language-python" data-language="python"><code class="language-python">c<span class="token punctuation">.</span>NotebookApp<span class="token punctuation">.</span>notebook_dir <span class="token operator">=</span> <span class="token string">'D:/ProjectFiles/JupyterLab_Pj'</span></code></pre>
-</li>
-</ul>
-<h5 id="3vscode配置"><a class="markdownIt-Anchor" href="#3vscode配置"></a> 3.	VSCode配置</h5>
-<h6 id="31c开发环境"><a class="markdownIt-Anchor" href="#31c开发环境"></a> 3.1	C++开发环境</h6>
-<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/bpf-1024/p/11597000.html">VSCode配置C++环境</a>，</p>
-<h6 id="32修改主题"><a class="markdownIt-Anchor" href="#32修改主题"></a> 3.2	修改主题</h6>
 <blockquote>
-<p>主题用的是<code>Github Light Theme - Gray</code>，不那么亮，不刺眼。</p>
+<ol>
+<li>该个人品质有助于实现人哪方面发展</li>
+<li>该社会文化有助于实现社会哪方面和谐进步</li>
+<li>该科技设备有助于实现人怎样的便利，社会怎样的进步</li>
+<li>或者该科技设备不利于实现人哪方面发展，不利于社会怎样的进步</li>
+<li>环境保护有助于实现社会怎样发展</li>
+<li>或者环境污染不利于社会哪方面发展</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><strong>该品质/行为 lays the foundation for us to set ambitious goals, overcome formidable obstacles and then reap the happiness of success.</strong><br />
+<strong>翻译</strong>：该品质/行为 为我们打下了设定远大目标，克服艰难障碍，并收获成功快乐的基石。<br />
+<strong>适用于哪些个人品质/行为</strong>：乐观，自信，坚持，合作，爱心，感恩等等等。（显然，掌握了这个写作角度，许多个人类话题作文都能被套用）</p>
 </blockquote>
 <ul>
-<li>
-<p>打开侧边栏的Extension，搜索<code>Github Light Theme - Gray</code>安装</p>
-</li>
-<li>
-<p>然后打开File——Preferences——Color Theme（或者用快捷键Ctrl+K、CtrlT），选择<code>Github Light Theme - Gray</code>就好了。效果如下（字体用的下面的JetBrains Mono）</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201105005451.png" srcset="/img/loading.gif" alt="" /></p>
-</li>
-</ul>
-<h6 id="33更换字体"><a class="markdownIt-Anchor" href="#33更换字体"></a> 3.3	更换字体</h6>
-<blockquote>
-<p>它默认的是<code>CONSOLAS</code>，但太细了，想换个粗点的。找到了一个Jet Brains出的字体：<a target="_blank" rel="noopener" href="https://www.jetbrains.com/zh-cn/lp/mono/">JetBrains Mono</a>。</p>
-</blockquote>
+<li>Tips
 <ul>
-<li>点击上面那个链接下载，解压后按照说明安装。</li>
-<li>打开VScode——File——Preferences——Settings——Text Editor——Font，找到<code>Font Family</code>，默认应该是<code>CONSOLAS, 'Courier New', monospace</code>，将其修改为<code>JetBrains Mono, 'Courier New', monospace</code>就可以了。</li>
+<li>“Economist” 即可表示书名</li>
 </ul>
-<h6 id="34c代码格式化规则的修改"><a class="markdownIt-Anchor" href="#34c代码格式化规则的修改"></a> 3.4	C++代码格式化规则的修改</h6>
-<blockquote>
-<p>它默认的格式化风格是：Visual Studio，但不太好用：行尾的大括号换行了，还有许多不必要的空行。所以换一个。</p>
-</blockquote>
+</li>
+</ul>
+<hr />
+<h5 id="1个人品质-发展"><a class="markdownIt-Anchor" href="#1个人品质-发展"></a> 1.	个人品质、发展</h5>
+<h6 id="11句子"><a class="markdownIt-Anchor" href="#11句子"></a> 1.1	句子</h6>
 <ul>
-<li>
-<p>打开File——Preferences——Settings（或<code>Ctrl,</code>快捷键），搜索<code>clang</code>，第一个就是格式化风格：</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201107124720.png" srcset="/img/loading.gif" alt="" /></p>
-</li>
-<li>
-<p>把原来的&quot;Visual Studio&quot;改成谷歌风格：<code>&#123;BasedOnStyle: Google, IndentWidth: 4&#125;</code>，效果如下：</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201107125013.png" srcset="/img/loading.gif" alt="" /></p>
-</li>
+<li><u>爱、毅力</u> is emotional strength, which can support us <strong>no matter how</strong> dark the world around us becomes.</li>
+<li>​      , we will lead a positive and fruitful life.【总结】</li>
+<li>Youngsters should be encouraged not only to be more <strong>physically active</strong>, but also to <strong>adopt a healthier lifestyle</strong>.【引语】</li>
+<li><strong>First and foremost, it is most effective to do</strong> <u>physical exercises</u>. <strong>People variously choose</strong> <u>jogging, playing basketball, swimming, skating, climbing or riding as their regular exercises</u>, <strong>because</strong> exercise <strong>never fails to make us stronger and more energetic</strong>.【措施_健康】</li>
+<li><strong>Moreover, we should put great emphasis on</strong> <u>forming good habits</u>. <u>A balanced diet and sufficient sleep</u> <strong>are both indispensable to</strong> <u>our physical fitness</u> .【措施_健康/爱/教育/环境保护/文化】</li>
+<li><strong>What’s more</strong>, <u>mental health</u> <strong>should also be taken seriously</strong>. <strong>Especially in adversity, we need to maintain an optimistic mentality to</strong> <u>pull through life’s pains and sorrows, twists and turns</u>.【措施_健康/毅力】</li>
+<li><strong>Besides</strong>, I never touch cigarettes or wine, nor do I stay up late. <strong>Instead</strong>, I keep a balanced diet and go to bed before 11 o’clock at night, <strong>because I believe</strong> burning the midnight oil is harmful to health.【例子_健康】</li>
+<li><strong>More importantly</strong>, <u>an optimistic attitude toward life</u> <strong>makes me confident and persistent</strong>.【例子_健康】</li>
+<li><strong>To Sum up</strong>, <u>all these practices</u> <strong>guarantee a healthy body and a happy life</strong>.【总结】</li>
 </ul>
-<h5 id="4ffmpeg下载与配置"><a class="markdownIt-Anchor" href="#4ffmpeg下载与配置"></a> 4.	FFmpeg下载与配置</h5>
-<blockquote>
-<p>我是win10的，而且不想用git装，所以不讲git的装法。</p>
-</blockquote>
-<h6 id="41下载"><a class="markdownIt-Anchor" href="#41下载"></a> 4.1	下载</h6>
+<h6 id="12词语"><a class="markdownIt-Anchor" href="#12词语"></a> 1.2	词语</h6>
 <ul>
 <li>
-<p>官网在这<a target="_blank" rel="noopener" href="http://ffmpeg.org/">FFmpeg</a>，进去后点<code>Download</code>：</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104180321.png" srcset="/img/loading.gif" alt="" /></p>
+<p>努力</p>
+<ul>
+<li>… with painstaking efforts.</li>
+</ul>
 </li>
 <li>
-<p>然后往下拉，找到Win版本，选择第一个<code>gyan.dev</code>：</p>
-<blockquote>
-<p>gyan.dev和btBN的都差不多，是不同人维护的，选哪个都行。</p>
-</blockquote>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104180436.png" srcset="/img/loading.gif" alt="" /></p>
-</li>
-<li>
-<p>进去后下拉，找到<code>Links</code>，然后选一个想装的：</p>
-<blockquote>
-<p>因为我目前只用ffmpeg，其他不用，所以选择的是第二个：<code>ffmpeg-release-essentials.7z</code>。</p>
-</blockquote>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104180722.png" srcset="/img/loading.gif" alt="" /></p>
+<p>健康【身心】</p>
+<ul>
+<li>yoga</li>
+</ul>
 </li>
 </ul>
-<h6 id="42解压配置环境变量"><a class="markdownIt-Anchor" href="#42解压配置环境变量"></a> 4.2	解压，配置环境变量</h6>
+<h5 id="2教育文化"><a class="markdownIt-Anchor" href="#2教育文化"></a> 2.	教育文化</h5>
+<h6 id="21句子"><a class="markdownIt-Anchor" href="#21句子"></a> 2.1	句子</h6>
+<ul>
+<li>For the vast majority of students, the choice is among …</li>
+<li>According to the research from the World Bank, increasing the investment on tertiary education may have a positive impact on one nation’s GDP.【例子_教育的好处】</li>
+<li>[例子]If these traditional arts lost, it must have a negative impact on China’s economy.【丢失传统的坏处】</li>
+<li>The movie is, essentially, technology’s answer to the traditional storybook.【电影】</li>
+<li>University graduates should be <strong>well-equipped</strong> with practical experience which suits the demands of society.【就业】</li>
+<li>Otherwise, they will find no foothold for themselves.【就业】</li>
+<li>Every student must decide <strong>how best to allocate</strong> his or her time outside of class.【时间管理】</li>
+<li>For those with a manageable schedule, work experience prior to graduation can offer important career benefits.【就业】</li>
+<li><strong>The development of modern transportation and information technology has ushered in a golden era of</strong> <u>cultural exchange: flourishing foreign trade, frequent human travels across national borders and instant communication with distant lands</u>.【引语_文化多样性/在线教育/】</li>
+<li><strong>Young people should be encouraged to</strong> <u>broaden their horizons with more activities to embrace this world</u>, <strong>which is the best way for them to</strong> <u>get a clear perspective of what they are hoping to do with their lives and why</u>.【措施_教育/奋斗/健康】</li>
+<li><u>The cultivation of critical thinking ability</u> <strong>was, is and remains to be an integral part in</strong> <u>achieving one’s personal accomplishment</u>.【措施_教育/奋斗/毅力/健康…】</li>
+<li><strong>Nowadays few of us</strong> <u>read extensively after we leave school</u>. <strong>This tendency is rather disturbing, for</strong> <u>reading extensively</u> <strong>is no less necessary to one’s mental life than fresh air is to one’s physical life</strong>.【引语_阅读/后半句交换顺序后也能用于健康】</li>
+<li>Furthermore, reading extensively can also offer us a wide range of experiences. In reading, we may join tourists marveling at incredible</li>
+</ul>
+<h6 id="22词语"><a class="markdownIt-Anchor" href="#22词语"></a> 2.2	词语</h6>
+<ul>
+<li>… various ingredients of multi-cultures.</li>
+<li>a culture can be accepted, respected, appreciated and shared internationally.</li>
+<li>national pride，民族自豪</li>
+<li>broad and profound，博大精深</li>
+<li>traditional virtues，传统美德</li>
+<li></li>
+</ul>
+<h5 id="3环境保护"><a class="markdownIt-Anchor" href="#3环境保护"></a> 3.	环境保护</h5>
+<h5 id="31句子"><a class="markdownIt-Anchor" href="#31句子"></a> 3.1	句子</h5>
 <ul>
 <li>
-<p>下载后解压到想装的目录，我解压到<code>D:\ProgramFiles\FFmpeg_Pg</code>下，如图：</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104181103.png" srcset="/img/loading.gif" alt="" /></p>
+<p>We can improve the quality of air we breathe everyday by taking some <strong>concrete steps</strong> to advance the Green City movement.【提升空气质量_措施】</p>
 </li>
 <li>
-<p>然后添加环境变量[找不到百度去]，将刚才解压的目录添加上去：</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104181611.png" srcset="/img/loading.gif" alt="" /></p>
+<p>There is no arguing that smog is a problem that we can no longer ignore.【重视雾霾_叙述】</p>
 </li>
 <li>
-<p>打开命令行，输入<code>ffmpeg</code>，如下，就可以用了。</p>
-<p><img src="https://blogjallery.oss-cn-beijing.aliyuncs.com/img/20201104181852.png" srcset="/img/loading.gif" alt="" /></p>
+<p>【例子】We can make a difference collectively by doing simple things <strong>in our daily life</strong>, such as making <strong>environmental friendly</strong> choice while shopping and <strong>opting</strong> public transportation when traveling.【从小事做起_措施】</p>
+</li>
+<li>
+<p>Smog is not built in a day and cannot <strong>be attributed to</strong> a single factor.【雾霾_叙述】</p>
+</li>
+<li>
+<p>So the process to get rid of it <strong>would</strong> also take time and require <strong>persistent efforts</strong> from both the public and the government.【措施】</p>
+</li>
+<li>
+<p>Long-term traffic and pollution reductions <code>would depend on educating the public to</code> use public transport more, <code>and on government's using public money to</code> construct and run efficient system.【政府】</p>
 </li>
 </ul>
-<h5 id="5简悦20的使用"><a class="markdownIt-Anchor" href="#5简悦20的使用"></a> 5.	简悦2.0的使用</h5>
+<h5 id="32词语"><a class="markdownIt-Anchor" href="#32词语"></a> 3.2	词语</h5>
+<ul>
+<li>live in the city or the country</li>
+<li>low carbon economy</li>
+</ul>
+<h5 id="4热点话题"><a class="markdownIt-Anchor" href="#4热点话题"></a> 4.	热点话题</h5>
+<h6 id="41句子"><a class="markdownIt-Anchor" href="#41句子"></a> 4.1	句子</h6>
+<ul>
+<li>
+<p>This photo does <code>reflect a thought-provoking social phenomenon which</code> is not uncommon in China now :…【引语】</p>
+</li>
+<li>
+<p>Several primary causes that contribute to the above-mentioned phenomenon could be summarized as follows.【引语】</p>
+</li>
+<li>
+<p>[例子]It could also be argued that smart phones may have the largest effect on our generation, they has already been one part of our everyday life.【手机_中性】</p>
+</li>
+<li>
+<p>In my opinion, focusing on sports facilities is <strong>too narrow</strong> an approach and would not have the <strong>desired results</strong>.【措施_转折】</p>
+</li>
+<li>
+<p>Over the decade the pace of change in people’s life has increased beyond out <strong>wildest expectations</strong>.【发展_引语】</p>
+</li>
+<li>
+<p><strong>With the government’s will and public awareness, corresponding effective measures could</strong> <u>really reduce the amount of rubbish we produce</u>.【政府个人措施_总结】</p>
+</li>
+</ul>
+<h6 id="42词语"><a class="markdownIt-Anchor" href="#42词语"></a> 4.2	词语</h6>
+<ul>
+<li>originated in China，中国智造</li>
+</ul>
+<h5 id="5通用词语"><a class="markdownIt-Anchor" href="#5通用词语"></a> 5.	通用词语</h5>
+<h6 id="51插入语"><a class="markdownIt-Anchor" href="#51插入语"></a> 5.1	插入语</h6>
+<ul>
+<li>
+<p>副词插入语：frankly, especially, fortunately, indeed, however</p>
+</li>
+<li>
+<p>短语插入语：generally speaking, to tell the truth, in a sense, in a word, strange to say</p>
+</li>
+<li>
+<p>短句插入语：I suppose, as I see it, I believe, what is important</p>
+</li>
+<li>
+<p>万能插入语：rather than肯前否后，这个短语可以放在句子中的任何一个成分后面。</p>
+<blockquote>
+<p>【例句】It abolishes the presumption of innocence and places the citizen at the service of the state rather than the other way round.</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="52两个功能句"><a class="markdownIt-Anchor" href="#52两个功能句"></a> 5.2	两个功能句</h5>
+<ul>
+<li>
+<p>对…有影响（观点）</p>
+<ul>
+<li>have a beneficial effect/impact/influence on sth</li>
+<li>have a harmful effect on sth</li>
+</ul>
+</li>
+<li>
+<p>威胁（分析原因）</p>
+<ul>
+<li>pose a deadly threat to</li>
+</ul>
+</li>
+</ul>
+<h5 id="6谚语"><a class="markdownIt-Anchor" href="#6谚语"></a> 6.	谚语</h5>
+<blockquote>
+<p>1.爱屋及乌 Love me, love my dog.<br />
+2.百闻不如一见 Seeing is believing.<br />
+3.比上不足比下有余 worse off than some, better off than many; to fall short of the best, but be better than the worst.<br />
+4.笨鸟先飞 A slow sparrow should make an early start.<br />
+5.不眠之夜 white night<br />
+6.不以物喜不以己悲 not pleased by external gains, not saddened by personnal losses<br />
+7.不遗余力 spare no effort; go all out; do one’s best<br />
+8.不打不成交 No discord, no concord.<br />
+9.拆东墙补西墙 rob Peter to pay Paul<br />
+10.辞旧迎新 bid farewell to the old and usher in the new; ring out the old year and ring in the new<br />
+11.大事化小小事化了 try first to make their mistake sound less serious and then to reduce it to nothing at all<br />
+12.大开眼界 open one’s eyes; broaden one’s horizon; be an eye-opener<br />
+13.国泰民安 The country flourishes and people live in peace<br />
+14.过犹不及 going too far is as bad as not going far enough; beyond is as wrong as falling short; too much is as bad as too little<br />
+15.功夫不负有心人 Everything comes to him who waits.<br />
+16.好了伤疤忘了疼 once on shore, one prays no more<br />
+17.好事不出门恶事传千里 Good news never goes beyond the gate, while bad news spread far and wide.<br />
+18.和气生财 Harmony brings wealth.<br />
+19.活到老学到老 One is never too old to learn.<br />
+20.既往不咎 let bygones be bygones<br />
+21.金无足赤人无完人 Gold can’t be pure and man can’t be perfect.<br />
+22.金玉满堂 Treasures fill the home.<br />
+23.脚踏实地 be down-to-earth<br />
+24.脚踩两只船 sit on the fence<br />
+25.君子之交淡如水 the friendship between gentlemen is as pure as crystal; a hedge between keeps friendship green<br />
+26.老生常谈陈词滥调 cut and dried, cliché<br />
+27.礼尚往来 Courtesy calls for reciprocity.<br />
+28.留得青山在不怕没柴烧 Where there is life, there is hope.<br />
+29.马到成功 achieve immediate victory; win instant success<br />
+30.名利双收 gain in both fame and wealth<br />
+31.茅塞顿开 be suddenly enlightened<br />
+32.没有规矩不成方圆 Nothing can be accomplished without norms or standards.<br />
+33.每逢佳节倍思亲 On festive occasions more than ever one thinks of one’s dear ones far <a target="_blank" rel="noopener" href="http://away.It">away.It</a> is on the festival occasions when one misses his dear most.<br />
+34.谋事在人成事在天 The planning lies with man, the outcome with Heaven. Man proposes, God disposes.<br />
+35.弄巧成拙 be too smart by half; Cunning outwits itself<br />
+36.拿手好戏 masterpiece<br />
+37.赔了夫人又折兵 throw good money after bad<br />
+38.抛砖引玉 a modest spur to induce others to come forward with valuable contributions; throw a sprat to catch a whale<br />
+39.破釜沉舟 cut off all means of retreat;burn one‘s own way of retreat and be determined to fight to the end<br />
+40.抢得先机 take the preemptive opportunities<br />
+41.巧妇难为无米之炊 If you have no hand you can’t make a fist. One can’t make bricks without straw.<br />
+42.千里之行始于足下 a thousand-li journey begins with the first step–the highest eminence is to be gained step by step<br />
+43.前事不忘后事之师 Past experience, if not forgotten, is a guide for the future.<br />
+44.前人栽树后人乘凉 One generation plants the trees in whose shade another generation rests.One sows and another reaps.<br />
+45.前怕狼后怕虎 fear the wolf in front and the tiger behind hesitate in doing something<br />
+46.强龙难压地头蛇 Even a dragon (from the outside) finds it hard to control a snake in its old haunt – Powerful outsiders can hardly afford to neglect local bullies.<br />
+47.强强联手 win-win co-operation<br />
+48.瑞雪兆丰年 A timely snow promises a good harvest.<br />
+49.人之初性本善 Man’s nature at birth is good.<br />
+50.人逢喜事精神爽 Joy puts heart into a man.<br />
+51.人海战术 huge-crowd strategy<br />
+52.世上无难事只要肯攀登 Where there is a will, there is a way.<br />
+53.世外桃源 a fictitious land of peace away from the turmoil of the world;<br />
+54.死而后已 until my heart stops beating<br />
+55.岁岁平安 Peace all year round.<br />
+56.上有天堂下有苏杭 Just as there is paradise in heaven, ther are Suzhou and Hangzhou on earth<br />
+57.塞翁失马焉知非福 Misfortune may be an actual blessing.<br />
+58.三十而立 A man should be independent at the age of <a target="_blank" rel="noopener" href="http://thirty.At">thirty.At</a> thirty, a man should be able to think for himself.<br />
+59.升级换代 updating and upgrading (of products)<br />
+60.四十不惑 Life begins at forty.</p>
+</blockquote>
 
             </div>
             <hr>
@@ -365,13 +493,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/">软件安装</a>
-                    
-                      <a class="hover-with-bg" href="/tags/Python37/">Python37</a>
-                    
-                      <a class="hover-with-bg" href="/tags/JupyterLab/">JupyterLab</a>
-                    
-                      <a class="hover-with-bg" href="/tags/FFmpeg/">FFmpeg</a>
+                      <a class="hover-with-bg" href="/tags/%E8%8B%B1%E8%AF%AD%E4%BD%9C%E6%96%87/">英语作文</a>
                     
                   </div>
                 
@@ -384,18 +506,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/11/23/%E8%AF%AD%E6%96%99/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">语料</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/10/29/%E7%81%B5%E6%95%8F%E5%BA%A6%E5%88%86%E6%9E%90/">
-                        <span class="hidden-mobile">灵敏度分析</span>
+                      <a href="/2020/11/02/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8F%8A%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
+                        <span class="hidden-mobile">常用软件安装及编程环境配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -563,7 +679,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "常用软件安装及编程环境配置&nbsp;",
+        "语料&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
