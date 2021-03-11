@@ -17,7 +17,7 @@
   <meta name="description" content="杂乱无章 所以记录">
   <meta name="author" content="尘云风">
   <meta name="keywords" content="">
-  <title>归档 - 尘云风</title>
+  <title>尘云风</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -43,7 +43,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 100vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -156,7 +156,7 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('http://jallery.oss-cn-beijing.aliyuncs.com/photo_music/%E4%BB%B0%E6%9C%9B.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -169,6 +169,10 @@
           </div>
 
           
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -178,45 +182,177 @@
     
       <div class="container nopadding-md">
         <div class="py-5" id="board"
-          >
+          style=margin-top:0>
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 23 篇文章</p>
-  <hr>
-  
+
+  <div class="row mx-auto index-card">
     
-      
-      <p class="h5">2019</p>
     
-    <a href="/2019/11/24/DecisionTree/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">DecisionTree</span>
-      <time style="float: right;">11-24</time>
-    </a>
-  
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2019/11/24/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">集成学习</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/11/24/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">
+          
+          
+            
+          
+          接上一篇DT
+参考资料：
+
+https://www.jianshu.com/p/ec8d144009d3
+https://juejin.im/post/5d218e7af265da1baa1e964b
+https://zhuanlan.zhihu.com/p/34534004
+
+
+ 1.简介.
+集成学习的是先通过一定的规则生成多个学习器，再采用某种集成策略进行组合，最后综合判断输出最终结果。
+一般
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-24 20:32" pubdate>
+              2019-11-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ML/">ML</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
-    <a href="/2019/11/24/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">集成学习</span>
-      <time style="float: right;">11-24</time>
-    </a>
-  
     
-    <a href="/2019/11/15/Fuzzy-Cmeans/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Fuzzy-Cmeans</span>
-      <time style="float: right;">11-15</time>
-    </a>
-  
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/11/15/Fuzzy-Cmeans/" target="_self">
+          <img src="https://user-images.githubusercontent.com/49241298/72425740-50aeba00-37c3-11ea-8377-22b3319c5cb3.png" srcset="/img/loading.gif" alt="Fuzzy-Cmeans">
+        </a>
+      </div>
     
-    <a href="/2019/11/15/K-means/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">K-means</span>
-      <time style="float: right;">11-15</time>
-    </a>
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2019/11/15/Fuzzy-Cmeans/">Fuzzy-Cmeans</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/11/15/Fuzzy-Cmeans/">
+          
+          
+            
+          
+          参考资料：
+
+Fuzzy clustering - Wikipedia
+
+ 一、原理简述
+​	Fuzzy-Cmeans（Fuzzy clustering means，模糊均值聚类）
+​	设原数据X，shape=(m∗n)X，shape=(m*n)X，shape=(m∗n)，要分为kkk个类：
+
+初始化隶属矩阵，第iii个样本x(i)x^{(i)}x(i)的隶属矩阵如下（需要归一化，确保概率和为1。
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-15 20:24" pubdate>
+              2019-11-15
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/11/15/K-means/" target="_self">
+          <img src="https://user-images.githubusercontent.com/49241298/72425946-bdc24f80-37c3-11ea-8fe5-56a822ed1be0.png" srcset="/img/loading.gif" alt="K-means">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2019/11/15/K-means/">K-means</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/11/15/K-means/">
+          
+          
+            
+          
+          数学原理及Python实现
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-15 20:23" pubdate>
+              2019-11-15
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ML/">ML</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/2/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </span>
+  </nav>
   
-</div>
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
@@ -338,7 +474,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "料峭春风吹酒醒，微冷，山头斜照却相迎&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
